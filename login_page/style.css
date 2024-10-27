@@ -1,0 +1,86 @@
+html, body{
+    width: 1200px;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-container{
+    position: absolute;
+    width: 1200px;
+}
+.login-container .img_br img{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.login-box{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #fcfafa;
+    height: 600px;
+    width: 400px;
+    left: 400px;
+    top: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.login-container .login-box h2{
+    position: relative;
+    top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.input-group{
+    position: relative;
+    top: 50px;
+    margin-bottom: 20px;
+}
+.input-group input {
+    width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 80%;
+    font-weight: bold;
+}
+.btn{
+    position: relative;
+    top: 60px;
+    width: 200px;
+    padding: 15px;
+    background: linear-gradient(to right, #8e2de2, #a306a3);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+p{
+    position: relative;
+    top: 80px;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    color: #888;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+li{
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+}
+li img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    top: 90px;
+    margin-left: 110px;
+}
+.sign-up{
+    position: relative;
+    top: 220px;
+}
