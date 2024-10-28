@@ -22,7 +22,8 @@ html, body{
     margin: 0px;
     position: relative;
     color: black;
-    font-weight: bold
+    font-weight: bold;
+    text-align: center;
 }
 .nav .container .listbtn{
     width: 80%;
@@ -32,6 +33,33 @@ html, body{
     display: flex;
     float: left;
     width: 100%;
+}
+.nav .container .listbtn ul li{
+    margin-left: 20px;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    top: 6px;
+    left: 170px;
+}
+.nav .container .listbtn ul li a{
+    color: black;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+.nav .container .loginbtn{
+    width: 10%;
+    text-align: center;
+}
+.nav .container .loginbtn a{
+    position: relative;
+    top: 21px;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: #fff;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
 }
 .login-container .img_br img{
     width: 100%;
@@ -45,7 +73,7 @@ html, body{
     height: 520px;
     width: 400px;
     left: 400px;
-    top: 80px;
+    top: 20px;
     border-radius: 10px;
     text-align: center;
     opacity: 0.8;
@@ -54,7 +82,8 @@ html, body{
 .login-container .login-box h2{
     position: relative;
     top: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
 }
 .input-group{
     position: relative;
