@@ -86,7 +86,7 @@
     animation: headerNotifyGrowth ease-in 0.2s;
     will-change: opacity, transform;
     display: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header__notify::before {
@@ -229,6 +229,7 @@
 .header__cart {
     width: 150px;
     text-align: center;
+    z-index: 2;
 }
 
 .header__cart-wrap {
@@ -307,6 +308,7 @@
     box-shadow: 0 1px 5px #dadada;
     display: none;
     overflow: hidden;
+    z-index: 1;
 }
 
 .header__search-history-heading {
@@ -355,6 +357,7 @@
     padding-left: 16px;
     position: relative;
     cursor: pointer;
+    z-index: 1;
 }
 
 .header__search-select-label {
@@ -451,4 +454,35 @@
 
 .header__search-option-item--active i {
     display: inline-block;
+}
+
+/* Container */
+
+
+
+/* Container heading */
+.container__heading {
+    margin-top: 10px;
+    display: flex;
+    width: var(--grid-width);
+    height: var(--container-header-height);
+    margin-left: calc(var(--header-height) + 50px)
+}
+
+
+
+
+
+/* Image discount */
+.img-discount {
+    display: flex;
+    width: 24%;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.img-discount-link img{
+    border-radius: 8px;
+    width: 100%;
 }
