@@ -30,15 +30,44 @@
 .name_product .right .star_rating ul{
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     float: right;
 }
 .name_product .right .star_rating li{
-    color: #FFD700;
+    color: rgb(221, 220, 220);
     margin-right: 5px;
-    font-size: 30px;
+    font-size: 10px;
+    position: relative;
+    top: 20px;
+    font-size: 150%;
 }
 .name_product .right .text_assess{
     width: 25%;
 }
+.name_product .right .text_assess a{
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    font-size: 150%;
+}
+.name_product .right .btn_compare{
+    width: 50%;
+}
+.name_product .right .btn_compare a{
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    padding: 5px 10px;
+    color: blue;
+    font-size: 150%;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+.separate{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(245, 243, 243);
+}
+
 
