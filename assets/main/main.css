@@ -463,8 +463,9 @@
     margin-top: 10px;
     display: flex;
     width: var(--grid-width);
+    max-width: 100%;
     height: var(--container-header-height);
-    margin-left: calc(var(--header-height) + 50px)
+    margin: 10px auto;
 }
 
 /* Sidebar danh mục */ 
@@ -611,3 +612,4 @@ button:hover {
     border-radius: 8px;
     width: 100%;
 }
+

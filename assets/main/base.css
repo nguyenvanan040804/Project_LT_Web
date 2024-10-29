@@ -49,3 +49,30 @@ html {
         opacity: 1;
     }
 }
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container__heading {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .img-discount {
+        width: 80%;
+        flex-direction: row; /* Hoặc row-reverse nếu muốn đảo ngược thứ tự */
+        justify-content: center; /* Canh giữa các hình ảnh */
+        margin: 0 auto;
+    }
+}
+
