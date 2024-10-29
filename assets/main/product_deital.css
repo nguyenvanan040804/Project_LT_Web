@@ -1,0 +1,44 @@
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.nav_heading a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: gray;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.nav_heading a:hover{
+    color: black;
+}
+.name_product{
+    display: flex;
+}
+.name_product .left{
+    width: 50%;
+}
+.name_product .right{
+    width: 50%;
+    display: flex;
+}
+.name_product .right .star_rating{
+    width: 25%;
+}
+.name_product .right .star_rating ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    float: right;
+}
+.name_product .right .star_rating li{
+    color: #FFD700;
+    margin-right: 5px;
+    font-size: 30px;
+}
+.name_product .right .text_assess{
+    width: 25%;
+}
+
