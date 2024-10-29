@@ -7,7 +7,9 @@
 
     --navbar-height: 32px;
     --header-height: 100px;
-    --header-width-search: calc(var(--header-height) - var(--navbar-height))
+    --header-width-search: calc(var(--header-height) - var(--navbar-height));
+    --grid-width: 1230px;
+    --container-header-height: 470px;
 }
 
 * {
@@ -21,8 +23,9 @@ html {
     box-sizing: border-box;
 }
 
+/* Responsive */
 .grid {
-    width: 1200px;
+    width: 1230px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -35,6 +38,7 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+
 
 /* Animation */
 @keyframes fadeIn {
