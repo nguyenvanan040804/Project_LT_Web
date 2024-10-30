@@ -69,5 +69,49 @@
     height: 3px;
     background-color: rgb(245, 243, 243);
 }
+.content{
+    width: 1200px;
+    margin: 0;
+    padding: 0;
+}
+.product{
+    width: 100%;
+    display: flex;
+}
+.product .col1_product{
+    width: 50%;
+}
+.product .col1_product .slide_show{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.product .col1_product .slide_show .img_slide{
+    display: flex;
+}
+.product .col1_product .slide_show img{
+    width: 100%;
+}
+.product .col1_product .slide_show .btn{
+    font-size: 20px;
+    color: blue;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.5;
+}
+.product .col1_product .slide_show .btn_left{
+    left: 0;
+}
+.product .col1_product .slide_show .btn_right{
+    right: 0;
+}
+.product .col2_product{
+    width: 50%;
+}
 
 
