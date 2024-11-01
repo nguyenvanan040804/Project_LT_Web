@@ -64,6 +64,9 @@
     border: 1px solid blue;
     border-radius: 5px;
 }
+.name_product .right .btn_compare a:hover{
+    color: orangered;
+}
 .separate{
     width: 100%;
     height: 3px;
@@ -143,8 +146,64 @@
     font-size: 150%;
     margin-bottom: 5px;
 }
+
 .product .col2_product{
     width: 50%;
+    margin-left: 50px;
+}
+.product .col2_product .product_price{
+    font-size: 200%;
+    display: flex;
+}
+.product .col2_product .product_price .price_old span{
+    margin-left: 20px;
+}
+.product .col2_product .product_price .price_new{
+    font-size: 150%;
+    color: red;
+    font-weight: bold;
+}
+.product .col2_product .product_price .price_old{
+    opacity: 0.1;
+}
+.product .col2_product .color_product .text_normal{
+    margin-left: 10px;
+    font-size: 120%;
+    font-weight: bold;
+}
+.product .col2_product .color_product .btn_color_product{
+    display: flex;
+}
+.product .col2_product .color_product .btn_color_product .btn_color{
+    height: 50px;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #cccbcb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.product .col2_product .color_product .btn_color_product .btn_color:hover{
+    border: 1px solid red;
+}
+.product .col2_product .color_product .btn_color_product .btn_color .item_product{
+    height: 100%;
+    width: 60px;
+}
+.product .col2_product .color_product .btn_color_product .btn_color .item_product img{
+    width: 100%;
+    height: 100%;
+}
+.product .col2_product .color_product .btn_color_product .btn_color .text{
+    margin-left: 10px;
+}
+.product .col2_product .color_product .btn_color_product .btn_color .text p{
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 
