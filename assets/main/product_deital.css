@@ -295,10 +295,46 @@
     font-size: 150%;
     font-weight: bold;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 .product .col2_product .box_gift .form_lh .btn_gift a{
     text-decoration: none;
     color: #fff;
+}
+.product .col2_product .code_product{
+    font-size: 150%;
+    font-weight: bold;
+    color: rgb(65, 65, 255);
+}
+.product .col2_product .box_promotion{
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+.product .col2_product .box_promotion .icon_name{
+    display: flex;
+    background-color: pink;
+    border-radius: 10px 10px 0 0;
+}
+.product .col2_product .box_promotion .icon_name .fa-gift{
+    align-items: center;
+    padding: 10px 5px;
+    margin-left: 10px;
+    font-size: 150%;
+    color: red;
+}
+.product .col2_product .box_promotion .icon_name p{
+    font-size: 150%;
+    font-weight: bold;
+    color: red;
+    margin: 10px 0;
+}
+.product .col2_product .box_promotion .img_promotion{
+    width: 440px;
+    padding: 0;
+    margin: 10px;
+}
+.product .col2_product .box_promotion .img_promotion img{
+    width: 100%;
 }
 
 
