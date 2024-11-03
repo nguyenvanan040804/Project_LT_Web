@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
     <div class="app">
@@ -213,55 +214,103 @@
             <!-- Image slider -->
             <div class="slider">
                 <div class="slides">
-                    <a href="#" class="slide active">
-                        <img src="./assets/img/imgslider1.jpg" alt="Image 1">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider2.jpg" alt="Image 2">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider3-1.webp" alt="Image 3">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider4.webp" alt="Image 4">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider5.webp" alt="Image 5">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider6.webp" alt="Image 6">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider7.webp" alt="Image 7">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider8.webp" alt="Image 8">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider9.webp" alt="Image 9">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider10.jpg" alt="Image 10">
-                    </a>
+                    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                        </div>
+                      
+                        <!-- The slideshow/carousel -->
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <a href="#">
+                              <img src="./assets/img/imgslider1.jpg" class="d-block w-100" alt="Image 1">
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="#">
+                              <img src="./assets/img/imgslider2.jpg" class="d-block w-100" alt="Image 2">
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="#">
+                              <img src="./assets/img/imgslider3-1.webp" class="d-block w-100" alt="Image 3">
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="#">
+                              <img src="./assets/img/imgslider4.webp" class="d-block w-100" alt="Image 4">
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="#">
+                              <img src="./assets/img/imgslider5.webp" class="d-block w-100" alt="Image 5">
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="#">
+                              <img src="./assets/img/imgslider6.webp" class="d-block w-100" alt="Image 6">
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="#">
+                              <img src="./assets/img/imgslider7.webp" class="d-block w-100" alt="Image 7">
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="#">
+                              <img src="./assets/img/imgslider8.webp" class="d-block w-100" alt="Image 8">
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="#">
+                              <img src="./assets/img/imgslider9.webp" class="d-block w-100" alt="Image 9">
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="#">
+                              <img src="./assets/img/imgslider10.jpg" class="d-block w-100" alt="Image 10">
+                            </a>
+                          </div>
+                        </div>
+                      
+                        <!-- Left and right controls/icons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+
+                        <div class="carousel-text-navigation">
+                            <div class="nav-items-wrapper">
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="nav-item" aria-label="Slide 1">Khuyến Mãi Xe Đạp</button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="nav-item" aria-label="Slide 2">Xe Đạp Twitter Leopard</button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="nav-item" aria-label="Slide 3">Xe Đạp Địa Hinh-MTB</button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="3" class="nav-item" aria-label="Slide 4">Xe Đạp Trẻ Em</button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="4" class="nav-item" aria-label="Slide 5">Xe Đạp Đua Road</button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="5" class="nav-item" aria-label="Slide 6">Xe Đạp Touring</button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="6" class="nav-item" aria-label="Slide 7">Xe Đạp Phổ Thông</button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="7" class="nav-item" aria-label="Slide 8">Xe Đạp Twitter Cyclone</button>
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="8" class="nav-item" aria-label="Slide 9">Xe Đạp Trả Góp</button>                            
+                                <button type="button" data-bs-target="#demo" data-bs-slide-to="9" class="nav-item" aria-label="Slide 10">Papylus PR9000</button>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
-                
-                <div class="dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-                <div class="buttons">
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                </div>
-            </div>
+            </div>             
         <!-- Image discount -->
             <div class="img-discount">
                 <a href="#" class="img-discount-link">
@@ -280,5 +329,6 @@
       </footer>
     </div>
     <script src="./assets/main/script.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
