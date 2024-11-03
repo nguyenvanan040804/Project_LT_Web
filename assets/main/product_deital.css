@@ -82,7 +82,7 @@
     display: flex;
 }
 .product .col1_product{
-    width: 50%;
+    width: 60%;
 }
 .product .col1_product .slide_show{
     width: 100%;
@@ -148,7 +148,7 @@
 }
 
 .product .col2_product{
-    width: 50%;
+    width: 40%;
     margin-left: 50px;
 }
 .product .col2_product .product_price{
@@ -175,7 +175,9 @@
 }
 .product .col2_product .color_product .btn_color_product{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 20px;
+    width: 400px;
 }
 .product .col2_product .color_product .btn_color_product .btn_color{
     height: 50px;
@@ -225,11 +227,11 @@
     background-color: rgb(0, 81, 255);
 }
 .product .col2_product .btn_buy_cart .btn_cart .icon_cart{
-    font-size: 250%;
+    font-size: 200%;
     color: #fff;
 }
 .product .col2_product .btn_buy_cart .btn_cart .text_add_cart p{
-    font-size: 150%;
+    font-size: 120%;
     color: #fff;
     margin: 10px;
 }
@@ -246,16 +248,58 @@
     background-color: rgb(150, 0, 0);
 }
 .product .col2_product .btn_buy_cart .btn_buy .text_buy h4{
-    font-size: 200%;
+    font-size: 150%;
     color: #fff;
     margin: 0;
+    margin-top: 10px;
 }
 .product .col2_product .btn_buy_cart .btn_buy p{
     color: #fff;
-    font-size: 150%;
-    margin: 10px;
+    font-size: 120%;
+    margin: 0;
+    margin-top: 10px;
 }
-
+.product .col2_product .box_gift{
+    width: 100%;
+    border: 2px solid rgb(39, 39, 255);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.product .col2_product .box_gift .text_gift h2{
+    margin-top: 0;
+    font-size: 250%;
+    color: rgb(223, 223, 0);
+}
+.product .col2_product .box_gift .text_normal{
+    font-size: 150%;
+    color: rgb(76, 76, 255);
+}
+.product .col2_product .box_gift .form_lh .input_group input{
+    width: 420px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 150%;
+}
+.product .col2_product .box_gift .form_lh .btn_gift{
+    width: 420px;
+    height: 40px;
+    text-align: center;
+    background-color: orangered;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 150%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.product .col2_product .box_gift .form_lh .btn_gift a{
+    text-decoration: none;
+    color: #fff;
+}
 
 
 
