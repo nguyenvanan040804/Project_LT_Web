@@ -1,284 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>web bán xe đạp</title>
-    <link rel="stylesheet" href="./assets/main/main.css">
-    <link rel="stylesheet" href="./assets/main/base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0/css/all.min.css">
+    <title>Bicycle Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/main/base.css">
+    <link rel="stylesheet" href="./assets/main/style.css">
 </head>
 <body>
-    <div class="app">
-      <header class="header">
-        <div class="grid">
-            <nav class="header__navbar">
-                <ul class="header__navbar-list">
-                    <li class="header__navbar-item header__navbar-item--separate">Giới Thiệu Cửa Hàng Xe Đạp Giá Kho</li>
-                    <li class="header__navbar-item">
-                        <span class="header__navbar-title--no-pointer">Liên Hệ Mua Hàng</span>
-                        <a href="#" class="header__navbar-icon-link">
-                            <i class="header__navbar-icon fa-solid fa-phone"></i>
-                        </a>
-                        <a href="#" class="header__navbar-icon-link">
-                            <i class="header__navbar-icon fa-solid fa-message"></i>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="header__navbar-list">
-                    <li class="header__navbar-item header__navbar-item--has-notify">
-                        <a href="#" class="header__navbar-item-link">
-                            <i class="header__navbar-icon fa-solid fa-bell"></i>
-                            Thông báo
-                        </a>
-                        <div class="header__notify">
-                            <header class="header__notify-header">
-                                <h3>Thông báo mới nhận</h3>
-                            </header>
-                            <ul class="header__notify-list">
-                                <li class="header__notify-item header__notify-item--viewed">
-                                    <a href="#" class="header__notify-link">
-                                        <img src="./assets/img/xe-dap-dia-hinh-cavanio-leopard-1.webp" alt="" class="header__notify-img">
-                                        <div class="header__notify-info">
-                                            <span class="header__notify-name">Xe Đạp Twitter Leopard</span>
-                                            <span class="header__notify-description">Xe đạp địa hình CAVANIO LEOPARD, Khung nhôm, Không mối hàn</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="header__notify-item header__notify-item--viewed">
-                                    <a href="#" class="header__notify-link">
-                                        <img src="./assets/img/images.jpg" alt="" class="header__notify-img">
-                                        <div class="header__notify-info">
-                                            <span class="header__notify-name">Xe Đạp Địa Hình MTB</span>
-                                            <span class="header__notify-description">Xe đạp 700c Khung Nhôm PAPYLUS PT700</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="header__notify-item header__notify-item--viewed">
-                                    <a href="#" class="header__notify-link">
-                                        <img src="./assets/img/stitch-907.webp" alt="" class="header__notify-img">
-                                        <div class="header__notify-info">
-                                            <span class="header__notify-name">Xe Đạp Trẻ Em</span>
-                                            <span class="header__notify-description">Xe đạp Nhật Maruishi Beehive Vành 16 inch </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="header__notify-item header__notify-item--viewed">
-                                    <a href="#" class="header__notify-link">
-                                        <img src="./assets/img/xe-dap-magicbros-Racing-R3000.webp" alt="" class="header__notify-img">
-                                        <div class="header__notify-info">
-                                            <span class="header__notify-name">Xe Đạp Đua Road</span>
-                                            <span class="header__notify-description">Xe đạp Giant XTC 20-P 2024 giá rẻ, chính hãng</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="header__notify-item header__notify-item--viewed">
-                                    <a href="#" class="header__notify-link">
-                                        <img src="./assets/img/winner24inch (1).jpg" alt="" class="header__notify-img">
-                                        <div class="header__notify-info">
-                                            <span class="header__notify-name">Xe Đạp Touring</span>
-                                            <span class="header__notify-description">Xe đạp Touring Magicbros Canyon 3 - Xe đạp thế giới</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <footer class="header__notify-footer">
-                                <a href="" class="header__notify-footer-btn">Xem tất cả</a>
-                            </footer>
-                        </div>
-                    </li>
-                    <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link">
-                            <i class="header__navbar-icon far fa-question-circle"></i>
-                            Trợ giúp
-                        </a>
-                    </li>
-                    <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
-                    <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
-                </ul>
-            </nav>
-            <!-- Header with search -->
-            <div class="header-width-search">
-                <div class="header__logo">
-                    <a href="#" class="header__logo-link">
-                        <img width="683" height="141" src="https://xedapgiakho.com/wp-content/uploads/2024/05/Logo-2024-11-White-683x141.png" class="header__logo-img" alt="Xe Đạp Giá Kho – Nguồn Xe Đạp Nhập Khẩu Lớn Nhất Việt Nam" data-lazy-src="https://xedapgiakho.com/wp-content/uploads/2024/05/Logo-2024-11-White-683x141.png" data-ll-status="loaded">
-                    </a>
-                </div>
-                
-                <div class="header__search">
-                    <div class="header__search-input-wrap">
-                        <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
-                        <!-- Search history -->
-                        <div class="header__search-history">
-                            <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
-                            <ul class="header__search-history-list">
-                                <li class="header__search-history-item">
-                                    <a href="#">Xe đạp địa hình</a>
-                                </li>
-                                <li class="header__search-history-item">
-                                    <a href="#">Xe đạp trẻ em</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="header__search-select">
-                        <span class="header__search-select-label">Trong shop</span>
-                        <i class="header__search-select-icon fas fa-angle-down"></i>
-                        
-                        <ul class="header__search-option">
-                            <li class="header__search-option-item header__search-option-item--active">
-                                <span>Trong shop</span>
-                                <i class="fa-solid fa-check"></i>
-                            </li>
-                            <li class="header__search-option-item">
-                                <span>Ngoài shop</span>
-                                <i class="fa-solid fa-check"></i>
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="header__search-btn">
-                        <i class="header__search-btn-icon fas fa-search"></i>
-                    </button>
-                </div>
+    <div id="page" class="site">
 
-                <!-- Cart layout -->
-                <div class="header__cart">
-                    <div class="header__cart-wrap">
-                        <i class="header__cart-icon fas fa-shopping-cart"></i>
-                        <div class="header__cart-list header__cart-list--no-cart ">
-                            <img src="./assets/img/no-cart.png" alt="" class="header__cart-no-cart-img">
-                            <span class="header__cart-list-no-cart-msg">
-                                Chưa có sản phẩm
-                            </span>
+        <aside class="site-off desktop-hide">
+            <div class="off-canvas">
+                <div class="canvas-head flexitem">
+                    <div class="logo"><a href="/"><span class="circle"></span>.BikeStore</a></div>
+                    <a href="#" class="t-close flexcenter"><i class="ri-close-line"></i></a>
+                </div>
+                <div class="departments"></div>
+                <nav></nav>
+                <div class="thetop-nav"></div>
+            </div>
+        </aside>
+
+        <header>
+            <div class="header-top mobile-hide">
+                <div class="container">
+                    <div class="wrapper flexitem">
+                        <div class="left">
+                            <ul class="flexitem main-links">
+                                <li><a href="#">Giới Thiệu Cửa Hàng Xe Đạp</a></li>
+                                <li><a href="#">Liên Hệ Mua Hàng</a></li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <ul class="flexitem main-links">
+                                <li><a href="#">Đăng Ký</a></li>
+                                <li><a href="#">Tài Khoản</a></li>
+                                <li><a href="#">Theo Dõi Đơn</a></li>
+                                <li><a href="#">Tiền Tệ <span class="icon-small"> <i class="ri-arrow-down-s-line"></i></span></a>
+                                    <ul>
+                                        <li class="current"><a href="#">VND</a></li>
+                                        <li><a href="#">USA</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Ngôn Ngữ <span class="icon-small"> <i class="ri-arrow-down-s-line"></i></span></a>
+                                    <ul>
+                                        <li class="current"><a href="#">Tiếng Việt</a></li>
+                                        <li><a href="#">English</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-      </header>  
-      <div class="container">
-        <div class="container__heading">
-            <!-- Sidebar danh mục -->
-            <div class="sidebar">
-                <ul class="category-list">
-                    <li class="category-item">
-                        Xe đạp trẻ em
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="category-item">
-                        Xe đạp thể thao
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="category-item">
-                        Xe đạp địa hình
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="category-item">
-                        Xe đạp touring
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="category-item">
-                        Xe đạp đua
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="category-item">
-                        Xe đạp phổ thông
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="category-item">
-                        Xe điện
-                    </li>
-                    <li class="category-item">
-                        Thương hiệu xe đạp
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="category-item">
-                        Phụ kiện – Phụ tùng Xe đạp
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="category-item">
-                        Chọn Cấu Hình Xe
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="category-item">
-                        🔥 Khuyến Mãi Hot 🔥
-                        <i class="category-item-icon fa-solid fa-angle-right"></i>
-                    </li>
-                </ul>
-            </div>
-            <!-- Image slider -->
-            <div class="slider">
-                <div class="slides">
-                    <a href="#" class="slide active">
-                        <img src="./assets/img/imgslider1.jpg" alt="Image 1">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider2.jpg" alt="Image 2">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider3-1.webp" alt="Image 3">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider4.webp" alt="Image 4">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider5.webp" alt="Image 5">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider6.webp" alt="Image 6">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider7.webp" alt="Image 7">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider8.webp" alt="Image 8">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider9.webp" alt="Image 9">
-                    </a>
-                    <a href="#" class="slide">
-                        <img src="./assets/img/imgslider10.jpg" alt="Image 10">
-                    </a>
-                </div>
-                
-                <div class="dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-                <div class="buttons">
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                </div>
-            </div>
-        <!-- Image discount -->
-            <div class="img-discount">
-                <a href="#" class="img-discount-link">
-                    <img src="./assets/img/uu-dai-duoi-2-trieu-gia-re.jpg" alt="uudaiduoi2trieu">
-                </a>
-                <a href="#" class="img-discount-link">
-                    <img src="./assets/img/uu-dai-duoi-5-trieu.jpg" alt="uudaiduoi2trieu">
-                </a>
-                <a href="#" class="img-discount-link">
-                    <img src="./assets/img/uu-dai-khuyen-mai.jpg" alt="uudaiduoi2trieu">
-                </a>
-            </div>
-        </div>
-      </div>
-      <footer class="footer">
-      </footer>
+            <!-- header-top -->
+
+
+
+
+
+
+        </header>
+        <!-- header -->
+
+        <main>
+
+
+
+
+
+        </main>
+        <!-- main -->
+        <footer></footer>
+        <!-- footer -->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/main/script.js"></script>
 </body>
 </html>

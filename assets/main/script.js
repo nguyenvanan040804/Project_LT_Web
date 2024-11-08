@@ -1,32 +1,50 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
+// copy menu for mobile
+function copyMenu() {
+    //copy inside .dpt-cat to .departments
+    var dptCategory = document.querySelector('.dpt-cat');
+    var dptPlace = document.querySelector('.departments');
+    dptPlace.innerHTML = dptCategory.innerHTML;
 
-function showSlide(index) {
-    // Đảm bảo index nằm trong giới hạn của số slide
-    index = (index + slides.length) % slides.length;
-    // Đặt lại tất cả slide và dot
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        dots[i].classList.remove('active');
-    });
+    // copy inside nav to nav
+    var mainNav = document.querySelector('.header-nav nav');
+    var navPlace = document.querySelector('.off-canvas nav');
+    navPlace.innerHTML = mainNav.innerHTML;
 
-    // Kích hoạt slide và dot mới
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
-    currentSlide = index;
+    // copy .header-top .wrapper to .thetop-nav
+    var topNav = document.querySelector('.header-top .wrapper');
+    var topPlace = document.querySelector('.off-canvas .thetop-nav');
+    topPlace.innerHTML = topNav.innerHTML;
+
+}
+copyMenu();
+
+// show mobile menu
+const menuButton = document.querySelector('.trigger'), 
+    closeButton = document.querySelector('.t-close'),
+    addclass = document.querySelector('.site');
+menuButton.addEventListener('click', function() {
+    addclass.classList.toggle('showmenu')
+})
+closeButton.addEventListener('click', function() {
+    addclass.classList.remove('showmenu')
+})
+
+// show sub menu on mobile
+const submenu = document.querySelectorAll('.has-child .icon-small');
+submenu.forEach((menu) => menu.addEventListener('click', toggle));
+
+function toggle(e) {
+    e.preventDefault();
+    submenu.forEach((item) => item != this ? item.closest('.has-child').classList.remove('expand') : null);
+    if (this.closest('.has-child').classList != 'expand');
+    this.closest('.has-child').classList.toggle('expand')
 }
 
-// Hàm thay đổi slide theo bước
-function changeSlide(step) {
-    showSlide(currentSlide + step);
-}
+// slider bằng swipper js
+const swiper = new Swiper('.swiper', {
+    loop: true,
 
-// Sự kiện nút mũi tên
-document.querySelector('.prev').onclick = () => changeSlide(-1);
-document.querySelector('.next').onclick = () => changeSlide(1);
-
-// Sự kiện cho các dấu chấm
-dots.forEach((dot, index) => {
-    dot.onclick = () => showSlide(index);
-});
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
