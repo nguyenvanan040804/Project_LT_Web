@@ -963,7 +963,32 @@ form.search button:hover {
     background-color: var(--second-dark-color);
 }
 
+/* 6a. Search */
+.search-bottom {
+    position: fixed;
+    bottom: 60px;
+    width: var(--percent100);
+    padding: 2.5em 0;
+    background-color: var(--second-dark-color);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    will-change: visibility, opacity;
+}
+.showsearch .search-bottom {
+    visibility: inherit;
+    opacity: 1;
+}
 
+.search-bottom .t-close {
+    position: absolute;
+    top: -54px;
+    right: 0;
+}
+
+.search-bottom .t-close:hover {
+    background-color: red;
+}
 
 
 
