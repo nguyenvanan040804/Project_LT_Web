@@ -730,6 +730,7 @@ form.search button:hover {
 
 .products.main .footer {
     position: absolute;
+    top: 180px;
     left: 0;
     right: 0;
     padding: 0 1em 1em;
@@ -778,6 +779,31 @@ form.search button:hover {
 
 .banner .row {
     margin-bottom: 0;
+}
+
+.banners .product-categories .item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+.banners .product-categories .image {
+    max-width: 100%;
+}
+
+.content h3 {
+    margin-top: 1em;
+}
+.content .store-address, .phone-num, .time-open {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.content  i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 1.4em;
 }
 
 
@@ -967,7 +993,8 @@ form.search button:hover {
     }
 
     /* products */
-    .trending .products {
+    .trending .products,
+    .product-categories .row {
         flex: 0 0 33.3333%;
     }
     .products.big .media {
@@ -976,5 +1003,7 @@ form.search button:hover {
     .products.main .item {
         flex: 0 0 25%;
     }
+
+    /*  */
 
 }
