@@ -783,10 +783,20 @@ form.search button:hover {
     margin-bottom: 0;
 }
 
-.banners .product-categories .item {
+/* .banners .product-categories .item {
     display: flex;
     flex-direction: column;
     padding: 1.5em;
+} */
+
+.banners .banner-categories .item {
+    height: 120px;
+}
+
+.banners .banner-categories .item img {
+    height: 100%;
+    width: auto;
+    display: block;
 }
 
 .banners .product-categories .image {
@@ -996,13 +1006,15 @@ form.search button:hover {
 
     /* products */
     .trending .products,
-    .product-categories .row {
+    .product-categories .row,
+    .top-dis-categories .row {
         flex: 0 0 33.3333%;
     }
     .products.big .media {
         max-height: 373px;
     }
-    .products.main .item {
+    .products.main .item,
+    .banner-categories .row{
         flex: 0 0 25%;
     }
 
