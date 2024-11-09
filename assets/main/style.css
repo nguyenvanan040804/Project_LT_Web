@@ -842,11 +842,97 @@ form.search button:hover {
     font-size: 1.4em;
 }
 
+/* 6.   FOOTER    */
+/* 6a News Letter */
+
+.newsletter {
+    padding: 2.5em 0;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.newsletter h3 {
+    font-size: 1.5em;
+}
+
+.newsletter p {
+    font-weight: var(--fw3);
+    color: var(--border-color);
+    margin: 0.5em 0 1.5em;
+}
+
+.newsletter p strong {
+    color: red;
+}
+
+.newsletter form {
+    max-width: 500px;
+    width: var(--percent100);
+}
+
+/* 6b. Widgets */
+
+.widgets {
+    padding: 3.5em 2.5em;
+    background-color: var(--light-bg-color);
+}
+
+.widgets h4 {
+    margin-bottom: 1em;
+}
+/* 6c. Footer Info */
+
+.footer-info {
+    padding: 3.5em 0 5em;
+}
+
+.footer-info .wrapper .flexcol {
+    align-items: center;
+    gap: 0;
+}
+
+.footer-info ul li a {
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-bg-color);
+    border-radius: var(--percent50);
+    margin: 0.25em;
+    transition: var(--trans-background);
+}
+
+.footer-info ul li a:hover {
+    background-color: var(--border-color);
+}
+
+.footer-info .logo a {
+    margin: 0 0 1em -0.75em;
+}
+
+.footer-info .mini-text {
+    margin-top: 2em;
+    text-align: center;
+}
+
+
+
+
+
+
 
 /* RESPONSIVE */
 
 @media screen and (min-width: 481px) {
+    .banner-categories .row {
+        flex: 1 0 auto;
+    }
     .products.main .item {
+        flex: 0 0 50%;
+    }
+    .products.sub .item {
         flex: 0 0 50%;
     }
 }
@@ -858,10 +944,20 @@ form.search button:hover {
     }
     .products.mini ,
     .banner .row,
-    .banner-sub .row {
+    .banner-sub .row,
+    .widgets .row {
+        flex: 0 0 50%;
+    }
+    .banner-categories .row {
+        flex: 0 0 50%;
+    }
+    .top-dis-categories .row {
         flex: 0 0 50%;
     }
     .products.main .item {
+        flex: 0 0 33.3333%;
+    }
+    .products.sub .item {
         flex: 0 0 33.3333%;
     }
 }
@@ -1039,6 +1135,7 @@ form.search button:hover {
         max-height: 373px;
     }
     .products.main .item,
+    .widgets .row,
     .banner-categories .row{
         flex: 0 0 25%;
     }
@@ -1046,6 +1143,10 @@ form.search button:hover {
         flex: 0 0 12.5%;
     }
 
-    /*  */
-
+    /* footer  */
+    .newsletter .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
