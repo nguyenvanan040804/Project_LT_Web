@@ -474,6 +474,8 @@ form.search button:hover {
 }
 
 .sectop h2 span:not(.circle) {
+    color: #ff6347;
+    text-transform: uppercase;
     padding: 0 0 0 2em;
 }
 
