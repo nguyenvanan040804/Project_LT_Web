@@ -759,6 +759,26 @@ form.search button:hover {
     z-index: 3;
 }
 
+/* 5. BANNER   */
+
+.banners .item {
+    position: relative;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+}
+
+.banner .image {
+    text-align: right;
+}
+
+.banner img {
+    height: 230px;
+    min-width: var(--percent100);
+}
+
+.banner .row {
+    margin-bottom: 0;
+}
 
 
 /* RESPONSIVE */
