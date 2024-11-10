@@ -137,7 +137,7 @@
     width: 28px;
     height: 28px;
     border-radius: var(--percent50);
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     bottom: 5px;
     right: 5px;
     opacity: .4;
@@ -477,6 +477,7 @@ form.search button:hover {
     color: #ff6347;
     text-transform: uppercase;
     padding: 0 0 0 2em;
+    font-weight: var(--fw8);
 }
 
 .sectop h2 .circle {
@@ -639,6 +640,7 @@ form.search button:hover {
     font-size: calc(1em + 1vw);
     color: #ff0000;
     margin-right: 0.25em;
+    font-weight: var(--fw6);
 }
 
 .products .price .normal {
@@ -990,7 +992,53 @@ form.search button:hover {
     background-color: red;
 }
 
+/* 7. OVERLAY */
+.overlay {
+    position: fixed;
+    width: var(--percent100);
+    height: var(--percent100);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+}
 
+.showmenu .overlay {
+    opacity: 1;
+    visibility: inherit;
+}
+
+/* 8.  PAGE SINGLE */
+.page-home .dpt-cat .dpt-trigger,
+.dpt-trigger .ri-close-line,
+.showdpt .dpt-trigger .ri-menu-3-line {
+    display: none;
+}
+
+.showdpt .dpt-trigger .ri-close-line {
+    display: block;
+}
+
+/* 8b. Breadcrumb */
+.breadcrumb {
+    font-size: var(--font-small);
+    margin-bottom: 2em;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+    padding: 0 0.35em;
+}
+
+.breadcrumb li:last-child {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--light-text-color);
+}
 
 
 
@@ -1005,6 +1053,16 @@ form.search button:hover {
     }
     .products.sub .item {
         flex: 0 0 50%;
+    }
+    /* page  single */
+    .products.one .big-image {
+        height: 520px;
+    }
+    .products.one .image-show {
+        height: 100%;
+    }
+    .products.one .thumbnail-show {
+        height: 140px;
     }
 }
 
@@ -1030,7 +1088,8 @@ form.search button:hover {
     }
     .products.sub .item {
         flex: 0 0 33.3333%;
-    }
+    }   
+
 }
 
 
@@ -1219,5 +1278,20 @@ form.search button:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    /* Page Single */
+
+    #page:not(.page-home) .dpt-menu {
+        display: none;
+    }
+    #page.showdpt .dpt-menu {
+        display: block;
+    }
+
+    /* Product details */
+    .products.one .row {
+        flex: 0 0 32%;
+        width: 68%;
     }
 }
