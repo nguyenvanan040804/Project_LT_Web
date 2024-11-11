@@ -486,13 +486,13 @@ form.search button:hover {
 
 /* 4a. Global product */
 .products .offer {
+    justify-content: center;
     text-align: center;
     margin-bottom: 1.5em;
 }
 
 .products .offer p {
     text-transform: uppercase;
-    margin-bottom: 0.5em;
 }
 
 .products .offer ul {
@@ -1208,13 +1208,40 @@ form.search button:hover {
 
 .products .qty-control {
     width: fit-content;
-    padding: 0.5em;
+    padding: 0.25em;
     border: 1px solid var(--border-color);
     margin: 1em;
+    font-size: 0.75em;
 }
 
-.products .actions :where(input, button) {
-    font-size: 1em;
+.products .actions .button-cart {
+    font-size: 0.95em;
+    outline: 0;
+    border: 0;
+}
+
+.products .actions .primary-button {
+    display: flex;
+    align-items: center;
+}
+
+
+.products .actions .button-cart i {
+    color: var(--white-color);
+}
+
+.products .actions .button-cart > button {
+    background-color: #ff6e35;
+    color: var(--white-color);
+    font-weight: var(--fw7);
+}
+
+.products .actions button {
+    outline: 0;
+    border: 0;
+}
+.products .actions input {
+    font-size: 0.75em;
     outline: 0;
     border: 0;
 }
@@ -1230,7 +1257,7 @@ form.search button:hover {
 
 .products .actions .button-cart {
     flex: 1;
-    min-width: 180px;
+    min-width: 160px;
 }
 
 .products .actions .button-cart button {
@@ -1393,6 +1420,8 @@ form label {
     text-transform: uppercase;
 }
 
+
+
 /* RESPONSIVE */
 
 @media screen and (min-width: 481px) {
@@ -1414,6 +1443,11 @@ form label {
     }
     .products.one .thumbnail-show {
         height: 140px;
+    }
+    .products .actions .primary-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
