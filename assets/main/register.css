@@ -6,7 +6,8 @@ main{
     background-color: #f4f4f9;
     margin: 0;
 }
-main .container{
+main .box-register{
+    width: 100%;
     max-width: 600px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -51,11 +52,6 @@ input[type="email"]:focus,
 input[type="password"]:focus {
     outline: none;
     background-color: #ffffff;
-}
-input[type="text"]:focus::placeholder,
-input[type="email"]:focus::placeholder,
-input[type="password"]:focus::placeholder {
-    color: transparent;
 }
 #field-gender {
     display: flex;

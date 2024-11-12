@@ -1,0 +1,117 @@
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+main .container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+.box-login {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.site_account_header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.txt-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.txt-small {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.form__input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form__input-wrapper .label.icon-field {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #888;
+    transition: opacity 0.3s;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 12px 12px 40px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #ededed;
+    font-size: 1em;
+    color: #333;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    background-color: #fff;
+}
+
+input[type="email"]:focus + .label,
+input[type="email"]:not(:placeholder-shown) + .label,
+input[type="password"]:focus + .label,
+input[type="password"]:not(:placeholder-shown) + .label {
+    opacity: 0;
+}
+
+.form__submit {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form__submit:hover {
+    background-color: #0056b3;
+}
+
+.site_account_secondary-action {
+    text-align: center;
+    margin-top: 20px;
+}
+.site_account_secondary-action p{
+    margin-top: 5px;
+}
+.site_account_secondary-action .link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.site_account_secondary-action .link:hover {
+    text-decoration: underline;
+}
+
+.sitebox-recaptcha {
+    font-size: 0.75em;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+}

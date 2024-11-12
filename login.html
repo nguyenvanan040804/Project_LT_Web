@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/main/base.css">
     <link rel="stylesheet" href="./assets/main/style.css">
-    <link rel="stylesheet" href="./assets/main/register.css">
+    <link rel="stylesheet" href="./assets/main/login.css">
 </head>
 <body>
     <div id="page" class="site">
@@ -341,51 +341,41 @@
 
         <main class="wrapperMain_content">	
             <div class="container">
-                <div class="box-register">
-                    <div class="content">
-                        <h3>Tạo Tài Khoản</h3>
-                        <div class="br"></div>
-                        <form action="">
-                            <div id="field-lastname" class="clearfix large_form">
-                                <label for="last_name" class="label icon-field"><i class="icon-login icon-user "></i></label>
-                                <input required="" type="text" value="" name="customer[last_name]" placeholder="Họ" id="last_name" class="text" size="30">
+                <div class="box-login">
+                    <div id="header-login-panel" class="site_account_panel site_account_default is-selected">
+                        <div class="site_account_header">
+                            <p class="txt-title ">Đăng nhập tài khoản</p>
+                            <p class="txt-small">Nhập email và mật khẩu của bạn:</p>
+                        </div>
+                        <div class="site_account_inner">
+                            <form accept-charset="UTF-8" action="/account/login" id="customer_login" method="post">
+                                <input name="form_type" type="hidden" value="customer_login">
+                                <input name="utf8" type="hidden" value="✓">
+                                <div class="form__input-wrapper form__input-wrapper--labelled">
+                                    <label for="email" class="label icon-field"><i class="icon-login icon-envelope "></i></label>
+                                    <input required="" type="email" value="" placeholder="Email" name="customer[email]" id="email" class="text" size="30">
+                                </div>
+                                <div class="form__input-wrapper form__input-wrapper--labelled">
+                                    <label for="password" class="label icon-field"><i class="icon-login icon-shield "></i></label>
+                                    <input required="" type="password" value="" placeholder="Mật khẩu" name="customer[password]" id="password" class="password text" size="30">
+                                    <div class="sitebox-recaptcha">
+                                        This site is protected by reCAPTCHA and the Google
+                                        <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> 
+                                        and <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a> apply.
+                                    </div>
+                                </div>
+                                <button type="submit" class="form__submit button dark" id="form_submit-login">Đăng nhập</button>             
+                                <input id="" name="g-recaptcha-response" type="hidden"><noscript src=""></noscript>
+                            </form>
+                            <div class="site_account_secondary-action">
+                                <p>Khách hàng mới? 
+                                    <a class="link" href="register.html">Tạo tài khoản</a>
+                                </p>
+                                <p>Quên mật khẩu? 
+                                    <button aria-controls="header-recover-panel" class="js-link link">Khôi phục mật khẩu</button>
+                                </p>
                             </div>
-                            <div id="field-firstname" class="clearfix large_form">
-                                <label for="first_name" class="label icon-field"><i class="icon-login icon-user "></i></label>
-                                <input required="" type="text" value="" name="customer[first_name]" placeholder="Tên" id="first_name" class="text" size="30">
-                            </div>
-                            <div id="field-gender" class="clearfix large_form">
-                                <input id="radio1" type="radio" value="0" name="customer[gender]"> 
-                                <label for="radio1">Nữ</label>
-                                <input id="radio2" type="radio" value="1" name="customer[gender]"> 
-                                <label for="radio2">Nam</label>
-                            </div>
-                            <div id="field-birthday" class="clearfix large_form">
-                                <label for="birthday" class="label icon-field"><i class="icon-login icon-envelope "></i></label>
-                                <input type="text" value="" placeholder="mm/dd/yyyy" name="customer[birthday]" id="birthday" class="text" size="30">
-                            </div>
-                            <div id="field-email" class="clearfix large_form">
-                                <label for="email" class="label icon-field"><i class="icon-login icon-envelope "></i></label>
-                                <input required="" type="email" value="" placeholder="Email" name="customer[email]" id="email" class="text" size="30">
-                            </div>
-                            <div id="field-password" class="clearfix large_form large_form-mrb">
-                                <label for="password" class="label icon-field"><i class="icon-login icon-shield "></i></label>
-                                <input required="" type="password" value="" placeholder="Mật khẩu" name="customer[password]" id="password" class="password text" size="30">
-                            </div>
-                            <div class="clearfix large_form sitebox-recaptcha ">
-                                This site is protected by reCAPTCHA and the Google
-                                <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> 
-                                and <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a> apply.
-                            </div>
-                            <div class="clearfix custommer_account_action">
-                                <div class="action_bottom">
-                                    <button class="btn button dark" type="submit">Đăng ký</button>	
-                                </div>						
-                            </div>
-                            <div class="clearfix req_pass text-center">
-                                <a class="come-back" href="index.html"><i class="fa fa-long-arrow-left"></i> Quay lại trang chủ</a>
-                            </div>
-                        </form>
+                        </div>			
                     </div>
                 </div>
             </div>
