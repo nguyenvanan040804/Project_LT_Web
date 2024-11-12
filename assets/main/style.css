@@ -214,6 +214,10 @@ nav .fly-item {
     margin-bottom: -2.15em;
 }
 
+.products .collapse .has-child .mini-text {
+    margin: 1em;
+}
+
 .dpt-cat .dpt-head .mini-text {
     color: var(--light-bg-color);
 }
@@ -747,6 +751,11 @@ form.search button:hover {
     object-fit: contain;
 }
 
+.products.sub .content h3 {
+    display: flex;
+    justify-content: center;
+}
+
 .products.main .footer {
     position: absolute;
     top: 200px;
@@ -1166,7 +1175,7 @@ form.search button:hover {
     z-index: 1;
 }
 
-.products .variant input {
+:where(.products .variant, .filter-block:not(.pricing)) input {
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
     position: absolute;
@@ -1479,6 +1488,24 @@ form label {
     margin-top: auto;
 }
 
+/* 10. PAGE CATEGORY */
+.single-category .holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.single-category  .sidebar,
+.single-category .section {
+    flex: 1 0 100%;
+}
+
+
+
+
+
+
+
+
 /* RESPONSIVE */
 
 @media screen and (min-width: 481px) {
@@ -1743,6 +1770,30 @@ form label {
     }
     .products.one .flexwrap > .row:last-child > .item {
         padding-left: 2em;
+    }
+
+    /* Page Category */
+    .single-category .holder {
+        flex-direction: row;
+    }
+    .single-category .sidebar {
+        flex: 1 0 25%;
+    }
+    .single-category .section {
+        flex: 1 0 75%;
+    }
+    .single-category .sidebar .filter {
+        padding: 0 1.5em 0 0;
+        position: sticky;
+        top: 2em;
+        box-shadow: none;
+        width: var(--percent100);
+        z-index: initial;
+        visibility: visible;
+        opacity: 1;
+    }
+    .single-category .products.main .item {
+        flex: 0 0 33.3333%;
     }
 
 }
