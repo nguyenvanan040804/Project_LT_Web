@@ -1949,6 +1949,71 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 0.75em;
 }
 
+/*  13. PAGE CHECKOUT */
+.checkout {
+    margin: 5em 0;
+}
+
+.checkout .left {
+    padding: 4em;
+    background-color: var(--light-bg-color);
+    box-shadow: 0 15px 70px -8px rgb(0 0 0 / 20%);
+}
+
+.checkout .item {
+    width: var(--percent100);
+}
+
+.checkout .left h1 {
+    font-weight: var(--fw3);
+    margin-bottom: 1.5em;
+}
+
+.checkout .left label {
+    font-size: var(--font-small);
+    text-transform: capitalize;
+    position: relative;
+    width: fit-content;
+}
+
+.checkout .left label span {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: var(--percent50);
+}
+
+.checkout p :where(input, textarea) {
+    background-color: rgb(255, 255, 255 / 50%);
+    font-family: inherit;
+}
+
+.checkout p input:focus {
+    background-color: var(--white-color);
+}
+
+.checkout p.checkset {
+    margin-top: 0.75em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkout p.checkset label {
+    margin: 0 0 0 1em;
+    cursor: pointer;
+}
+
+.checkout h2 {
+    padding-top: 0.5em;
+    margin-bottom: 0.75em;
+    border-top: 1px solid var(--border-color);
+}
+
+
 
 
 
