@@ -530,7 +530,91 @@
                                             </table>
                                         </div>
                                     </form>
-
+                                    <div class="cart-summary styled">
+                                        <div class="item">
+                                            <div class="coupon">
+                                                <input type="text" placeholder="Mã giảm giá">
+                                                <button>Áp dụng</button>
+                                            </div>
+                                            <div class="shipping-rate collapse">
+                                                <div class="has-child expand">
+                                                    <a href="#" class="icon-small">Phí vận chuyển và thuế</a>
+                                                    <div class="content">
+                                                        <div class="countries">
+                                                            <form action="">
+                                                                <label for="country">Quốc gia</label>
+                                                                <select name="country" id="country">
+                                                                    <option value=""></option>
+                                                                    <option value="1">Lào</option>
+                                                                    <option value="2">Campuchia</option>
+                                                                    <option value="3">Thái Lan</option>
+                                                                    <option value="4" selected="selected">Việt Nam</option>
+                                                                    <option value="5">Khác</option>
+                                                                </select>
+                                                            </form>
+                                                        </div>
+                                                        <div class="states">
+                                                            <form action="">
+                                                                <label for="state">Tỉnh/Thành Phố</label>
+                                                                <select name="state" id="state">
+                                                                    <option value="">Chọn tỉnh hoặc thành phố</option>
+                                                                    <option value="1">TP. Hồ Chí Minh</option>
+                                                                    <option value="2">Cần Thơ</option>
+                                                                    <option value="3">Đà Nẵng</option>
+                                                                    <option value="4">Hà Nội</option>
+                                                                    <option value="5">Hải Phòng</option>
+                                                                    <option value="6">Khác</option>
+                                                                </select>
+                                                            </form>
+                                                        </div>
+                                                        <div class="postal-code">
+                                                            <form action="">
+                                                                <label for="postal">Mã Zip/Bưu chính</label>
+                                                                <input type="number" name="postal" id="postal">
+                                                            </form>
+                                                        </div>
+                                                        <div class="rate-options variant">
+                                                            <form action="">
+                                                                <p>
+                                                                    <span>Mặc định: 100.000đ</span>
+                                                                    <input type="radio" name="rate-option" id="flat" checked>
+                                                                    <label for="flat" class="circle"></label>
+                                                                </p>
+                                                                <p>
+                                                                    <span>Tốt nhất: 300.000đ</span>
+                                                                    <input type="radio" name="rate-option" id="best">
+                                                                    <label for="best" class="circle"></label>
+                                                                </p>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cart-total">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Tổng</th>
+                                                            <td>26.950.000đ</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Giảm giá</th>
+                                                            <td>-500.000đ</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Phí giao hàng <span class="mini-text">(Mặc định)</span></th>
+                                                            <td>100.000đ</td>
+                                                        </tr>
+                                                        <tr class="grand-total">
+                                                            <th>Tổng cộng</th>
+                                                            <td><strong>26.550.000đ</strong></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <a href="/checkout" class="secondary-button">Thanh toán</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                     </div>
