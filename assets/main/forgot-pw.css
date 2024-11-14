@@ -1,0 +1,118 @@
+
+main .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+.box-forgot-pw {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.header-page h1 {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 10px;
+    color: #444;
+    text-align: center;
+}
+.header-page .br {
+    width: 50px;
+    height: 3px;
+    background-color: #ddd;
+    margin: 10px auto;
+}
+.accounttype h2 {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+    text-align: center;
+}
+.errors {
+    margin: 10px 0;
+    padding: 10px;
+    color: #d9534f;
+    background-color: #f9d6d5;
+    border: 1px solid #e0b4b4;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.errors ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.large_form {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.large_form label.icon-field {
+    position: absolute;
+    left: 10px;
+    color: #888;
+}
+.large_form input[type="email"] {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+.large_form input[type="email"]::placeholder {
+    color: #aaa;
+}
+.sitebox-recaptcha {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+.sitebox-recaptcha a {
+    color: #007bff;
+    text-decoration: none;
+}
+.sitebox-recaptcha a:hover {
+    text-decoration: underline;
+}
+.action_bottom .btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.action_bottom .btn:hover {
+    background-color: #0056b3;
+}
+.req_pass {
+    margin-top: 10px;
+    text-align: center;
+}
+.req_pass a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+}
+.req_pass a:hover {
+    color: #555;
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .large_form label.icon-field {
+        left: 5px;
+    }
+}
