@@ -1950,6 +1950,7 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 0.75em;
 }
 
+
 /*  13. PAGE CHECKOUT */
 .checkout {
     margin: 5em 0;
@@ -2147,6 +2148,12 @@ input[type="range"]::-webkit-slider-thumb {
     transition: var(--font-small);
 }
 
+#products-add{
+    display: none;
+}
+#btn-hidden a:focus + #products-add{
+    display: block;
+}
 
 /* RESPONSIVE */
 
