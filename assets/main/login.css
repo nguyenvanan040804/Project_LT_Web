@@ -1,117 +1,134 @@
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f7f7f7;
+body {
     font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
 }
 
-main .container {
-    max-width: 600px;
+.container-login {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
     padding: 20px;
-}
-
-.box-login {
-    background-color: #ffffff;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
 }
 
-.site_account_header {
+.header-acc {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.txt-title {
-    font-size: 1.5em;
+.text-title {
+    font-size: 24px;
     font-weight: bold;
     color: #333;
 }
 
-.txt-small {
-    font-size: 0.9em;
-    color: #666;
-}
-
-.form__input-wrapper {
-    position: relative;
+.content {
     margin-bottom: 20px;
 }
 
-.form__input-wrapper .label.icon-field {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    font-size: 1.2em;
-    color: #888;
-    transition: opacity 0.3s;
+.form {
+    margin-bottom: 15px;
 }
 
-input[type="email"],
-input[type="password"] {
+.form-input {
     width: 100%;
-    padding: 12px 12px 12px 40px; 
-    border: 1px solid #ddd;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #ededed;
-    font-size: 1em;
-    color: #333;
-    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 16px;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
-    outline: none;
-    background-color: #fff;
+.px6VFi {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-input[type="email"]:focus + .label,
-input[type="email"]:not(:placeholder-shown) + .label,
-input[type="password"]:focus + .label,
-input[type="password"]:not(:placeholder-shown) + .label {
-    opacity: 0;
-}
-
-.form__submit {
+.btn-login {
     width: 100%;
-    padding: 12px;
-    font-size: 1em;
-    background-color: #007bff;
+    padding: 10px;
+    background-color: #ff5722;
     color: #fff;
     border: none;
     border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.form__submit:hover {
-    background-color: #0056b3;
+.btn-login:hover {
+    background-color: #e64a19;
 }
 
-.site_account_secondary-action {
-    text-align: center;
-    margin-top: 20px;
+.br {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
 }
-.site_account_secondary-action p{
-    margin-top: 5px;
+
+.border-1px {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
 }
-.site_account_secondary-action .link {
-    color: #007bff;
+
+.text-normal {
+    margin: 0 10px;
+    color: #666;
+}
+
+.btn-fb-gg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-fb, .btn-gg {
+    width: 48%;
+    padding: 10px;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn-fb:hover {
+    background-color: #2d4373;
+}
+
+.btn-gg {
+    background-color: #db4437;
+}
+
+.btn-gg:hover {
+    background-color: #c23321;
+}
+
+.form-link {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.link {
+    color: #ff5722;
     text-decoration: none;
 }
 
-.site_account_secondary-action .link:hover {
+.link:hover {
     text-decoration: underline;
 }
 
-.sitebox-recaptcha {
-    font-size: 0.75em;
-    color: #666;
-    margin-top: 20px;
+.text-acc-register {
     text-align: center;
+    margin-top: 20px;
+}
+.form-input:hover{
+    border: 1px solid #ff5722;
 }
