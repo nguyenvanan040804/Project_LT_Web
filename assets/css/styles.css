@@ -1,0 +1,4 @@
+.products :where(.image, .thumbnail) img {
+    transition: transform .3s;
+    width: 200px;
+}
