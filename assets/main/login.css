@@ -42,10 +42,16 @@ body {
     font-size: 16px;
 }
 
-.px6VFi {
+.display-pw {
     background: none;
     border: none;
+    position: relative;
     cursor: pointer;
+    float: right;
+    top: -30px;
+}
+.display-pw i{
+    color: #666;
 }
 
 .btn-login {
@@ -96,6 +102,7 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
+    padding-left: 40px;
 }
 
 .btn-fb:hover {
