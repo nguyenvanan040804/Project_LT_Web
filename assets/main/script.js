@@ -133,26 +133,6 @@ document.querySelector('.modalclose').addEventListener('click', function() {
     document.querySelector('.site').classList.remove('showmodal')
 })
 
-document.addEventListener('DOMContentLoaded', function () {
-    const button = document.getElementById('btn-hidden');
-    const content = document.getElementById('coblue');
-
-        button.addEventListener('click', function (e) {
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                button.textContent = 'Ẩn bớt';
-             
-            } else {
-                content.style.display = 'block';
-                button.textContent = 'hien thi them';
-            }
-        });
-        document.addEventListener('click', function(event){
-            if(event.target != button && !button.contains(event.target)){
-                content.style.display = 'none';
-            }
-        });
-    });
 
 
   

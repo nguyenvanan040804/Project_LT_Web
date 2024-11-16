@@ -2150,11 +2150,17 @@ input[type="range"]::-webkit-slider-thumb {
 
 #products-add{
     display: none;
+    flex-direction: row;
 }
-#btn-hidden a:focus + #products-add{
-    display: block;
+#btn-hidden:focus + #products-add{
+    display: flex;
 }
-
+#products-add .item{
+    flex: 0 0 100%;
+    padding: 0 0.938em;
+    padding-bottom: 0.5em;
+    width: 33.3333%;
+}
 /* RESPONSIVE */
 
 @media screen and (min-width: 481px) {

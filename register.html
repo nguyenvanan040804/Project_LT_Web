@@ -339,54 +339,62 @@
         </header>
         <!-- header -->
 
-        <main class="wrapperMain_content">	
-            <div class="container">
-                <div class="box-register">
-                    <div class="content">
-                        <h3>Tạo Tài Khoản</h3>
-                        <div class="br"></div>
-                        <form action="">
-                            <div id="field-lastname" class="clearfix large_form">
-                                <label for="last_name" class="label icon-field"><i class="icon-login icon-user "></i></label>
-                                <input required="" type="text" value="" name="customer[last_name]" placeholder="Họ" id="last_name" class="text" size="30">
-                            </div>
-                            <div id="field-firstname" class="clearfix large_form">
-                                <label for="first_name" class="label icon-field"><i class="icon-login icon-user "></i></label>
-                                <input required="" type="text" value="" name="customer[first_name]" placeholder="Tên" id="first_name" class="text" size="30">
-                            </div>
-                            <div id="field-gender" class="clearfix large_form">
-                                <input id="radio1" type="radio" value="0" name="customer[gender]"> 
-                                <label for="radio1">Nữ</label>
-                                <input id="radio2" type="radio" value="1" name="customer[gender]"> 
-                                <label for="radio2">Nam</label>
-                            </div>
-                            <div id="field-birthday" class="clearfix large_form">
-                                <label for="birthday" class="label icon-field"><i class="icon-login icon-envelope "></i></label>
-                                <input type="text" value="" placeholder="mm/dd/yyyy" name="customer[birthday]" id="birthday" class="text" size="30">
-                            </div>
-                            <div id="field-email" class="clearfix large_form">
-                                <label for="email" class="label icon-field"><i class="icon-login icon-envelope "></i></label>
-                                <input required="" type="email" value="" placeholder="Email" name="customer[email]" id="email" class="text" size="30">
-                            </div>
-                            <div id="field-password" class="clearfix large_form large_form-mrb">
-                                <label for="password" class="label icon-field"><i class="icon-login icon-shield "></i></label>
-                                <input required="" type="password" value="" placeholder="Mật khẩu" name="customer[password]" id="password" class="password text" size="30">
-                            </div>
-                            <div class="clearfix large_form sitebox-recaptcha ">
-                                This site is protected by reCAPTCHA and the Google
-                                <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> 
-                                and <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a> apply.
-                            </div>
-                            <div class="clearfix custommer_account_action">
-                                <div class="action_bottom">
-                                    <button class="btn button dark" type="submit">Đăng ký</button>	
-                                </div>						
-                            </div>
-                            <div class="clearfix req_pass text-center">
-                                <a class="come-back" href="index.html"><i class="fa fa-long-arrow-left"></i> Quay lại trang chủ</a>
-                            </div>
-                        </form>
+        <main>	
+            <div class="container-register">
+                <div class="header">
+                    <div class="header-acc row1">
+                        <div class="text-title">Đăng ký</div>
                     </div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <form>
+                        <div class="row2">
+                            <div class="form-user">
+                                <input class="form-input" type="text" name="user" placeholder="Họ và Tên">
+                            </div>
+                            <div class="form-phone">
+                                <input class="form-input" type="text" placeholder="Số điện thoại" autocomplete="tel" name="phone" aria-invalid="false" value="">
+                            </div>
+                            <div class="form-user-login">
+                                <input class="form-input" type="text" name="user" placeholder="Tên Đăng Nhập">
+                            </div>
+                            <div class="form-pw">
+                                <input class="form-input" type="password" name="pw" placeholder="Mật Khẩu">
+                            </div>
+                        </div>
+                        <button class="btn-next" disabled="">Đăng Ký</button>
+                    </form>
+                    <div>
+                        <div class="br">
+                            <div class="border-1px"></div>
+                            <span class="text-normal">hoặc</span>
+                            <div class="border-1px"></div>
+                        </div>
+                        <div class="register-fb-gg">
+                            <button class="btn-fb">
+                                <div class="icon-fb">
+                                    <div class="QtJO69 social-white-background social-white-fb-blue-png"></div>
+                                </div>
+                                <div class="">Facebook</div>
+                            </button>
+                            <button class="btn-gg">
+                                <div class="icon-gg">
+                                    <div class="QtJO69 social-white-background social-white-google-png"></div>
+                                </div>
+                                <div class="">Google</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-note">
+                        <div class="text-normal">Bằng việc đăng kí, bạn đã đồng ý với Shopee về 
+                            <a href="" class="text-col" target="_blank" rel="noopener noreferrer">Điều khoản dịch vụ</a> &amp; 
+                            <a href="" class="text-col" target="_blank" rel="noopener noreferrer">Chính sách bảo mật</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-acc-login">
+                    <div class="text-normal">Bạn đã có tài khoản? <a class="link" href="login.html">Đăng nhập</a></div>
                 </div>
             </div>
         </main>

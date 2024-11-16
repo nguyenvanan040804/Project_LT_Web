@@ -1036,7 +1036,7 @@
                                         </div>
                                     </div>
                                     <div id="btn-hidden" class="load-more flexcenter">
-                                        <a href="#" id="btn" class="secondary-button">Hiển thị thêm</a>
+                                        <a href="#" class="secondary-button">Hiển thị thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -1257,7 +1257,7 @@
 
     </div>
     <script src="./assets/main/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script>
         const FtoShow = '.filter';
@@ -1281,10 +1281,21 @@
         })
 
 
-        document.getElementById('btn-hidden').addEventListener('click', function() {
-            const coblue = document.getElementById('products-add');
-            coblue.style.display = coblue.style.display === 'none' ? 'block' : 'none';
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnHidden = document.getElementById('btn-hidden');
+            const productsAdd = document.getElementById('products-add');
+
+            if (!btnHidden || !productsAdd) {
+                console.error('Required elements not found in the DOM!');
+                return;
+            }
+
+            btnHidden.addEventListener('click', function () {
+                productsAdd.classList.toggle('item'); 
+                productsAdd.style.display = productsAdd.style.display === 'none' || productsAdd.style.display === '' ? 'block' : 'none';
+            });
         });
+
 
     </script>
 </body>
