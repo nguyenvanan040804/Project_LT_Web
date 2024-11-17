@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container-login {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header-acc {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.form {
+    margin-bottom: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.display-pw {
+    background: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    top: -30px;
+}
+.display-pw i{
+    color: #666;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #e64a19;
+}
+
+.br {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.border-1px {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.text-normal {
+    margin: 0 10px;
+    color: #666;
+}
+
+.btn-fb-gg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-fb, .btn-gg {
+    width: 48%;
+    padding: 10px;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.btn-fb:hover {
+    background-color: #2d4373;
+}
+
+.btn-gg {
+    background-color: #db4437;
+}
+
+.btn-gg:hover {
+    background-color: #c23321;
+}
+
+.form-link {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.link {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.text-acc-register {
+    text-align: center;
+    margin-top: 20px;
+}
+.form-input:hover{
+    border: 1px solid #ff5722;
+}

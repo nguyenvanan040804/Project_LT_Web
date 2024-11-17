@@ -1950,6 +1950,7 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 0.75em;
 }
 
+
 /*  13. PAGE CHECKOUT */
 .checkout {
     margin: 5em 0;
@@ -2147,7 +2148,19 @@ input[type="range"]::-webkit-slider-thumb {
     transition: var(--font-small);
 }
 
-
+#products-add{
+    display: none;
+    flex-direction: row;
+}
+#btn-hidden:focus + #products-add{
+    display: flex;
+}
+#products-add .item{
+    flex: 0 0 100%;
+    padding: 0 0.938em;
+    padding-bottom: 0.5em;
+    width: 33.3333%;
+}
 /* RESPONSIVE */
 
 @media screen and (min-width: 481px) {
