@@ -24,3 +24,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+
+
+   // Lấy các phần tử cần thiết
+ const priceFilter = document.getElementById('priceFilter');
+ const products = document.querySelectorAll('.product');
+
+ // Xử lý sự kiện thay đổi trên bộ lọc
+ priceFilter.addEventListener('change', () => {
+     const filterValue = priceFilter.value;
+
+     products.forEach(product => {
+         const price = parseInt(product.dataset.price);
+
+         // Hiển thị/Ẩn sản phẩm dựa vào giá
+         if (
+             (filterValue === 'low' && price < 1000000) ||
+             (filterValue === 'medium' && price >= 1000000 && price <= 5000000) ||
+             (filterValue === 'high' && price > 5000000) ||
+             filterValue === 'all'
+         ) {
+             product.classList.remove('hidden');
+         } else {
+             product.classList.add('hidden');
+         }
+     });
+ });

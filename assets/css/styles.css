@@ -90,3 +90,24 @@
         width: 900px;
       
     }
+    .content-accessory{
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+    .content-accessory .item-category{
+      height: 50px;
+    }
+    .content-accessory .item-category .item{
+      display: flex;
+      
+      
+    }
+    .content-accessory .item-category .item li{
+      margin-left: 10px;
+      font-size: 13px;
+    }
+    .content-accessory .item-category h1{
+      margin-bottom: 10px;
+    }
