@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/page-user.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Menu bên trái -->
+        <div class="sidebar">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/80" alt="User Avatar" class="avatar">
+                <h3>Nguyễn Văn A</h3>
+                <p>email@example.com</p>
+            </div>
+            <ul>
+                <li class="menu-item active" data-target="userInfo">Thông tin người dùng</li>
+                <li class="menu-item" data-target="hobbies">Sở thích</li>
+                <li class="menu-item" data-target="watchlist">Watchlist</li>
+                <li class="menu-item" data-target="settings">Cài đặt</li>
+            </ul>
+        </div>
+
+        <!-- Nội dung bên phải -->
+        <div class="content">
+            <!-- Thông tin người dùng -->
+            <div id="userInfo" class="content-section active">
+                <h2>Thông tin người dùng</h2>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <p><strong>Họ tên:</strong></p>
+                        <p>Nguyễn Văn A</p>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>Email:</strong></p>
+                        <p>email@example.com</p>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>Số điện thoại:</strong></p>
+                        <p>+84 123 456 789</p>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>Địa chỉ:</strong></p>
+                        <p>123 Đường ABC, TP.HCM</p>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>Ngày sinh:</strong></p>
+                        <p>01/01/1990</p>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>Giới tính:</strong></p>
+                        <p>Nam</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sở thích -->
+            <div id="hobbies" class="content-section">
+                <h2>Sở thích</h2>
+                <div class="info-card">
+                    <ul class="hobby-list">
+                        <li> Đọc sách</li>
+                        <li> Chạy bộ</li>
+                        <li> Du lịch</li>
+                        <li> Chơi cờ Caro</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Watchlist -->
+            <div id="watchlist" class="content-section">
+                <h2>Watchlist</h2>
+                <div class="info-card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên phim</th>
+                                <th>Thể loại</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Inception</td>
+                                <td>Khoa học viễn tưởng</td>
+                                <td>Hoàn thành</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Avengers: Endgame</td>
+                                <td>Siêu anh hùng</td>
+                                <td>Chưa xem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Cài đặt -->
+            <div id="settings" class="content-section">
+                <h2>Cài đặt</h2>
+                <div class="info-card">
+                    <form>
+                        <label for="username">Tên người dùng:</label>
+                        <input type="text" id="username" placeholder="Nhập tên mới">
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Nhập email mới">
+
+                        <label for="password">Mật khẩu:</label>
+                        <input type="password" id="password" placeholder="Nhập mật khẩu mới">
+
+                        <button type="submit">Lưu thay đổi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
