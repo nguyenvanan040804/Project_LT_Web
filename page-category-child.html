@@ -399,8 +399,8 @@
                         <div class="right">
                             <div class="search-box">
                                 <form action="" class="search">
-                                    <span class="icon-large"><i class="ri-search-line"></i></span>
-                                    <input type="search" name="" id="" placeholder="Tìm kiếm sản phẩm">
+                                    <span id="iconSearch" class="icon-large"><i class="ri-search-line"></i></span>
+                                    <input type="search" name="search" id="search" placeholder="Tìm kiếm sản phẩm">
                                     <button type="submit">Tìm kiếm</button>
                                 </form>
                             </div>
@@ -705,7 +705,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="products main flexwrap">
+                                    <div id="productList" class="products main flexwrap">
                                         <!-- products category structure -->
                                         <div class="item">
                                             <div class="media">
@@ -1237,6 +1237,29 @@
                 Fpopup.classList.remove('show')
             }
         })
+
+        // chuc nang tim kiem trong trang demo page-category-child
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("search");
+            const btnSearch = document.getElementById("iconSearch");
+            const productList = document.getElementById("productList");
+            const productItems = productList.getElementsByClassName("item");
+
+            btnSearch.addEventListener("click", () => {
+                const query = searchInput.value.trim().toLowerCase();
+
+                Array.from(productItems).forEach(item => {
+                    const productName = item.querySelector(".main-links a").textContent.toLowerCase();
+                    const matches = productName.includes(query);
+
+                    if (matches) {
+                        item.style.display = ""; // Show matching items
+                    } else {
+                        item.style.display = "none"; // Hide non-matching items
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
