@@ -399,9 +399,9 @@
                         <div class="right">
                             <div class="search-box">
                                 <form action="" class="search">
-                                    <span class="icon-large"><i class="ri-search-line"></i></span>
+                                    <span id="iconSearch" class="icon-large"><i class="ri-search-line"></i></span>
                                     <input type="search" name="search" id="search" placeholder="Tìm kiếm sản phẩm">
-                                    <button id="btnSearch" type="submit">Tìm kiếm</button>
+                                    <button type="submit">Tìm kiếm</button>
                                 </form>
                             </div>
                         </div>
@@ -707,7 +707,7 @@
                                     </div>
                                     <div id="productList" class="products main flexwrap">
                                         <!-- products category structure -->
-                                        <div class="item" data-name="JsXiong">
+                                        <div class="item">
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
                                                     <a href="#">
@@ -744,7 +744,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item" data-name="Xaming">
+                                        <div class="item">
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
                                                     <a href="#">
@@ -779,7 +779,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item" data-name="Hector">
+                                        <div class="item">
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
                                                     <a href="#">
@@ -814,7 +814,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item" data-name="Shukyo">
+                                        <div class="item">
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
                                                     <a href="#">
@@ -849,7 +849,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item" data-name="Shukyo">
+                                        <div class="item">
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
                                                     <a href="#">
@@ -885,7 +885,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item" data-name="JsXiong">
+                                        <div class="item">
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
                                                     <a href="#">
@@ -920,7 +920,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item" data-name="Melody">
+                                        <div class="item">
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
                                                     <a href="#">
@@ -955,7 +955,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item" data-name="Xaming">
+                                        <div class="item">
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
                                                     <a href="#">
@@ -1238,14 +1238,14 @@
             }
         })
 
-
-        // chuc nang tim kiem san pham
+        // chuc nang tim kiem trong trang demo page-category-child
         document.addEventListener("DOMContentLoaded", () => {
             const searchInput = document.getElementById("search");
+            const btnSearch = document.getElementById("iconSearch");
             const productList = document.getElementById("productList");
             const productItems = productList.getElementsByClassName("item");
 
-            searchInput.addEventListener("input", () => {
+            btnSearch.addEventListener("click", () => {
                 const query = searchInput.value.trim().toLowerCase();
 
                 Array.from(productItems).forEach(item => {
@@ -1253,14 +1253,13 @@
                     const matches = productName.includes(query);
 
                     if (matches) {
-                        item.style.display = ""; // hien thi san pham
+                        item.style.display = ""; // Show matching items
                     } else {
-                        item.style.display = "none"; // an san pham
+                        item.style.display = "none"; // Hide non-matching items
                     }
                 });
             });
         });
-
     </script>
 </body>
 </html>
