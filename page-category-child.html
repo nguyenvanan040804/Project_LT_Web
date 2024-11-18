@@ -685,27 +685,10 @@
                                                         <li>Hãng</li>
                                                     </ul>
                                                 </div>
-                                                <div class="item-perpage mobile-hide">
-                                                    <div class="label">8 xe trên trang</div>
-                                                    <div class="desktop-hide">8</div>
-                                                </div>
-                                                <div class="item-options">
-                                                    <div class="label">
-                                                        <span class="mobile-hide">Hiển thị 8 xe</span>
-                                                        <div class="desktop-hide">8</div>
-                                                        <i class="ri-arrow-down-s-line"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li>8</li>
-                                                        <li>16</li>
-                                                        <li>24</li>
-                                                        <li>ALL</li>
-                                                    </ul>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="products main flexwrap">
+                                    <div id="product-container" class="products main flexwrap">
                                         <!-- products category structure -->
                                         <div class="item">
                                             <div class="media">
@@ -993,8 +976,14 @@
                                         </div>
                                     </div>
                                     <div class="load-more flexcenter">
-                                        <a href="#" class="secondary-button">Hiển thị thêm</a>
+                                        <a href="#" class="secondary-button load-button">Hiển thị thêm</a>
+                                        <div class="pagination-buttons">
+                                            <button class="pagination-btn" data-page="1">1</button>
+                                            <button class="pagination-btn" data-page="2">2</button>
+                                            <button class="pagination-btn" data-page="3">3</button>
+                                        </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -1217,6 +1206,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="./assets/main/script.js"></script>
+    <script src="./assets/main/pagination.js"></script>
     <script>
         const FtoShow = '.filter';
         const Fpopup = document.querySelector(FtoShow);
