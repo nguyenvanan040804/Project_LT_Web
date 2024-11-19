@@ -134,7 +134,27 @@ document.querySelector('.modalclose').addEventListener('click', function() {
 })
 
 
+// chuc nang tim kiem trong trang demo page-category-child
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("search");
+    const productList = document.getElementById("productList");
+    const productItems = productList.getElementsByClassName("item");
 
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+
+        Array.from(productItems).forEach(item => {
+            const productName = item.querySelector(".main-links a").textContent.toLowerCase();
+            const matches = productName.includes(query);
+
+            if (matches) {
+                item.style.display = ""; // Show matching items
+            } else {
+                item.style.display = "none"; // Hide non-matching items
+            }
+        });
+    });
+});
 
 
 

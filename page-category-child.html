@@ -399,8 +399,8 @@
                         <div class="right">
                             <div class="search-box">
                                 <form action="" class="search">
-                                    <span class="icon-large"><i class="ri-search-line"></i></span>
-                                    <input type="search" name="" id="" placeholder="Tìm kiếm sản phẩm">
+                                    <span id="iconSearch" class="icon-large"><i class="ri-search-line"></i></span>
+                                    <input type="search" name="search" id="search" placeholder="Tìm kiếm sản phẩm">
                                     <button type="submit">Tìm kiếm</button>
                                 </form>
                             </div>
@@ -678,17 +678,34 @@
                                                         <div class="desktop-hide">Mặc định</div>
                                                         <i class="ri-arrow-down-s-line"></i>
                                                     </div>
+                                                    <ul id="sortOptions">
+                                                        <li data-sort="default">Mặc định</li>
+                                                        <li data-sort="name">Tên sản phẩm</li>
+                                                        <li data-sort="price">Giá</li>
+                                                        <li data-sort="brand">Hãng</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="item-perpage mobile-hide">
+                                                    <div class="label">8 xe trên trang</div>
+                                                    <div class="desktop-hide">8</div>
+                                                </div>
+                                                <div class="item-options">
+                                                    <div class="label">
+                                                        <span class="mobile-hide">Hiển thị 8 xe</span>
+                                                        <div class="desktop-hide">8</div>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </div>
                                                     <ul>
-                                                        <li>Mặc định</li>
-                                                        <li>Tên sản phẩm</li>
-                                                        <li>Giá</li>
-                                                        <li>Hãng</li>
+                                                        <li>8</li>
+                                                        <li>16</li>
+                                                        <li>24</li>
+                                                        <li>ALL</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="product-container" class="products main flexwrap">
+                                    <div id="productList" class="products main flexwrap">
                                         <!-- products category structure -->
                                         <div class="item">
                                             <div class="media">
@@ -1206,7 +1223,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="./assets/main/script.js"></script>
-    <script src="./assets/main/pagination.js"></script>
+    <script src="./assets/main/chucnang.js"></script>
     <script>
         const FtoShow = '.filter';
         const Fpopup = document.querySelector(FtoShow);
