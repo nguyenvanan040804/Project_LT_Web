@@ -267,7 +267,7 @@ const products = [
   
   // Hàm hiển thị sản phẩm
   function displayProducts(productsToDisplay) {
-    const container = document.getElementById("product-container");
+    const container = document.getElementById("productList");
     container.innerHTML = ''; // Xóa hết sản phẩm cũ
   
     productsToDisplay.forEach(product => {
