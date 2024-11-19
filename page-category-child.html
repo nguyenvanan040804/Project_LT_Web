@@ -678,11 +678,11 @@
                                                         <div class="desktop-hide">Mặc định</div>
                                                         <i class="ri-arrow-down-s-line"></i>
                                                     </div>
-                                                    <ul>
-                                                        <li>Mặc định</li>
-                                                        <li>Tên sản phẩm</li>
-                                                        <li>Giá</li>
-                                                        <li>Hãng</li>
+                                                    <ul id="sortOptions">
+                                                        <li data-sort="default">Mặc định</li>
+                                                        <li data-sort="name">Tên sản phẩm</li>
+                                                        <li data-sort="price">Giá</li>
+                                                        <li data-sort="brand">Hãng</li>
                                                     </ul>
                                                 </div>
                                                 <div class="item-perpage mobile-hide">
@@ -1217,6 +1217,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="./assets/main/script.js"></script>
+    <script src="./assets/main/chucnang.js"></script>
     <script>
         const FtoShow = '.filter';
         const Fpopup = document.querySelector(FtoShow);
@@ -1237,29 +1238,6 @@
                 Fpopup.classList.remove('show')
             }
         })
-
-        // chuc nang tim kiem trong trang demo page-category-child
-        document.addEventListener("DOMContentLoaded", () => {
-            const searchInput = document.getElementById("search");
-            const btnSearch = document.getElementById("iconSearch");
-            const productList = document.getElementById("productList");
-            const productItems = productList.getElementsByClassName("item");
-
-            btnSearch.addEventListener("click", () => {
-                const query = searchInput.value.trim().toLowerCase();
-
-                Array.from(productItems).forEach(item => {
-                    const productName = item.querySelector(".main-links a").textContent.toLowerCase();
-                    const matches = productName.includes(query);
-
-                    if (matches) {
-                        item.style.display = ""; // Show matching items
-                    } else {
-                        item.style.display = "none"; // Hide non-matching items
-                    }
-                });
-            });
-        });
     </script>
 </body>
 </html>
