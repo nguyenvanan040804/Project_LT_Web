@@ -13,9 +13,9 @@
             const matches = productName.includes(query);
 
             if (matches) {
-                item.style.display = ""; // Show matching items
+                item.style.display = ""; // hien thi san pham
             } else {
-                item.style.display = "none"; // Hide non-matching items
+                item.style.display = "none"; // an san pham
             }
         });
     });
