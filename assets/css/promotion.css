@@ -71,6 +71,7 @@
 .selection .view-all ul li{
     list-style: none;
     font-size: 16px;
+    color: white;
 }
 
 
@@ -96,11 +97,11 @@
   
   .product-sp {
     width: 275px;
-    height: 350px;
+    height: 370px;
     flex-shrink: 0;
     /* text-align: center; */
     padding: 20px;
-    margin: 0 10px 0 10px;
+    margin: 0 17px 0 10px;
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
