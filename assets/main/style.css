@@ -1665,6 +1665,11 @@ input[type="range"]::-webkit-slider-thumb {
     margin: 2em 0 4em;
 }
 
+.load-more.flexcenter {
+    display: flex;
+    position: relative;
+}
+
 .filter {
     position: fixed;
     top: 0;
@@ -1686,6 +1691,34 @@ input[type="range"]::-webkit-slider-thumb {
     opacity: 1;
 }
 
+/* pagination */
+
+.pagination-buttons {
+    display: none;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.pagination-btn {
+    background-color: var(--second-dark-color);
+    color: var(--white-color);
+    font-size: var(--font-small);
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.pagination-btn:hover {
+    background-color: var(--light-text-color);
+    font-weight: var(--fw6);
+    transform: scale(1.1);
+}
+
+
+
 /* 11. CART*/
 .mini-cart {
     position: absolute;
@@ -1697,6 +1730,49 @@ input[type="range"]::-webkit-slider-thumb {
     box-shadow: rgb(0 0 0 / 30%) 0 10px 50px;
     display: none;
     opacity: 0;
+}
+
+.empty-cart {
+    position: absolute;
+    width: 360px;
+    height: 220px;
+    top: 140%;
+    right: 2.5em;
+    background-color: var(--white-color);
+    z-index: 1000;
+    box-shadow: rgb(0 0 0 / 30%) 0 10px 50px;
+    display: none;
+}
+
+.iscart:hover .empty-cart {
+    display: block;
+}
+
+.empty-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-cart img {
+    margin: 1.5em 0;
+    width: 70%;
+}
+
+.empty-cart span {
+    font-size: 1em;
+    font-weight: var(--fw5);
+}
+
+.empty-cart::after {
+    content: "";
+    position: absolute;
+    top: -2em;
+    right: 1.2em;
+    border-width: 1.3em;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent; 
 }
 
 .iscart:hover .mini-cart {
@@ -2161,8 +2237,19 @@ input[type="range"]::-webkit-slider-thumb {
     padding-bottom: 0.5em;
     width: 33.3333%;
 }
+#btnSearch{
+    width: 120px;
+    background-color: blue;
+    padding: 12.5px 20px;
+    float: right;
+    top: -47px;
+    position: relative;
+    border-radius: 0px 5px 5px 0px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
 /* RESPONSIVE */
-
 @media screen and (min-width: 481px) {
     .banner-categories .row {
         flex: 1 0 auto;
