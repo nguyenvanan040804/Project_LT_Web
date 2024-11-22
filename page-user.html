@@ -17,8 +17,7 @@
             </div>
             <ul>
                 <li class="menu-item active" data-target="userInfo">Thông tin người dùng</li>
-                <li class="menu-item" data-target="hobbies">Sở thích</li>
-                <li class="menu-item" data-target="watchlist">Watchlist</li>
+                <li class="menu-item" data-target="producted">Sản phẩm đã mua</li>
                 <li class="menu-item" data-target="settings">Cài đặt</li>
             </ul>
         </div>
@@ -56,49 +55,12 @@
                 </div>
             </div>
 
-            <!-- Sở thích -->
-            <div id="hobbies" class="content-section">
-                <h2>Sở thích</h2>
-                <div class="info-card">
-                    <ul class="hobby-list">
-                        <li> Đọc sách</li>
-                        <li> Chạy bộ</li>
-                        <li> Du lịch</li>
-                        <li> Chơi cờ Caro</li>
-                    </ul>
+            <!-- Sản phẩm đã mua -->
+             <div id="producted" class="content-section">
+                <div class="info-producted">
+                    <p>Bạn chưa đặt mua sản phẩm.</p>
                 </div>
-            </div>
-
-            <!-- Watchlist -->
-            <div id="watchlist" class="content-section">
-                <h2>Watchlist</h2>
-                <div class="info-card">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>STT</th>
-                                <th>Tên phim</th>
-                                <th>Thể loại</th>
-                                <th>Trạng thái</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Inception</td>
-                                <td>Khoa học viễn tưởng</td>
-                                <td>Hoàn thành</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Avengers: Endgame</td>
-                                <td>Siêu anh hùng</td>
-                                <td>Chưa xem</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+             </div>
 
             <!-- Cài đặt -->
             <div id="settings" class="content-section">
@@ -111,8 +73,23 @@
                         <label for="email">Email:</label>
                         <input type="email" id="email" placeholder="Nhập email mới">
 
-                        <label for="password">Mật khẩu:</label>
-                        <input type="password" id="password" placeholder="Nhập mật khẩu mới">
+                        <label for="password">Số Điện Thoại:</label>
+                        <input type="tell" id="phone" placeholder="Nhập số điện thoại mới">
+
+                        <label for="password">Địa Chỉ:</label>
+                        <input type="text" id="address" placeholder="Nhập địa chỉ mới">
+
+                        <label for="password">Ngày Sinh:</label>
+                        <input type="date" id="date">
+
+                        <label for="password">Giới Tính:</label>
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Nam</label>
+            
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Nữ</label>
+                        </div>
 
                         <button type="submit">Lưu thay đổi</button>
                     </form>
