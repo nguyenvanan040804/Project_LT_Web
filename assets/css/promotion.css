@@ -1,3 +1,6 @@
+.container{
+   
+}
 .container-category{
     width: 1200px;
     margin-left: auto;
@@ -94,6 +97,12 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
   }
+  .slider-wrapper1 {
+    padding-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
   
   .product-sp {
     width: 275px;
@@ -108,12 +117,12 @@
     font-size: 14px;
   }
   
-  .dots {
+  .dots, .dots1 {
     text-align: center;
     margin-top: 10px;
   }
   
-  .dot {
+  .dot, .dot1 {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -126,6 +135,13 @@
   .dot.active {
     background-color: #333;
   }
+  .dot1.active {
+    background-color: #333;
+  }
+  /* ---------- dot 1 */
+  
+  
+
 
   .product-sp {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
