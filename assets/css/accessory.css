@@ -7,14 +7,14 @@
   
   .content-accessory .item-category .item{
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   }
   .content-accessory .item-category .item li{
     margin-left: 10px;
     font-size: 13px;
   }
   .content-accessory .item-category h1{
-   margin-bottom: 10px;
+   margin-bottom: 50px;
   }
   .criteria{
     width: 230px;

@@ -93,7 +93,7 @@
   .content-section {
     display: none;
   }
-  
+
   .content-section.active {
     display: block;
   }
@@ -127,51 +127,13 @@
   .info-box p:last-child {
     color: #555;
   }
-  
-  /* Sở thích */
-  .hobby-list {
-    padding-left: 20px;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-  }
-  
-  .hobby-list li {
-    margin-bottom: 10px;
-  }
-  
-  .hobby-list li::before {
-    content: "✔️";
-    margin-right: 10px;
-    color: #007bff;
-    font-size: 18px;
-  }
-  
-  /* Watchlist */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  table th, table td {
+
+  /* Sản phẩm đã mua */
+  .info-producted p{
+    margin: 20px 50px;
     padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
-  }
-  
-  table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  table tr:hover {
-    background-color: #f1f1f1;
+    border: 2px solid #007bff;
+    border-radius: 5px;
   }
   
   /* Cài đặt */
@@ -209,4 +171,5 @@
   form button:hover {
     background-color: #0056b3;
   }
+
   
