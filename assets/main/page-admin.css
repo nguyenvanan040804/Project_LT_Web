@@ -250,18 +250,33 @@ main {
 }
 
 .page-header {
+    display: none;
     padding: 1.3rem 1rem;
     background: #E9edf2;
     border-bottom: 1px solid #dee2e8;
 }
 
-.page-header h1, .page-header small {
-    color: #74767d;
-}
-
 .page-content {
+    display: none;
     padding: 1.3rem 1rem;
     background: #f1f4f9;
+}
+
+.page-header-customer {
+    /* display: none; */
+    padding: 1.3rem 1rem;
+    background: #E9edf2;
+    border-bottom: 1px solid #dee2e8;
+}
+
+.page-content-customer {
+    /* display: none; */
+    padding: 1.3rem 1rem;
+    background: #f1f4f9;
+}
+
+.page-header h1, .page-header small {
+    color: #74767d;
 }
 
 .analytics {
@@ -270,6 +285,16 @@ main {
     grid-gap: 2rem;
     margin-top: .5rem;
     margin-bottom: 2rem;
+}
+
+.analytics-customer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    grid-auto-flow: dense;
+    justify-content: end;
 }
 
 .card {
@@ -292,7 +317,7 @@ main {
 }
 
 .card-head span {
-    font-size: 3.2rem;
+    font-size: 2rem;
     color: var(--text-grey);
 }
 
