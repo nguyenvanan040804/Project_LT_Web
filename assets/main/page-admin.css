@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root {
     --main-color: #22BAA0;
@@ -250,32 +251,42 @@ main {
 }
 
 .page-header {
-    display: none;
     padding: 1.3rem 1rem;
     background: #E9edf2;
     border-bottom: 1px solid #dee2e8;
 }
 
 .page-content {
-    display: none;
     padding: 1.3rem 1rem;
     background: #f1f4f9;
 }
 
 .page-header-customer {
-    /* display: none; */
     padding: 1.3rem 1rem;
     background: #E9edf2;
     border-bottom: 1px solid #dee2e8;
 }
 
 .page-content-customer {
-    /* display: none; */
     padding: 1.3rem 1rem;
     background: #f1f4f9;
 }
 
+.page-content-product {
+    padding: 1.3rem 1rem;
+    background: #f1f4f9;
+}
+
+.page-header-customer, 
+.page-content-customer {
+    display: none;
+}
+
 .page-header h1, .page-header small {
+    color: #74767d;
+}
+
+.page-headerh1, .page-header-customer small {
     color: #74767d;
 }
 
@@ -439,8 +450,11 @@ table thead th:first-child {
 }
 
 table tbody td {
-    padding: 1rem 0rem;
     color: #444;
+}
+
+table tbody td .btn{
+    font-size: 1em;
 }
 
 table tbody td:first-child {
@@ -452,6 +466,7 @@ table tbody td:first-child {
 
 table tbody tr {
     border-bottom: 1px solid #dee2e8;
+    height: 5em;
 }
 
 .client {
@@ -490,6 +505,123 @@ table tbody tr {
     padding: .5rem 1rem;
     border-radius: 20px;
     font-size: .8rem;
+}
+
+:root {
+    --green: #27ae60;
+    --black: #333;
+    --white: #fff;
+    --bg-color: #eee;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --border: .1rem solid var(--black);
+ }
+ 
+ .wrapper {
+    display: none;
+    max-width: 100%;
+    /* padding: 0.5em; */
+    margin: 0 auto;
+ }
+ 
+ .product-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .product-form-wrapper form {
+    max-width: 30rem;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 0.5em;
+    background: var(--bg-color);
+ }
+ 
+ .product-form-wrapper form h3 {
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+    font-size: 1.25em;
+ }
+
+ .product-form-wrapper form .btn {
+    font-size: 1em;
+    border: none;
+ }
+ 
+ .input-field {
+    width: 100%;
+    border-radius: 0.25em;
+    padding: 0.3em 0.5em;
+    font-size: 1em;
+    margin: 0.5em 0;
+    background: var(--white);
+    text-transform: none;
+ }
+ 
+ .btn {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0.3em 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+ }
+ 
+ .primary-btn {
+    background: var(--green);
+ }
+ 
+ .primary-btn:hover {
+    background: var(--black);
+ }
+ 
+ .secondary-btn {
+    background: #3498db;
+ }
+ 
+ .secondary-btn:hover {
+    background: #2980b9;
+ }
+ 
+ .danger-btn {
+    background: crimson;
+ }
+ 
+ .danger-btn:hover {
+    background: var(--black);
+ }
+ 
+ .product-list {
+    margin: 0.5em 0;
+ }
+ 
+ .product-table {
+    width: 100%;
+ }
+
+ .product-table td li {
+    font-size: 0.75em;
+    list-style-type: circle;
+ }
+
+ 
+ .product-table thead {
+    background: var(--bg-color);
+ }
+ 
+ .product-table th,
+ .product-table td {
+    /* padding: 0.25em; */
+    font-size: 1em;
+    border-bottom: var(--border);
+ }
+ 
+.product-table img {
+    width: 5em;
+    height: 4em;
 }
 
 @media only screen and (max-width: 1200px) {

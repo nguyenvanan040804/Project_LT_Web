@@ -6,6 +6,7 @@
     <title>Page Admin</title>
     <link rel="stylesheet" href="assets/main/page-admin.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
    <input type="checkbox" id="menu-toggle">
@@ -23,38 +24,38 @@
 
             <div class="side-menu">
                 <ul>
-                    <li>
-                       <a href="" class="active">
+                    <li class="dashboard">
+                       <a href="#" class="active">
                             <span class="las la-home"></span>
                             <small>Bảng điều khiển</small>
                         </a>
                     </li>
-                    <li>
-                       <a href="">
+                    <li class="customer-info">
+                       <a href="#">
                             <span class="las la-user-alt"></span>
                             <small>Thông tin KH</small>
                         </a>
                     </li>
+                    <li class="add-product">
+                        <a href="#">
+                             <span class="las la-shopping-cart"></span>
+                             <small>Sản phẩm</small>
+                         </a>
+                     </li>
                     <li>
-                       <a href="">
+                       <a href="#">
                             <span class="las la-envelope"></span>
                             <small>Hộp thư</small>
                         </a>
                     </li>
                     <li>
-                       <a href="">
+                       <a href="#">
                             <span class="las la-clipboard-list"></span>
                             <small>Dự án</small>
                         </a>
                     </li>
                     <li>
-                       <a href="">
-                            <span class="las la-shopping-cart"></span>
-                            <small>Đơn hàng</small>
-                        </a>
-                    </li>
-                    <li>
-                       <a href="">
+                       <a href="#">
                             <span class="las la-tasks"></span>
                             <small>Kế hoạch</small>
                         </a>
@@ -772,9 +773,129 @@
                 </div>
             
             </div>
+
+            <!-- Trang thêm sản phẩm -->
+            <div class="wrapper">
+
+                <div class="product-form-wrapper">
+
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <h3>Thêm sản phẩm mới</h3>
+                        <input type="text" placeholder="Nhập tên sản phẩm" name="product_name" class="input-field">
+                        <input type="number" placeholder="Nhập giá" name="product_price" class="input-field">
+                        <textarea placeholder="Nhập mô tả" name="product_des" class="input-field" rows="4" cols="50"></textarea>
+                        <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="input-field">
+                        <input type="submit" class="btn primary-btn" name="add_product" value="Thêm sản phẩm">
+                    </form>
+
+                </div>
+
+                <div class="product-list">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Ảnh sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Giá sản phẩm</th>
+                                <th>Mô tả sản phẩm</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="assets/img/Xe-Dap-Dia-Hinh-Life-Lion-Pro.jpg" height="100" alt="Product 1"></td>
+                                <td>Xe đạp địa hình Life Lion Pro</td>
+                                <td>5.990.000đ</td>
+                                <td>
+                                    <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
+                                    <li>Phù hợp với người cao từ 1m60 trở lên</li>
+                                    <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn secondary-btn"> <i class="fas fa-edit"></i> Sửa </a>
+                                    <a href="#" class="btn danger-btn"> <i class="fas fa-trash"></i> Xóa </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets/img/Xe-Dap-Gap-Califa-CG20-3.jpg" height="100" alt="Product 2"></td>
+                                <td>Xe đạp Gap Califa CG20-3</td>
+                                <td>2.500.000đ</td>
+                                <td>
+                                    <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
+                                    <li>Phù hợp với người cao từ 1m60 trở lên</li>
+                                    <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn secondary-btn"> <i class="fas fa-edit"></i> Sửa </a>
+                                    <a href="#" class="btn danger-btn"> <i class="fas fa-trash"></i> Xóa </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets/img/xe-dap-dia-hinh-giant-atx-720-2021.jpg" height="100" alt="Product 3"></td>
+                                <td>Xe đạp địa hình Giant ATX 720</td>
+                                <td>7.900.000đ</td>
+                                <td>
+                                    <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
+                                    <li>Phù hợp với người cao từ 1m60 trở lên</li>
+                                    <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn secondary-btn"> <i class="fas fa-edit"></i> Sửa </a>
+                                    <a href="#" class="btn danger-btn"> <i class="fas fa-trash"></i> Xóa </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets/img/Xe-Dap-Dia-Hinh-Life-Lion-Pro.jpg" height="100" alt="Product 1"></td>
+                                <td>Xe đạp địa hình Life Lion Pro</td>
+                                <td>5.990.000đ</td>
+                                <td>
+                                    <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
+                                    <li>Phù hợp với người cao từ 1m60 trở lên</li>
+                                    <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn secondary-btn"> <i class="fas fa-edit"></i> Sửa </a>
+                                    <a href="#" class="btn danger-btn"> <i class="fas fa-trash"></i> Xóa </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets/img/Xe-Dap-Gap-Califa-CG20-3.jpg" height="100" alt="Product 2"></td>
+                                <td>Xe đạp Gap Califa CG20-3</td>
+                                <td>2.500.000đ</td>
+                                <td>
+                                    <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
+                                    <li>Phù hợp với người cao từ 1m60 trở lên</li>
+                                    <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn secondary-btn"> <i class="fas fa-edit"></i> Sửa </a>
+                                    <a href="#" class="btn danger-btn"> <i class="fas fa-trash"></i> Xóa </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets/img/xe-dap-dia-hinh-giant-atx-720-2021.jpg" height="100" alt="Product 3"></td>
+                                <td>Xe đạp địa hình Giant ATX 720</td>
+                                <td>7.900.000đ</td>
+                                <td>
+                                    <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
+                                    <li>Phù hợp với người cao từ 1m60 trở lên</li>
+                                    <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn secondary-btn"> <i class="fas fa-edit"></i> Sửa </a>
+                                    <a href="#" class="btn danger-btn"> <i class="fas fa-trash"></i> Xóa </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
             
         </main>
         
     </div>
+    <script src="assets/main/page-admin.js"></script>
 </body>
 </html>
