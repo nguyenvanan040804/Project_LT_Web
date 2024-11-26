@@ -1,6 +1,5 @@
-// Lấy tất cả các input checkbox
+// Lấy tất cả checkbox và section
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-// Lấy các section
 const sections = {
     children: document.getElementById('section-children'),
     sporty: document.getElementById('section-sporty'),
@@ -10,45 +9,66 @@ const sections = {
     school: document.getElementById('section-school'),
 };
 
-// Hàm để hiển thị section tương ứng
+// Hàm hiển thị section dựa trên trạng thái checkbox
 function toggleSection() {
-    // Ẩn tất cả các section
-    Object.values(sections).forEach((section) => {
-        section.style.display = 'none';
-    });
-
-    // Lặp qua tất cả checkbox
-    checkboxes.forEach((checkbox) => {
-        const id = checkbox.id; // Lấy ID của checkbox
-        if (checkbox.checked) {
-            // Hiển thị section tương ứng
-            sections[id].style.display = 'block';
-            checkbox.nextElementSibling.querySelector('span').className = 'children';
+    Object.keys(sections).forEach((key) => {
+        const checkbox = document.getElementById(key);
+        if (checkbox && checkbox.checked) {
+            sections[key].style.display = 'block';
+            const span = checkbox.nextElementSibling?.querySelector('span');
+            if (span) span.className = 'children';
         } else {
-            // Reset class của các checkbox không được chọn
-            checkbox.nextElementSibling.querySelector('span').className = 'checked';
+            sections[key].style.display = 'none';
+            const span = checkbox?.nextElementSibling?.querySelector('span');
+            if (span) span.className = 'checked';
         }
     });
 }
 
-// Gắn sự kiện thay đổi cho từng checkbox
+// Gắn sự kiện thay đổi cho checkbox
 checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('change', (event) => {
-        // Kiểm tra nếu checkbox được chọn
+        // Đảm bảo chỉ một checkbox được chọn
         if (event.target.checked) {
-            // Bỏ chọn tất cả các checkbox khác
             checkboxes.forEach((otherCheckbox) => {
                 if (otherCheckbox !== event.target) {
                     otherCheckbox.checked = false;
-                    otherCheckbox.nextElementSibling.querySelector('span').className = 'checked';
                 }
             });
         }
-        toggleSection(); // Cập nhật lại hiển thị section
+        toggleSection(); // Cập nhật hiển thị
     });
 });
 
-// Xử lý trạng thái mặc định khi trang tải
+// Khi trang tải, kiểm tra trạng thái từ localStorage
 document.addEventListener('DOMContentLoaded', () => {
-    toggleSection();
+    const selectedCategory = localStorage.getItem('selectedCategory');
+    if (selectedCategory && sections[selectedCategory]) {
+        const targetCheckbox = document.getElementById(selectedCategory);
+        if (targetCheckbox) {
+            targetCheckbox.checked = true;
+        }
+    }
+    toggleSection(); // Cập nhật hiển thị ban đầu
+});
+
+// Gắn sự kiện cho các liên kết trong menu danh mục
+// Lấy tất cả các liên kết có data-id
+const categoryLinks = document.querySelectorAll('a[data-id]');
+
+// Lắng nghe sự kiện click trên mỗi liên kết
+categoryLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Ngăn cản hành động mặc định của thẻ a (chuyển hướng)
+
+        // Lấy giá trị của data-id từ thẻ a đã click
+        const categoryId = link.getAttribute('data-id');
+        if (categoryId) {
+            // Lưu danh mục đã chọn vào localStorage
+            localStorage.setItem('selectedCategory', categoryId);
+
+            // Chuyển hướng đến trang danh mục (hoặc làm việc gì đó tùy mục đích)
+            window.location.href = 'page-category.html';
+        }
+    });
 });

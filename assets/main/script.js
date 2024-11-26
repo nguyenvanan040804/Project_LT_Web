@@ -134,6 +134,23 @@ document.querySelector('.modalclose').addEventListener('click', function() {
 })
 
 
+// Xử lý click vào menu chính
+document.querySelectorAll('.dpt-menu a').forEach((link) => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const categoryId = link.getAttribute('data-id');
+
+        if (categoryId) {
+            // Lưu thông tin danh mục vào localStorage
+            localStorage.setItem('selectedCategory', categoryId);
+
+            // Chuyển hướng đến trang danh mục
+            window.location.href = 'page-category.html';
+        }
+    });
+});
+
+
 
 
 
