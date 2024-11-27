@@ -135,7 +135,7 @@ document.querySelector('.modalclose').addEventListener('click', function() {
 
 
 // Xử lý click vào menu chính
-document.querySelectorAll('.dpt-menu a').forEach((link) => {
+document.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
         const categoryId = link.getAttribute('data-id');

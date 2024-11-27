@@ -6,6 +6,7 @@ const sections = {
     terrain: document.getElementById('section-terrain'),
     racing: document.getElementById('section-racing'),
     tour: document.getElementById('section-tour'),
+    elec: document.getElementById('section-elec'),
     school: document.getElementById('section-school'),
 };
 
