@@ -1,191 +1,138 @@
-/* Reset mặc định */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  body .go-back {
-    position: absolute;
-    top: 5px;
-    left: 12px;
-  }
+body {
+  background: #e9efff !important;
+  margin-top: 20px;
+}
 
-  body .go-back a {
-    color: #333;
-    text-decoration: none;
-  }
+.ui-w-80 {
+  width : 80px !important;
+  height: auto;
+}
 
-  body .go-back a:hover {
-    color: #555;
-    text-decoration: underline;
-  }
+.btn-default {
+  border-color: rgba(24, 28, 33, 0.1);
+  background  : rgba(0, 0, 0, 0);
+  color       : #4E5155;
+}
 
-  .container {
-    display: flex;
-    width: 90%;
-    max-width: 1200px;
-    height: 80%;
-    background-color: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 30%;
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .user-profile {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .user-profile .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    border: 3px solid #fff;
-  }
-  
-  .user-profile h3 {
-    margin-bottom: 5px;
-  }
-  
-  .user-profile p {
-    font-size: 14px;
-    color: #cce5ff;
-  }
-  
-  ul {
-    list-style: none;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .menu-item {
-    padding: 15px;
-    margin: 10px 0;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-  }
-  
-  .menu-item.active,
-  .menu-item:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-  
-  /* Nội dung */
-  .content {
-    width: 70%;
-    padding: 20px 40px;
-    overflow-y: auto;
-  }
-  
-  .content-section {
-    display: none;
-  }
+label.btn {
+  margin-bottom: 0;
+}
 
-  .content-section.active {
-    display: block;
-  }
-  
-  .content-section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* Thông tin người dùng */
-  .info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .info-box {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .info-box p:first-child {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  .info-box p:last-child {
-    color: #555;
-  }
+.container {
+  margin-top: 1.5em; 
+}
 
-  /* Sản phẩm đã mua */
-  .info-producted p{
-    margin: 20px 50px;
-    padding: 10px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-  }
-  
-  /* Cài đặt */
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  form label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  form button {
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  form button:hover {
-    background-color: #0056b3;
-  }
+body .logo {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  z-index: 1000;
+}
 
-  
+body .logo img {
+  width: 12em;
+  height: 4.5em;
+}
+
+.go-back a {
+  color: #000;
+}
+
+.go-back a:hover {
+  color: #4E5155;
+}
+
+.col-md-9 img {
+  border-radius: 50%;
+}
+
+.btn-outline-primary {
+  border-color: #26B4FF;
+  background  : transparent;
+  color       : #26B4FF;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.text-light {
+  color: #babbbc !important;
+}
+
+.btn-facebook {
+  border-color: rgba(0, 0, 0, 0);
+  background  : #3B5998;
+  color       : #fff;
+}
+
+.btn-instagram {
+  border-color: rgba(0, 0, 0, 0);
+  background  : #000;
+  color       : #fff;
+}
+
+.card {
+  background-clip: padding-box;
+  box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+  overflow: hidden;
+}
+
+.account-settings-fileinput {
+  position  : absolute;
+  visibility: hidden;
+  width     : 1px;
+  height    : 1px;
+  opacity   : 0;
+}
+
+.account-settings-links .list-group-item.active {
+  font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+  background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+  width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+  color: #617795 !important;
+}
+
+.material-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.material-style .account-settings-links .list-group-item.active {
+  color: #4e5155 !important;
+}
+
+.dark-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-style .account-settings-links .list-group-item.active {
+  color: #ffffffb5 !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+  color: #4E5155 !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
