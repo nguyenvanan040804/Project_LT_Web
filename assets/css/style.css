@@ -1,10 +1,17 @@
 /* style.css */
 body {
+<<<<<<< HEAD
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
   }
   
   #sidebar {
+=======
+    font-family: 'Open Sans', sans-serif;
+}
+
+#sidebar {
+>>>>>>> c061f4ef6e8cafc5a675a5439f76f20e4244fe88
     width: 250px;
     min-height: 100vh;
     position: fixed;
