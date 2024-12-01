@@ -1,23 +1,105 @@
-/* styles.css */
+/* style.css */
 body {
+<<<<<<< HEAD
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  #sidebar {
+=======
     font-family: 'Open Sans', sans-serif;
 }
 
 #sidebar {
+>>>>>>> c061f4ef6e8cafc5a675a5439f76f20e4244fe88
     width: 250px;
     min-height: 100vh;
-}
-
-#sidebar h2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  #sidebar h2 {
     font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#sidebar .nav-link {
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  
+  #sidebar .nav-link {
+    color: #fff;
+    padding: 10px;
     font-size: 18px;
-}
-
-.container-fluid {
+  }
+  
+  #sidebar .nav-link:hover {
+    background-color: #555;
+    text-decoration: none;
+  }
+  
+  .container-fluid {
     margin-left: 250px;
-}
+  }
+  
+  h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  
+  .card {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  table .btn {
+    width: 80px;
+    margin: 5px;
+  }
+  
+  table .btn-delete {
+    background-color: #dc3545;
+  }
+  
+  table .btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  table .btn-edit {
+    background-color: #ffc107;
+  }
+  
+  table .btn-edit:hover {
+    background-color: #e0a800;
+  }
+  
+  #change-info {
+    margin-top: 20px;
+    display: none;
+  }
+  
+  button[type="button"] {
+    margin-left: 10px;
+  }
+  
