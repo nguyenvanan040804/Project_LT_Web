@@ -6,7 +6,7 @@
     margin-left: auto;
     margin-right: auto;   
 }
-.banner-hearder{
+.banner-hearder{ 
     
     text-align: center;
 }
@@ -26,14 +26,15 @@
 
 }
 .product .one-product .product-category{
-    text-align: center;
-    margin-left: 500px;
+    /* text-align: center; */
+    /* margin-left: 500px; */
     
 }
 .product .one-product h3{
-    width: 200px;
+    width: 300px;
     padding: 15px;
-    background: linear-gradient(to right, rgb(35, 149, 225), rgb(101, 196, 255));
+    /* background: linear-gradient(to right, rgb(35, 149, 225), rgb(101, 196, 255)); */
+
     border-radius: 4px;
 
 }
