@@ -14,7 +14,7 @@ document.querySelector('.customer-info').addEventListener('click', function (eve
     // Ẩn Thêm sản phẩm
     document.querySelector('.wrapper').style.display = 'none';
 });
-
+ 
 // Hiển thị Dashboard
 document.querySelector('.dashboard').addEventListener('click', function (event) {
     console.log('Đã nhấn vào Dashboard');
