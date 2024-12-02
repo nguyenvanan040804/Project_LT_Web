@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bicycle Website</title>
+    <title>Giỏ hàng</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./assets/main/base.css">
-    <link rel="stylesheet" href="./assets/main/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <div id="page" class="site page-cart">
@@ -232,7 +232,7 @@
                                         <div class="cart-footer">
                                             <div class="subtotal">
                                                 <p>Tổng cộng</p>
-                                                <p><strong>26.950.000đ</strong></p>
+                                                <p><strong>26.920.000đ</strong></p>
                                             </div>
                                             <div class="action">
                                                 <a href="checkout.html" class="primary-button">Thanh toán</a>
@@ -383,7 +383,9 @@
                                             <table id="cart-table">
                                                 <thead>
                                                     <tr>
-                                                        <th>Sản phẩm</th>
+                                                        <th>Ảnh</th>
+                                                        <th>Tên</th>
+                                                        <th>Màu</th>
                                                         <th>Giá</th>
                                                         <th>Số lượng</th>
                                                         <th>Tổng</th>
@@ -392,84 +394,92 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="flexitem">
+                                                        <td>
                                                             <div class="thumbnail object-cover">
                                                                 <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg" alt=""></a>
                                                             </div>
-                                                            <div class="content">
+                                                        </td>
+                                                        <td>
+                                                            <div style="text-align: left;">
                                                                 <strong><a href="#">Xe Đạp Fixed Gear Life Horse Fx2</a></strong>
-                                                                <p>Màu: Trắng</p>
                                                             </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>Trắng</p>
                                                         </td>
                                                         <td>5.500.000đ</td>
                                                         <td>
                                                             <div class="qty-control flexitem">
-                                                                <button class="minus">-</button>
-                                                                <input type="text" value="2" min="1">
-                                                                <button class="plus">+</button>
+                                                                <input type="number" value="2" min="1">
                                                             </div>
                                                         </td>
                                                         <td>11.000.000đ</td>
                                                         <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="flexitem">
+                                                        <td>
                                                             <div class="thumbnail object-cover">
                                                                 <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Life-Fix735-700C.jpg" alt=""></a>
                                                             </div>
-                                                            <div class="content">
+                                                        </td>
+                                                        <td>
+                                                            <div style="text-align: left;">
                                                                 <strong><a href="#">Xe Đạp Fixed Gear Life Fix735 700C</a></strong>
-                                                                <p>Màu: Xám</p>
                                                             </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>Xám</p>
                                                         </td>
                                                         <td>3.740.000đ</td>
                                                         <td>
                                                             <div class="qty-control flexitem">
-                                                                <button class="minus">-</button>
-                                                                <input type="text" value="1" min="1">
-                                                                <button class="plus">+</button>
+                                                                <input type="number" value="1" min="1">
                                                             </div>
                                                         </td>
                                                         <td>3.740.000đ</td>
                                                         <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="flexitem">
+                                                        <td>
                                                             <div class="thumbnail object-cover">
                                                                 <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Funky-Locking-Nhat-Ban.jpg" alt=""></a>
                                                             </div>
-                                                            <div class="content">
+                                                        </td>
+                                                        <td>
+                                                            <div style="text-align: left;">
                                                                 <strong><a href="#">Xe Đạp Fixed Gear Funky Locking Nhật Bản</a></strong>
-                                                                <p>Màu: Xám</p>
                                                             </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>Xám</p>
                                                         </td>
                                                         <td>7.590.000đ</td>
                                                         <td>
                                                             <div class="qty-control flexitem">
-                                                                <button class="minus">-</button>
-                                                                <input type="text" value="1" min="1">
-                                                                <button class="plus">+</button>
+                                                                <input type="number" value="1" min="1">
                                                             </div>
                                                         </td>
                                                         <td>7.590.000đ</td>
                                                         <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="flexitem">
+                                                        <td>
                                                             <div class="thumbnail object-cover">
                                                                 <a href="#"><img src="assets/img/xe-dap-fix-gear-khong-thang-brave-will.jpg" alt=""></a>
                                                             </div>
-                                                            <div class="content">
+                                                        </td>
+                                                        <td>
+                                                            <div style="text-align: left;">
                                                                 <strong><a href="#">Xe Đạp Fixed Gear Không Thắng Brave Will</a></strong>
-                                                                <p>Màu: Đỏ-Trắng</p>
                                                             </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>Đỏ-Trắng</p>
                                                         </td>
                                                         <td>4.590.000đ</td>
                                                         <td>
                                                             <div class="qty-control flexitem">
-                                                                <button class="minus">-</button>
-                                                                <input type="text" value="1" min="1">
-                                                                <button class="plus">+</button>
+                                                                <input type="number" value="1" min="1">
                                                             </div>
                                                         </td>
                                                         <td>4.590.000đ</td>
@@ -479,7 +489,7 @@
                                             </table>
                                         </div>
                                     </form>
-                                    <div class="cart-summary styled">
+                                    <!-- <div class="cart-summary styled">
                                         <div class="item">
                                             <div class="coupon">
                                                 <input type="text" placeholder="Mã giảm giá">
@@ -544,7 +554,7 @@
                                                     <tbody>
                                                         <tr>
                                                             <th>Tổng</th>
-                                                            <td>26.950.000đ</td>
+                                                            <td>26.920.000đ</td>
                                                         </tr>
                                                         <tr>
                                                             <th>Giảm giá</th>
@@ -556,13 +566,44 @@
                                                         </tr>
                                                         <tr class="grand-total">
                                                             <th>Tổng cộng</th>
-                                                            <td><strong>26.550.000đ</strong></td>
+                                                            <td><strong>26.520.000đ</strong></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                                 <a href="checkout.html" class="secondary-button">Thanh toán</a>
                                             </div>
                                         </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="cart-add">
+                                <div class="cart-coupon">
+                                    <div class="coupon">
+                                        <h3>Mã giảm giá</h3>
+                                        <div class="content">
+                                            <input type="text" placeholder="Nhập mã giảm giá">
+                                            <button class="normal">Áp dụng</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-totals">
+                                    <div class="subtotals">
+                                        <h3>Thanh toán</h3>
+                                        <table>
+                                            <tr>
+                                                <td>Tổng đơn hàng</td>
+                                                <td>26.920.000đ</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phí vận chuyển</td>
+                                                <td>100.000đ</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tổng</strong></td>
+                                                <td>27.020.000đ</td>
+                                            </tr>
+                                        </table>
+                                        <button class="normal"><a href="checkout.html">Thanh toán</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -757,8 +798,9 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
-    <script src="./assets/main/script.js"></script>
-    <script src="assets/main/category.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="assets/js/category.js"></script>
+    <script src="assets/js/store.js"></script>
     <script>
         const FtoShow = '.filter';
         const Fpopup = document.querySelector(FtoShow);
