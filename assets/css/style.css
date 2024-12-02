@@ -1218,6 +1218,12 @@ form.search button:hover {
 }
 
 .products .qty-control {
+    width: 30%;
+    border: 1px solid var(--border-color);
+    font-size: 0.75em;
+}
+
+#cart-table td .qty-control {
     width: 100%;
     border: 1px solid var(--border-color);
     font-size: 0.75em;
