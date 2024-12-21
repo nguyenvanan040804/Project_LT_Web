@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="page" class="site page-category">
@@ -39,8 +39,8 @@
                         </div>
                         <div class="right">
                             <ul class="flexitem main-links">
-                                <li><a href="login.html">Đăng Nhập</a></li>
-                                <li><a href="page-user.html">Tài Khoản</a></li>
+                                <li><a href="login.jsp">Đăng Nhập</a></li>
+                                <li><a href="../../../page-user.html">Tài Khoản</a></li>
                                 <li><a href="#">Theo Dõi Đơn</a></li>
                                 <li><a href="#">Tiền Tệ <span class="icon-small"> <i class="ri-arrow-down-s-line"></i></span></a>
                                     <ul>
@@ -69,7 +69,7 @@
                             <div class="logo"><a href="/"><span class="circle"></span>.BikeStore</a></div>
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
-                                    <li><a href="index.html">Trang Chủ</a></li>
+                                    <li><a href="index.jsp">Trang Chủ</a></li>
                                     <li><a href="#">Cửa Hàng</a></li>
                                     <li class="has-child">
                                         <a href="#">Sản Phẩm
@@ -178,7 +178,7 @@
                                             <ul class="products mini">
                                                 <li class="item">
                                                     <div class="thumbnail object-cover">
-                                                        <a href="#"><img src="./assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg"></a>
+                                                        <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg"></a>
                                                     </div>
                                                     <div class="item-content">
                                                         <p><a href="#">Xe Đạp Fixed Gear Life Horse Fx2</a></p>
@@ -236,8 +236,8 @@
                                                 <p><strong>26.920.000đ</strong></p>
                                             </div>
                                             <div class="action">
-                                                <a href="checkout.html" class="primary-button">Thanh toán</a>
-                                                <a href="cart.html" class="secondary-button">Xem giỏ hàng</a>
+                                                <a href="checkout.jsp" class="primary-button">Thanh toán</a>
+                                                <a href="cart.jsp" class="secondary-button">Xem giỏ hàng</a>
                                             </div>
                                         </div>
                                     </div>
@@ -605,7 +605,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.html">Trang chủ</a></li>
+                                                    <li><a href="index.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp trẻ em</li>
                                                 </ul>
                                             </div>
@@ -941,7 +941,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.html">Trang chủ</a></li>
+                                                    <li><a href="index.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp thể thao</li>
                                                 </ul>
                                             </div>
@@ -1267,7 +1267,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.html">Trang chủ</a></li>
+                                                    <li><a href="index.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp đua</li>
                                                 </ul>
                                             </div>
@@ -1376,7 +1376,7 @@
                                         <div class="item">
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
-                                                    <a href="page-single.html">
+                                                    <a href="../../../page-single.html">
                                                         <img src="assets/img/Xe-Dap-Dua-Sava-Ex7.jpg" alt="">
                                                     </a>
                                                 </div>
@@ -1394,7 +1394,7 @@
                                                     <div class="stars"></div>
                                                     <span class="mini-text">(1,601)</span>
                                                 </div>
-                                                <h3 class="main-links"><a href="page-single.html">Xe Đạp Đua Sava Ex7 – Khung Nhôm</a></h3>
+                                                <h3 class="main-links"><a href="../../../page-single.html">Xe Đạp Đua Sava Ex7 – Khung Nhôm</a></h3>
                                                 <div class="price">
                                                     <span class="current">19.490.000đ</span>
                                                     <span class="normal mini-text">20.000.000đ</span>
@@ -1596,7 +1596,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.html">Trang chủ</a></li>
+                                                    <li><a href="index.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp địa hình</li>
                                                 </ul>
                                             </div>
@@ -1930,7 +1930,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.html">Trang chủ</a></li>
+                                                    <li><a href="index.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp touring</li>
                                                 </ul>
                                             </div>
@@ -2254,7 +2254,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.html">Trang chủ</a></li>
+                                                    <li><a href="index.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp phổ thông</li>
                                                 </ul>
                                             </div>
@@ -2398,7 +2398,7 @@
                                             <div class="media">
                                                 <div class="thumbnail object-cover">
                                                     <a href="#">
-                                                        <img src="assets/img/Xe-Dap-Nu-City-Fascino-FM24-600x420 (1).jpg" alt="">
+                                                        <img src="assets/img/Xe-Dap-Nu-City-Fascino-FM24-600x420%20(1).jpg" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="hoverable">
@@ -2581,7 +2581,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.html">Trang chủ</a></li>
+                                                    <li><a href="index.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp điện</li>
                                                 </ul>
                                             </div>
@@ -3115,8 +3115,8 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/search.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/search.js"></script>
     <script src="assets/js/pagination.js"></script>
     <script src="assets/js/category.js"></script>
     <script>

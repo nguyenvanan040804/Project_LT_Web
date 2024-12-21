@@ -69,7 +69,7 @@ categoryLinks.forEach((link) => {
             localStorage.setItem('selectedCategory', categoryId);
 
             // Chuyển hướng đến trang danh mục (hoặc làm việc gì đó tùy mục đích)
-            window.location.href = 'page-category.html';
+            window.location.href = 'page-category.jsp';
         }
     });
 });

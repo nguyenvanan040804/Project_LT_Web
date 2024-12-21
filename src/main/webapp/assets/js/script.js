@@ -145,7 +145,7 @@ document.querySelectorAll('a').forEach((link) => {
             localStorage.setItem('selectedCategory', categoryId);
 
             // Chuyển hướng đến trang danh mục
-            window.location.href = 'page-category.html';
+            window.location.href = 'page-category.jsp';
         }
     });
 });

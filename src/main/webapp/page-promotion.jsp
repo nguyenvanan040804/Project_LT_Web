@@ -9,10 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/acc-manager.css">
-    <link rel="stylesheet" href="./assets/css/promotion.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="src/main/webapp/assets/css/acc-manager.css">
+    <link rel="stylesheet" href="assets/css/promotion.css">
 </head>
 
 <body>
@@ -74,7 +74,7 @@
                             <div class="logo"><a href="/"><span class="circle"></span>.BikeStore</a></div>
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
-                                    <li><a href="index.html">Trang Chủ</a></li>
+                                    <li><a href="index.jsp">Trang Chủ</a></li>
                                     <li><a href="#">Cửa Hàng</a></li>
                                     <li class="has-child">
                                         <a href="#">Sản Phẩm
@@ -148,7 +148,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li><a href="page-service.html">Dịch Vụ</a></li>
+                                    <li><a href="../../../page-service.html">Dịch Vụ</a></li>
                                     <li>
                                         <a href="#">Thể Thao
                                             <div class="fly-item"><span>Mới</span></div>
@@ -184,7 +184,7 @@
                                                     <li class="item">
                                                         <div class="thumbnail object-cover">
                                                             <a href="#"><img
-                                                                    src="./assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg"></a>
+                                                                    src="assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg"></a>
                                                         </div>
                                                         <div class="item-content">
                                                             <p><a href="#">Xe Đạp Fixed Gear Life Horse Fx2</a></p>
@@ -250,8 +250,8 @@
                                                     <p><strong>26.920.000đ</strong></p>
                                                 </div>
                                                 <div class="action">
-                                                    <a href="/cart.html" class="primary-button">Thanh toán</a>
-                                                    <a href="/checkout.html" class="secondary-button">Xem giỏ hàng</a>
+                                                    <a href="/cart.jsp" class="primary-button">Thanh toán</a>
+                                                    <a href="/checkout.jsp" class="secondary-button">Xem giỏ hàng</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -336,7 +336,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="page-accessory.html">
+                                            <a href="page-accessory.jsp">
                                                 <div class="icon-large"><i class="ri-android-line"></i></div>
                                                 Phụ Kiện Xe Đạp
                                                 <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
@@ -1781,10 +1781,10 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
-    <script src="./assets/js/scripts.js"></script>
-    <script src="./assets/js/promotion.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/category.js"></script>
+    <script src="src/main/webapp/assets/js/scripts.js"></script>
+    <script src="assets/js/promotion.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/category.js"></script>
     <script>
         const FtoShow = '.filter';
         const Fpopup = document.querySelector(FtoShow);
