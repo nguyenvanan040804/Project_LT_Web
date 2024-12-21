@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phụ kiện</title>
+    <title>Giỏ hàng</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/accessory.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-    <div id="page" class="site page-category">
+    <div id="page" class="site page-cart">
 
         <aside class="site-off desktop-hide">
             <div class="off-canvas">
@@ -44,8 +39,7 @@
                         </div>
                         <div class="right">
                             <ul class="flexitem main-links">
-                                <li><a href="login.html">Đăng Nhập</a></li>
-                                <li><a href="page-user.html">Tài Khoản</a></li>
+                                <li><a href="#">Tài Khoản</a></li>
                                 <li><a href="#">Theo Dõi Đơn</a></li>
                                 <li><a href="#">Tiền Tệ <span class="icon-small"> <i class="ri-arrow-down-s-line"></i></span></a>
                                     <ul>
@@ -74,7 +68,7 @@
                             <div class="logo"><a href="/"><span class="circle"></span>.BikeStore</a></div>
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
-                                    <li><a href="#">Trang Chủ</a></li>
+                                    <li><a href="../../../index.html">Trang Chủ</a></li>
                                     <li><a href="#">Cửa Hàng</a></li>
                                     <li class="has-child">
                                         <a href="#">Sản Phẩm
@@ -148,7 +142,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li><a href="page-service.html">Dịch Vụ</a></li>
+                                    <li><a href="#">Dịch Vụ</a></li>
                                     <li>
                                         <a href="#">Thể Thao
                                             <div class="fly-item"><span>Mới</span></div>
@@ -183,7 +177,7 @@
                                             <ul class="products mini">
                                                 <li class="item">
                                                     <div class="thumbnail object-cover">
-                                                        <a href="#"><img src="./assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg"></a>
+                                                        <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg"></a>
                                                     </div>
                                                     <div class="item-content">
                                                         <p><a href="#">Xe Đạp Fixed Gear Life Horse Fx2</a></p>
@@ -241,7 +235,7 @@
                                                 <p><strong>26.920.000đ</strong></p>
                                             </div>
                                             <div class="action">
-                                                <a href="checkout.html" class="primary-button">Thanh toán</a>
+                                                <a href="../../../checkout.html" class="primary-button">Thanh toán</a>
                                                 <a href="cart.html" class="secondary-button">Xem giỏ hàng</a>
                                             </div>
                                         </div>
@@ -327,7 +321,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="page-accessory.html">
+                                            <a href="../../../page-accessory.html">
                                                 <div class="icon-large"><i class="ri-android-line"></i></div>
                                                 Phụ Kiện Xe Đạp
                                                 <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
@@ -354,8 +348,8 @@
                         <div class="right">
                             <div class="search-box">
                                 <form action="" class="search">
-                                    <span id="iconSearch" class="icon-large"><i class="ri-search-line"></i></span>
-                                    <input type="search" name="search" id="search" placeholder="Tìm kiếm sản phẩm">
+                                    <span class="icon-large"><i class="ri-search-line"></i></span>
+                                    <input type="search" name="" id="" placeholder="Tìm kiếm sản phẩm">
                                     <button type="submit">Tìm kiếm</button>
                                 </form>
                             </div>
@@ -370,179 +364,250 @@
         <!-- header -->
 
         <main>
-            <div class="content-accessory">
-                <div class="item-category">
-                    <ul class="item">
-                        <li>TRANG CHỦ / </li>
-                        <li> PHỤ KIỆN </li>
-
-                    </ul>
-                    <h1>Phụ kiện xe đạp – Shop phụ kiện xe đạp thể thao, xe đạp Giant, xe đạp trẻ em, xe đạp TP. HCM
-                        chính hãng, giá rẻ</h1>
-                    <p>Tại TP. HCM, chúng tôi cung cấp đa dạng các phụ kiện xe đạp chính hãng, bao gồm xe đạp thể thao,
-                        xe đạp Giant, và xe đạp trẻ em. Shop chúng tôi cam kết mang đến sản phẩm chất lượng với giá cả
-                        phải chăng. Các phụ kiện bao gồm mũ bảo hiểm, găng tay, đèn chiếu sáng, bình nước, giá đỡ điện
-                        thoại, và nhiều phụ kiện khác </p>
-                    <div class="criteria">
-                        <label for="priceFilter">Lọc theo giá:</label>
-                        <select id="priceFilter">
-                            <option value="all">Tất cả</option>
-                            <option value="low">Dưới 1 triệu</option>
-                            <option value="medium">1 triệu - 5 triệu</option>
-                            <option value="high">Trên 5 triệu</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="block-item">
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/Co-ve-sinh-xe-dap.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Cọ vệ sinh xích xe đạp</p>
-                            <span>20.000đ</span>
+            <div class="single-cart">
+                <div class="container">
+                    <div class="wrappper">
+                        <div class="breadcrumb">
+                            <ul class="flexitem">
+                                <li><a href="#">Trang chủ</a></li>
+                                <li>Giỏ Hàng</li>
+                            </ul>
                         </div>
-
+                            <div class="page-title">
+                                <h1>Giỏ Hàng</h1>
+                            </div>
+                            <div class="products one cart">
+                                <div class="flexwrap">
+                                    <form action="" class="form-cart">
+                                        <div class="item">
+                                            <table id="cart-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Ảnh</th>
+                                                        <th>Tên</th>
+                                                        <th>Màu</th>
+                                                        <th>Giá</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Tổng</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="thumbnail object-cover">
+                                                                <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg" alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style="text-align: left;">
+                                                                <strong><a href="#">Xe Đạp Fixed Gear Life Horse Fx2</a></strong>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>Trắng</p>
+                                                        </td>
+                                                        <td>5.500.000đ</td>
+                                                        <td>
+                                                            <div class="qty-control flexitem">
+                                                                <input type="number" value="2" min="1">
+                                                            </div>
+                                                        </td>
+                                                        <td>11.000.000đ</td>
+                                                        <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="thumbnail object-cover">
+                                                                <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Life-Fix735-700C.jpg" alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style="text-align: left;">
+                                                                <strong><a href="#">Xe Đạp Fixed Gear Life Fix735 700C</a></strong>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>Xám</p>
+                                                        </td>
+                                                        <td>3.740.000đ</td>
+                                                        <td>
+                                                            <div class="qty-control flexitem">
+                                                                <input type="number" value="1" min="1">
+                                                            </div>
+                                                        </td>
+                                                        <td>3.740.000đ</td>
+                                                        <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="thumbnail object-cover">
+                                                                <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Funky-Locking-Nhat-Ban.jpg" alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style="text-align: left;">
+                                                                <strong><a href="#">Xe Đạp Fixed Gear Funky Locking Nhật Bản</a></strong>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>Xám</p>
+                                                        </td>
+                                                        <td>7.590.000đ</td>
+                                                        <td>
+                                                            <div class="qty-control flexitem">
+                                                                <input type="number" value="1" min="1">
+                                                            </div>
+                                                        </td>
+                                                        <td>7.590.000đ</td>
+                                                        <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="thumbnail object-cover">
+                                                                <a href="#"><img src="assets/img/xe-dap-fix-gear-khong-thang-brave-will.jpg" alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style="text-align: left;">
+                                                                <strong><a href="#">Xe Đạp Fixed Gear Không Thắng Brave Will</a></strong>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>Đỏ-Trắng</p>
+                                                        </td>
+                                                        <td>4.590.000đ</td>
+                                                        <td>
+                                                            <div class="qty-control flexitem">
+                                                                <input type="number" value="1" min="1">
+                                                            </div>
+                                                        </td>
+                                                        <td>4.590.000đ</td>
+                                                        <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                    <!-- <div class="cart-summary styled">
+                                        <div class="item">
+                                            <div class="coupon">
+                                                <input type="text" placeholder="Mã giảm giá">
+                                                <button>Áp dụng</button>
+                                            </div>
+                                            <div class="shipping-rate collapse">
+                                                <div class="has-child expand">
+                                                    <a href="#" class="icon-small">Phí vận chuyển và thuế</a>
+                                                    <div class="content">
+                                                        <div class="countries">
+                                                            <form action="">
+                                                                <label for="country">Quốc gia</label>
+                                                                <select name="country" id="country">
+                                                                    <option value=""></option>
+                                                                    <option value="1">Lào</option>
+                                                                    <option value="2">Campuchia</option>
+                                                                    <option value="3">Thái Lan</option>
+                                                                    <option value="4" selected="selected">Việt Nam</option>
+                                                                    <option value="5">Khác</option>
+                                                                </select>
+                                                            </form>
+                                                        </div>
+                                                        <div class="states">
+                                                            <form action="">
+                                                                <label for="state">Tỉnh/Thành Phố</label>
+                                                                <select name="state" id="state">
+                                                                    <option value="">Chọn tỉnh hoặc thành phố</option>
+                                                                    <option value="1">TP. Hồ Chí Minh</option>
+                                                                    <option value="2">Cần Thơ</option>
+                                                                    <option value="3">Đà Nẵng</option>
+                                                                    <option value="4">Hà Nội</option>
+                                                                    <option value="5">Hải Phòng</option>
+                                                                    <option value="6">Khác</option>
+                                                                </select>
+                                                            </form>
+                                                        </div>
+                                                        <div class="postal-code">
+                                                            <form action="">
+                                                                <label for="postal">Mã Zip/Bưu chính</label>
+                                                                <input type="number" name="postal" id="postal">
+                                                            </form>
+                                                        </div>
+                                                        <div class="rate-options variant">
+                                                            <form action="">
+                                                                <p>
+                                                                    <span>Mặc định: 100.000đ</span>
+                                                                    <input type="radio" name="rate-option" id="flat" checked>
+                                                                    <label for="flat" class="circle"></label>
+                                                                </p>
+                                                                <p>
+                                                                    <span>Tốt nhất: 300.000đ</span>
+                                                                    <input type="radio" name="rate-option" id="best">
+                                                                    <label for="best" class="circle"></label>
+                                                                </p>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cart-total">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Tổng</th>
+                                                            <td>26.920.000đ</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Giảm giá</th>
+                                                            <td>-500.000đ</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Phí giao hàng <span class="mini-text">(Mặc định)</span></th>
+                                                            <td>100.000đ</td>
+                                                        </tr>
+                                                        <tr class="grand-total">
+                                                            <th>Tổng cộng</th>
+                                                            <td><strong>26.520.000đ</strong></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <a href="checkout.jsp" class="secondary-button">Thanh toán</a>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="cart-add">
+                                <div class="cart-coupon">
+                                    <div class="coupon">
+                                        <h3>Mã giảm giá</h3>
+                                        <div class="content">
+                                            <input type="text" placeholder="Nhập mã giảm giá">
+                                            <button class="normal">Áp dụng</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-totals">
+                                    <div class="subtotals">
+                                        <h3>Thanh toán</h3>
+                                        <table>
+                                            <tr>
+                                                <td>Tổng đơn hàng</td>
+                                                <td>26.920.000đ</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phí vận chuyển</td>
+                                                <td>100.000đ</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tổng</strong></td>
+                                                <td>27.020.000đ</td>
+                                            </tr>
+                                        </table>
+                                        <button class="normal"><a href="../../../checkout.html">Thanh toán</a></button>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/gong-binh-nuoc.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Gọng nhựa bình nước</p>
-                            <span>20.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/chuong-mini.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Chuông Xe đạp mini</p>
-                            <span>20.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/dau-tra.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Dầu tra sên, xích, líp xe đạp</p>
-                            <span>25.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/chuong-la-ban.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Chuông la bàn cho xe đạp</p>
-                            <span>20.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/guong-chieu-hau.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Gương chiếu hậu cho xe đạp</p>
-                            <span>30.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/gap-gac-chan.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Gắp gác chân inox</p>
-                            <span>35.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/bo-va-xe.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Bộ Vá Xe chuyên dụng</p>
-                            <span>30.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/gong-cao-cap.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Gọp nhựa cao cấp MPE</p>
-                            <span>40.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/gong-nhua-binh-nuoc-2-mau.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Cọ vệ sinh xích xe đạp</p>
-                            <span>45.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/chan-chong-xe.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Chân chống xe đạp 12 INCH</p>
-                            <span>40.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/chuong-2-tieng-cao-cap.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Chuông 2 tiếng cao cấp</p>
-                            <span>50.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    <div class="one-item">
-                        <a href="">
-                            <img src="assets/img/binh-nuoc-nhua-trong-550ml.jpg" alt="">
-                        </a>
-                        <div class="text-one-block">
-                            <p>Bình nước nhựa trong cao cấp 550ml</p>
-                            <span>70.000đ</span>
-                        </div>
-
-                    </div>
-                    <!-- end one-item -->
-                    
-                </div>
-                <div class="load-more flexcenter">
-                    <a href="#" class="secondary-button">Hiển thị thêm</a>
                 </div>
             </div>
 
@@ -652,8 +717,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <p class="mini-text">Copyright 2024 © Xe Đạp Giá Rẻ All rights reserved. Web Design by Đỗ Khắc
-                            Hảo</p>
+                        <p class="mini-text">Copyright 2024 © Xe Đạp Giá Rẻ All rights reserved. Web Design by Đỗ Khắc Hảo</p>
                     </div>
                 </div>
             </div>
@@ -734,8 +798,9 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/category.js"></script>
+    <script src="assets/js/store.js"></script>
     <script>
         const FtoShow = '.filter';
         const Fpopup = document.querySelector(FtoShow);
@@ -743,20 +808,19 @@
 
         Ftrigger.addEventListener('click', () => {
             setTimeout(() => {
-                if (!Fpopup.classList.contains('show')) {
+                if(!Fpopup.classList.contains('show')) {
                     Fpopup.classList.add('show')
                 }
-            }, 250)
+            }, 250 )
         })
 
         // auto close by click outside .filter
         document.addEventListener('click', (e) => {
             const isClosest = e.target.closest(FtoShow);
-            if (!isClosest && Fpopup.classList.contains('show')) {
+            if(!isClosest && Fpopup.classList.contains('show')) {
                 Fpopup.classList.remove('show')
             }
         })
     </script>
 </body>
-
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <title>Admin</title>
-    <link rel="stylesheet" href="assets/css/page-admin.css">
+    <link rel="stylesheet" href="../../../assets/css/page-admin.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -803,7 +803,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><img src="assets/img/Xe-Dap-Dia-Hinh-Life-Lion-Pro.jpg" height="100" alt="Product 1"></td>
+                                <td><img src="../../../assets/img/Xe-Dap-Dia-Hinh-Life-Lion-Pro.jpg" height="100" alt="Product 1"></td>
                                 <td>Xe đạp địa hình Life Lion Pro</td>
                                 <td>5.990.000đ</td>
                                 <td>
@@ -817,7 +817,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><img src="assets/img/Xe-Dap-Gap-Califa-CG20-3.jpg" height="100" alt="Product 2"></td>
+                                <td><img src="../../../assets/img/Xe-Dap-Gap-Califa-CG20-3.jpg" height="100" alt="Product 2"></td>
                                 <td>Xe đạp Gap Califa CG20-3</td>
                                 <td>2.500.000đ</td>
                                 <td>
@@ -831,7 +831,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><img src="assets/img/xe-dap-dia-hinh-giant-atx-720-2021.jpg" height="100" alt="Product 3"></td>
+                                <td><img src="../../../assets/img/xe-dap-dia-hinh-giant-atx-720-2021.jpg" height="100" alt="Product 3"></td>
                                 <td>Xe đạp địa hình Giant ATX 720</td>
                                 <td>7.900.000đ</td>
                                 <td>
@@ -845,7 +845,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><img src="assets/img/Xe-Dap-Dia-Hinh-Life-Lion-Pro.jpg" height="100" alt="Product 1"></td>
+                                <td><img src="../../../assets/img/Xe-Dap-Dia-Hinh-Life-Lion-Pro.jpg" height="100" alt="Product 1"></td>
                                 <td>Xe đạp địa hình Life Lion Pro</td>
                                 <td>5.990.000đ</td>
                                 <td>
@@ -859,7 +859,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><img src="assets/img/Xe-Dap-Gap-Califa-CG20-3.jpg" height="100" alt="Product 2"></td>
+                                <td><img src="../../../assets/img/Xe-Dap-Gap-Califa-CG20-3.jpg" height="100" alt="Product 2"></td>
                                 <td>Xe đạp Gap Califa CG20-3</td>
                                 <td>2.500.000đ</td>
                                 <td>
@@ -873,7 +873,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><img src="assets/img/xe-dap-dia-hinh-giant-atx-720-2021.jpg" height="100" alt="Product 3"></td>
+                                <td><img src="../../../assets/img/xe-dap-dia-hinh-giant-atx-720-2021.jpg" height="100" alt="Product 3"></td>
                                 <td>Xe đạp địa hình Giant ATX 720</td>
                                 <td>7.900.000đ</td>
                                 <td>
@@ -896,6 +896,6 @@
         </main>
         
     </div>
-    <script src="assets/js/page-admin.js"></script>
+    <script src="../../../assets/js/page-admin.js"></script>
 </body>
 </html>

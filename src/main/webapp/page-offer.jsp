@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết sản phẩm</title>
+    <title>Ưu đãi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="page" class="site page-single">
@@ -39,9 +39,9 @@
                         </div>
                         <div class="right">
                             <ul class="flexitem main-links">
-                                <li><a href="login.html">Đăng Nhập</a></li>
-                                <li><a href="page-user.html">Tài Khoản</a></li>
-                                <li><a href="cart.html">Theo Dõi Đơn</a></li>
+                                <li><a href="#">Đăng Nhập</a></li>
+                                <li><a href="#">Tài Khoản</a></li>
+                                <li><a href="#">Theo Dõi Đơn</a></li>
                                 <li><a href="#">Tiền Tệ <span class="icon-small"> <i class="ri-arrow-down-s-line"></i></span></a>
                                     <ul>
                                         <li class="current"><a href="#">VND</a></li>
@@ -69,7 +69,7 @@
                             <div class="logo"><a href="/"><span class="circle"></span>.BikeStore</a></div>
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
-                                    <li><a href="index.html">Trang Chủ</a></li>
+                                    <li><a href="index.jsp">Trang Chủ</a></li>
                                     <li><a href="#">Cửa Hàng</a></li>
                                     <li class="has-child">
                                         <a href="#">Sản Phẩm
@@ -247,7 +247,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="page-accessory.html">
+                                            <a href="page-accessory.jsp">
                                                 <div class="icon-large"><i class="ri-android-line"></i></div>
                                                 Phụ Kiện Xe Đạp
                                                 <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
@@ -296,7 +296,7 @@
                     <div class="wrapper">
                         <div class="breadcrumb">
                             <ul class="flexitem">
-                                <li><a href="index.html">Trang chủ</a></li>
+                                <li><a href="#">Trang chủ</a></li>
                                 <li><a href="#">Thương hiệu xe đạp</a></li>
                                 <li><a href="#">Xe đạp</a></li>
                             </ul>
@@ -365,7 +365,7 @@
                                                     <span class="current">19.490.000đ</span>
                                                     <span class="normal">20.000.000đ</span>
                                                 </div>
-                                                <div class="colors">
+                                                <!-- <div class="colors">
                                                     <p>Màu: </p>
                                                     <div class="variant">
                                                         <form action="">
@@ -387,7 +387,27 @@
                                                             </P>
                                                         </form>
                                                     </div>
+                                                </div> -->
+
+                                                <div class="stock mini-text" data-stock="4000">
+                                                    <div class="qty">
+                                                        <span>Sold: <strong class="qty-sold">3459</strong></span>
+                                                        <span>Stock: <strong class="qty-available">107</strong></span>
+                                                    </div>
+                                                    <div class="bar">
+                                                        <div class="available"></div>
+                                                    </div>
                                                 </div>
+                                                <div class="offer">
+                                                    <p>Offer ends at</p>
+                                                    <ul class="flexcenter">
+                                                        <li>1</li>
+                                                        <li>15</li>
+                                                        <li>27</li>
+                                                        <li>07</li>
+                                                    </ul>
+                                                </div>
+
                                                 <div class="actions">
                                                     <div class="qty-control flexitem">
                                                         <button class="minus circle">-</button>
@@ -588,18 +608,18 @@
             </div>
             <!-- sản phâm chính -->
 
-            <div class="features">
+            <div class="related-products">
                 <div class="container">
                     <div class="wrapper">
-                        <div class="column">
-                            <div class="sectop flexitem">
-                                <h2><span class="circle"></span><span>Có thể bạn thích</span></h2>
-                                <div class="second-links">
-                                    <a href="#" class="view-all">Xem tất cả
-                                        <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
+                        <div class="sectop flexitem">
+                            <h2><span class="circle"></span><span>Có thể bạn thích</span></h2>
+                            <div class="second-links">
+                                <a href="#" class="view-all">Xem tất cả
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
                             </div>
+                        </div>
+                        <div class="column">
                             <div class="products main flexwrap">
                                 <div class="item">
                                     <div class="media">
@@ -618,21 +638,32 @@
                                         <div class="discount circle flexcenter"><span>16%</span></div>
                                     </div>
                                     <div class="content">
+                                        <div class="offer flexitem">
+                                            <p class="mini-text">Offer ends at</p>
+                                            <ul class="flexcenter">
+                                                <li>0</li>
+                                                <li>17</li>
+                                                <li>28</li>
+                                                <li>01</li>
+                                            </ul>
+                                        </div>
                                         <div class="rating">
                                             <div class="stars"></div>
                                             <span class="mini-text">(1,955)</span>
                                         </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Life Horse Fx2</a></h3>
+                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Life Horse Fx2 – Khung Nhôm | Phanh Vành | Giá Rẻ</a></h3>
                                         <div class="price">
                                             <span class="current">5.500.000đ</span>
                                             <span class="normal mini-text">6.555.000đ</span>
                                         </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
-                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
+                                        <div class="stock mini-text" data-stock="4000">
+                                            <div class="qty">
+                                                <span>Sold: <strong class="qty-sold">529</strong></span>
+                                                <span>Stock: <strong class="qty-available">37</strong></span>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="available"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -653,21 +684,32 @@
                                         <div class="discount circle flexcenter"><span>7%</span></div>
                                     </div>
                                     <div class="content">
+                                        <div class="offer flexitem">
+                                            <p class="mini-text">Offer ends at</p>
+                                            <ul class="flexcenter">
+                                                <li>1</li>
+                                                <li>10</li>
+                                                <li>09</li>
+                                                <li>22</li>
+                                            </ul>
+                                        </div>
                                         <div class="rating">
                                             <div class="stars"></div>
                                             <span class="mini-text">(362)</span>
                                         </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Life Fix735 700C</a></h3>
+                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Life Fix735 700C Giá Rẻ | Khuyến mãi Hot</a></h3>
                                         <div class="price">
                                             <span class="current">3.740.000đ</span>
                                             <span class="normal mini-text">4.000.000đ</span>
                                         </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
-                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
+                                        <div class="stock mini-text" data-stock="4000">
+                                            <div class="qty">
+                                                <span>Sold: <strong class="qty-sold">259</strong></span>
+                                                <span>Stock: <strong class="qty-available">10</strong></span>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="available"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -688,6 +730,15 @@
                                         <div class="discount circle flexcenter"><span>5%</span></div>
                                     </div>
                                     <div class="content">
+                                        <div class="offer flexitem">
+                                            <p class="mini-text">Offer ends at</p>
+                                            <ul class="flexcenter">
+                                                <li>1</li>
+                                                <li>18</li>
+                                                <li>02</li>
+                                                <li>09</li>
+                                            </ul>
+                                        </div>
                                         <div class="rating">
                                             <div class="stars"></div>
                                             <span class="mini-text">(231)</span>
@@ -697,12 +748,14 @@
                                             <span class="current">7.590.000đ</span>
                                             <span class="normal mini-text">7.990.000đ</span>
                                         </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Sản xuất tại Đài Loan</li>
-                                                <li>Bảo hành 12 tháng</li>
-                                                <li>Có nhiều màu sắc khác nhau</li>
-                                            </ul>
+                                        <div class="stock mini-text" data-stock="4000">
+                                            <div class="qty">
+                                                <span>Sold: <strong class="qty-sold">929</strong></span>
+                                                <span>Stock: <strong class="qty-available">107</strong></span>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="available"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -723,6 +776,15 @@
                                         <div class="discount circle flexcenter"><span>2%</span></div>
                                     </div>
                                     <div class="content">
+                                        <div class="offer flexitem">
+                                            <p class="mini-text">Offer ends at</p>
+                                            <ul class="flexcenter">
+                                                <li>2</li>
+                                                <li>12</li>
+                                                <li>00</li>
+                                                <li>02</li>
+                                            </ul>
+                                        </div>
                                         <div class="rating">
                                             <div class="stars"></div>
                                             <span class="mini-text">(713)</span>
@@ -732,12 +794,14 @@
                                             <span class="current">4.590.000đ</span>
                                             <span class="normal mini-text">4.690.000đ</span>
                                         </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Sản xuất tại Đài Loan</li>
-                                                <li>Bảo hành 12 tháng</li>
-                                                <li>Phù hợp cho người thích cảm giác mạnh</li>
-                                            </ul>
+                                        <div class="stock mini-text" data-stock="4000">
+                                            <div class="qty">
+                                                <span>Sold: <strong class="qty-sold">1129</strong></span>
+                                                <span>Stock: <strong class="qty-available">92</strong></span>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="available"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -745,7 +809,7 @@
                                     <div class="media">
                                         <div class="thumbnail object-cover">
                                             <a href="#">
-                                                <img src="assets/img/Xe-Dap-Fixed-Gear-Funky-Locking-Nhat-Ban.jpg" alt="">
+                                                <img src="assets/img/feature-product-5.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="hoverable">
@@ -755,25 +819,35 @@
                                                 <li><a href=""><i class="ri-shuffle-line"></i></a></li>
                                             </ul>
                                         </div>
-                                        <div class="discount circle flexcenter"><span>5%</span></div>
+                                        <div class="discount circle flexcenter"><span>10%</span></div>
                                     </div>
                                     <div class="content">
+                                        <div class="offer flexitem">
+                                            <p class="mini-text">Offer ends at</p>
+                                            <ul class="flexcenter">
+                                                <li>1</li>
+                                                <li>20</li>
+                                                <li>22</li>
+                                                <li>10</li>
+                                            </ul>
+                                        </div>
                                         <div class="rating">
                                             <div class="stars"></div>
                                             <span class="mini-text">(225)</span>
                                         </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Funky Locking Nhật Bản</a></h3>
+                                        <h3 class="main-links"><a href="#">Xe Đạp Địa Hình MTB Kurashi Kon 26 Inch Giá Rẻ</a></h3>
                                         <div class="price">
-                                            <span class="current">7.590.000đ</span>
-                                            <span class="normal mini-text">7.990.000đ</span>
+                                            <span class="current">3.790.000đ</span>
+                                            <span class="normal mini-text">4.190.000đ</span>
                                         </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Thiết kế đơn giản, trọng lượng nhẹ và có thể đi lùi</li>
-                                                <li>Ghi đông Xe Đạp Fixed Funky Popping thiết kế kiểu dáng cong</li>
-                                                <li>Bộ truyền động Xe Đạp Fixed Gear Funky Popping được cấu tạo đơn giản</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
+                                        <div class="stock mini-text" data-stock="4000">
+                                            <div class="qty">
+                                                <span>Sold: <strong class="qty-sold">239</strong></span>
+                                                <span>Stock: <strong class="qty-available">7</strong></span>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="available"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -781,7 +855,7 @@
                                     <div class="media">
                                         <div class="thumbnail object-cover">
                                             <a href="#">
-                                                <img src="assets/img/Xe-Dap-Fixed-Gear-Life-Fix735-700C.jpg" alt="">
+                                                <img src="assets/img/feature-products-7.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="hoverable">
@@ -791,24 +865,35 @@
                                                 <li><a href=""><i class="ri-shuffle-line"></i></a></li>
                                             </ul>
                                         </div>
-                                        <div class="discount circle flexcenter"><span>7%</span></div>
+                                        <div class="discount circle flexcenter"><span>22%</span></div>
                                     </div>
                                     <div class="content">
+                                        <div class="offer flexitem">
+                                            <p class="mini-text">Offer ends at</p>
+                                            <ul class="flexcenter">
+                                                <li>1</li>
+                                                <li>09</li>
+                                                <li>33</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
                                         <div class="rating">
                                             <div class="stars"></div>
                                             <span class="mini-text">(1,022)</span>
                                         </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Life Fix 735-700C</a></h3>
+                                        <h3 class="main-links"><a href="#">Xe Đạp Touring Life Fly – Khung Nhôm | Phanh Đĩa | Ltwoo R7</a></h3>
                                         <div class="price">
-                                            <span class="current">3.740.000đ</span>
-                                            <span class="normal mini-text">4.000.000đ</span>
+                                            <span class="current">8.090.000đ</span>
+                                            <span class="normal mini-text">10.350.000đ</span>
                                         </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
-                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
+                                        <div class="stock mini-text" data-stock="4000">
+                                            <div class="qty">
+                                                <span>Sold: <strong class="qty-sold">1239</strong></span>
+                                                <span>Stock: <strong class="qty-available">227</strong></span>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="available"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -829,21 +914,32 @@
                                         <div class="discount circle flexcenter"><span>2%</span></div>
                                     </div>
                                     <div class="content">
+                                        <div class="offer flexitem">
+                                            <p class="mini-text">Offer ends at</p>
+                                            <ul class="flexcenter">
+                                                <li>1</li>
+                                                <li>01</li>
+                                                <li>44</li>
+                                                <li>42</li>
+                                            </ul>
+                                        </div>
                                         <div class="rating">
                                             <div class="stars"></div>
                                             <span class="mini-text">(355)</span>
                                         </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Địa Hình Giant ATX 720-2021</a></h3>
+                                        <h3 class="main-links"><a href="#">Xe Đạp Địa Hình Giant ATX 720-2021 Giá Rẻ</a></h3>
                                         <div class="price">
                                             <span class="current">10.750.000đ</span>
                                             <span class="normal mini-text">10.990.000đ</span>
                                         </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Xe chính hãng, nhập khẩu Đài Loan</li>
-                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
+                                        <div class="stock mini-text" data-stock="4000">
+                                            <div class="qty">
+                                                <span>Sold: <strong class="qty-sold">429</strong></span>
+                                                <span>Stock: <strong class="qty-available">38</strong></span>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="available"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -864,22 +960,32 @@
                                         <div class="discount circle flexcenter"><span>13%</span></div>
                                     </div>
                                     <div class="content">
+                                        <div class="offer flexitem">
+                                            <p class="mini-text">Offer ends at</p>
+                                            <ul class="flexcenter">
+                                                <li>1</li>
+                                                <li>31</li>
+                                                <li>24</li>
+                                                <li>18</li>
+                                            </ul>
+                                        </div>
                                         <div class="rating">
                                             <div class="stars"></div>
                                             <span class="mini-text">(425)</span>
                                         </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Touring Twtter R12 Tay Ngang</a></h3>
+                                        <h3 class="main-links"><a href="#">Xe Đạp Touring Twtter R12 Tay Ngang Giá Rẻ Khuyến Mãi Hot</a></h3>
                                         <div class="price">
                                             <span class="current">15.900.000đ</span>
                                             <span class="normal mini-text">18.290.000đ</span>
                                         </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Thiết kế thời thượng và công nghệ tiên tiến</li>
-                                                <li>Phù hợp với người cao từ 1m65 trở lên</li>
-                                                <li>Chịu tải trọng lên đến 90kg</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
+                                        <div class="stock mini-text" data-stock="4000">
+                                            <div class="qty">
+                                                <span>Sold: <strong class="qty-sold">939</strong></span>
+                                                <span>Stock: <strong class="qty-available">31</strong></span>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="available"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1104,7 +1210,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/category.js"></script>
 </body>
 </html>
