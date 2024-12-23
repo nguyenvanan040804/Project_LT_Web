@@ -1,11 +1,12 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Nhập</title>
-    <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- <link rel="stylesheet" href="assets/css/base.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -18,12 +19,12 @@
         <div class="form login">
             <div class="form-content">
                 <a href="index.jsp" class="logo">
-                    <img src="assets/img/logo.png" alt="">
+                    <img src="./assets/img/logo.png" alt="">
                 </a>
                 <header>Đăng nhập</header>
                 <form action="#">
                     <div class="field input-field">
-                        <input type="email" class="input" placeholder="email">
+                        <input type="text" class="input" placeholder="username">
                     </div>
                     <div class="field input-field">
                         <input type="password" class="password" placeholder="mật khẩu">
@@ -53,7 +54,7 @@
 
             <div class="media-options">
                 <a href="#" class="field google">
-                    <img src="assets/img/google.png" alt="" class="google-img">
+                    <img src="./assets/img/google.png" alt="" class="google-img">
                     <span>Đăng nhập với Google</span>
                 </a>
             </div>
@@ -64,12 +65,12 @@
         <div class="form signup">
             <div class="form-content">
                 <a href="index.jsp" class="logo">
-                    <img src="assets/img/logo.png" alt="">
+                    <img src="./assets/img/logo.png" alt="">
                 </a>
                 <header>Đăng ký</header>
                 <form action="#">
                     <div class="field input-field">
-                        <input type="email" class="input" placeholder="email">
+                        <input type="text" class="input" placeholder="username">
                     </div>
                     <div class="field input-field">
                         <input type="password" class="password" placeholder="mật khẩu">
@@ -100,7 +101,7 @@
 
             <div class="media-options">
                 <a href="#" class="field google">
-                    <img src="assets/img/google.png" alt="" class="google-img">
+                    <img src="./assets/img/google.png" alt="" class="google-img">
                     <span>Đăng ký với Google</span>
                 </a>
             </div>
@@ -109,7 +110,7 @@
         <div class="form forgot-password">
             <div class="form-content">
                 <a href="index.jsp" class="logo">
-                    <img src="assets/img/logo.png" alt="">
+                    <img src="./assets/img/logo.png" alt="">
                 </a>
                 <header>Quên mật khẩu</header>
                 <form action="#">
@@ -128,6 +129,6 @@
         
     </section>
 
-    <script src="assets/js/login.js"></script>
+    <script src="./assets/js/login.js"></script>
 </body>
 </html>
