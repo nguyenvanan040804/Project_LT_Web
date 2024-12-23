@@ -42,7 +42,7 @@
                         </div>
                         <div class="right">
                             <ul class="flexitem main-links">
-                                <li><a href="../../../login.jsp">Đăng Nhập</a></li>
+                                <li><a href="./login.jsp">Đăng Nhập</a></li>
                                 <li><a href="../../../page-user.jsp">Tài Khoản</a></li>
                                 <li><a href="cart.jsp">Theo Dõi Đơn</a></li>
                                 <li><a href="#">Tiền Tệ <span class="icon-small"> <i class="ri-arrow-down-s-line"></i></span></a>
@@ -2849,7 +2849,7 @@
                             </div>
                             <form action="" class="search">
                                 <span class="icon-large"><i class="ri-mail-line"></i></span>
-                                <input type="mail" name="" placeholder="Email của bạn" required>
+                                <input type="email" name="" placeholder="Email của bạn" required>
                                 <button type="submit">Đăng ký</button>
                             </form>
                         </div>

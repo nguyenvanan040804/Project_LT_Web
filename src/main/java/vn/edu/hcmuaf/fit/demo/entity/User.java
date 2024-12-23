@@ -5,30 +5,28 @@ import java.time.LocalDateTime;
 public class User {
     private int id;
     private int role_num;
+    private String username;
     private String fullName;
     private String email;
     private String password;
     private String phone;
     private String address;
-    private String avatarUrl;
-    private LocalDateTime birthDate;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
     public User() {
     }
 
-    public User(int id, int role_num, String fullName, String email, String password, String phone, String address,
-                String avatarUrl, LocalDateTime birthDate, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public User(int id, int role_num, String username,String fullName, String email, String password, String phone, String address,
+                 LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
+        this.username = username;
         this.role_num = role_num;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
         this.phone = phone;
         this.address = address;
-        this.avatarUrl = avatarUrl;
-        this.birthDate = birthDate;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
@@ -47,6 +45,14 @@ public class User {
 
     public void setRole_num(int role_num) {
         this.role_num = role_num;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFullName() {
@@ -89,22 +95,6 @@ public class User {
         this.address = address;
     }
 
-    public String getAvatarUrl() {
-        return avatarUrl;
-    }
-
-    public void setAvatarUrl(String avatarUrl) {
-        this.avatarUrl = avatarUrl;
-    }
-
-    public LocalDateTime getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDateTime birthDate) {
-        this.birthDate = birthDate;
-    }
-
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
@@ -130,8 +120,6 @@ public class User {
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
-                ", avatarUrl='" + avatarUrl + '\'' +
-                ", birthDate=" + birthDate +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';
