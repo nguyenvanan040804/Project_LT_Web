@@ -3,7 +3,8 @@ package vn.edu.hcmuaf.fit.demo.entity;
 import java.time.LocalDateTime;
 
 public class User {
-    private Integer userId;
+    private int id;
+    private int role_num;
     private String fullName;
     private String email;
     private String password;
@@ -17,9 +18,10 @@ public class User {
     public User() {
     }
 
-    public User(Integer userId, String fullName, String email, String password, String phone, String address,
+    public User(int id, int role_num, String fullName, String email, String password, String phone, String address,
                 String avatarUrl, LocalDateTime birthDate, LocalDateTime createdAt, LocalDateTime updatedAt) {
-        this.userId = userId;
+        this.id = id;
+        this.role_num = role_num;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
@@ -31,12 +33,20 @@ public class User {
         this.updatedAt = updatedAt;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public int getId() {
+        return id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getRole_num() {
+        return role_num;
+    }
+
+    public void setRole_num(int role_num) {
+        this.role_num = role_num;
     }
 
     public String getFullName() {
@@ -114,7 +124,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "id=" + id +
                 ", fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
