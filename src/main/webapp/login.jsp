@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -23,6 +24,7 @@
                     <img src="./assets/img/logo.png" alt="">
                 </a>
                 <header>Đăng nhập</header>
+
                 <form action="login" method="post">
                     <div class="field input-field">
                         <input type="text" class="input" placeholder="username" name="username">
@@ -31,6 +33,12 @@
                         <input type="password" class="password" placeholder="mật khẩu" name="password">
                         <i class="bx bx-hide eye-icon"></i>
                     </div>
+
+                    <c:if test="${not empty failedMsg}">
+                        <h5 class="text-center text-danger">${failedMsg}</h5>
+                        <c:remove var="failedMsg" scope="session" />
+                    </c:if>
+
                     <div class="form-link">
                         <a href="#" class="forgot-pass">Quên mật khẩu?</a>
                     </div>

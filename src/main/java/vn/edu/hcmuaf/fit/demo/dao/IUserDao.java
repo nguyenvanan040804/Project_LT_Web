@@ -4,4 +4,5 @@ import vn.edu.hcmuaf.fit.demo.entity.User;
 
 public interface IUserDao {
     public boolean userRegister(User user);
+    public User login(String username, String password);
 }

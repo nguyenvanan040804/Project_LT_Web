@@ -5,6 +5,7 @@ import vn.edu.hcmuaf.fit.demo.entity.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class UserDaoImpl implements IUserDao {
     private Connection conn;
@@ -35,5 +36,33 @@ public class UserDaoImpl implements IUserDao {
             e.printStackTrace();
         }
         return regis;
+    }
+
+    @Override
+    public User login(String username, String password) {
+        User user = null;
+        try {
+            String sql = "select * from users where username = ? and pass_word = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, username);
+            ps.setString(2, password);
+
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()) {
+                user = new User();
+                user.setId(rs.getInt("id"));
+                user.setRole_num(rs.getInt("role_num"));
+                user.setUsername(rs.getString("username"));
+                user.setFullName(rs.getString("fullname"));
+                user.setEmail(rs.getString("email"));
+                user.setPassword(rs.getString("pass_word"));
+                user.setPhone(rs.getString("phone"));
+                user.setAddress(rs.getString("address"));
+
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
     }
 }
