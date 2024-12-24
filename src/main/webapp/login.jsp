@@ -1,11 +1,14 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Nhập</title>
-    <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- <link rel="stylesheet" href="assets/css/base.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -18,17 +21,24 @@
         <div class="form login">
             <div class="form-content">
                 <a href="index.jsp" class="logo">
-                    <img src="assets/img/logo.png" alt="">
+                    <img src="./assets/img/logo.png" alt="">
                 </a>
                 <header>Đăng nhập</header>
-                <form action="#">
+
+                <form action="login" method="post">
                     <div class="field input-field">
-                        <input type="email" class="input" placeholder="email">
+                        <input type="text" class="input" placeholder="username" name="username">
                     </div>
                     <div class="field input-field">
-                        <input type="password" class="password" placeholder="mật khẩu">
+                        <input type="password" class="password" placeholder="mật khẩu" name="password">
                         <i class="bx bx-hide eye-icon"></i>
                     </div>
+
+                    <c:if test="${not empty failedMsg}">
+                        <h5 class="text-center text-danger">${failedMsg}</h5>
+                        <c:remove var="failedMsg" scope="session" />
+                    </c:if>
+
                     <div class="form-link">
                         <a href="#" class="forgot-pass">Quên mật khẩu?</a>
                     </div>
@@ -38,78 +48,58 @@
                 </form>
 
                 <div class="form-link">
-                    <span>Bạn chưa có tài khoản <a href="#" class="link signup-link">Đăng ký</a></span>
+                    <span>Bạn chưa có tài khoản <a href="./register.jsp">Đăng ký</a></span>
                 </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="media-options">
-                <a href="#" class="field facebook">
-                    <i class="bx bxl-facebook facebook-icon"></i>
-                    <span>Đăng nhập với Facebook</span>
-                </a>
-            </div>
-
-            <div class="media-options">
-                <a href="#" class="field google">
-                    <img src="assets/img/google.png" alt="" class="google-img">
-                    <span>Đăng nhập với Google</span>
-                </a>
             </div>
         </div>
 
-        <!-- Sign up form -->
+        <!-- Đăng ký form -->
 
-        <div class="form signup">
-            <div class="form-content">
-                <a href="index.jsp" class="logo">
-                    <img src="assets/img/logo.png" alt="">
-                </a>
-                <header>Đăng ký</header>
-                <form action="#">
-                    <div class="field input-field">
-                        <input type="email" class="input" placeholder="email">
-                    </div>
-                    <div class="field input-field">
-                        <input type="password" class="password" placeholder="mật khẩu">
-                    </div>
+<%--        <div class="form signup">--%>
+<%--            <div class="form-content">--%>
+<%--                <a href="index.jsp" class="logo">--%>
+<%--                    <img src="./assets/img/logo.png" alt="">--%>
+<%--                </a>--%>
+<%--                <header>Đăng ký</header>--%>
+<%--                <form action="register" method="post">--%>
+<%--                    <div class="field input-field">--%>
+<%--                        <input type="text" class="input" placeholder="tên đăng nhập" name="username">--%>
+<%--                    </div>--%>
+<%--                    <div class="field input-field">--%>
+<%--                        <input type="password" class="password" placeholder="mật khẩu" name="password">--%>
+<%--                        <i class="bx bx-hide eye-icon"></i>--%>
+<%--                    </div>--%>
+<%--                    <div class="field input-field">--%>
+<%--                        <input type="text" class="input" placeholder="tên đầy đủ" name="fullname">--%>
+<%--                    </div>--%>
+<%--                    <div class="field input-field">--%>
+<%--                        <input type="email" class="input" placeholder="email" name="email">--%>
+<%--                    </div>--%>
+<%--                    <div class="field input-field">--%>
+<%--                        <input type="text" class="input" placeholder="số điện thoại" name="phone">--%>
+<%--                    </div>--%>
+<%--                    <div class="field input-field">--%>
+<%--                        <input type="text" class="input" placeholder="địa chỉ" name="address">--%>
+<%--                    </div>--%>
+<%--                    <div class="check-form" style="font-size: 0.8em; display: flex; margin: 10px; gap: 10px">--%>
+<%--                        <input type="checkbox" class="input" name="check">--%>
+<%--                        Đồng ý với điều khoản sử dụng và chính sách--%>
+<%--                    </div>--%>
+<%--                    <div class="field button-field">--%>
+<%--                        <button>Đăng ký</button>--%>
+<%--                    </div>--%>
+<%--                </form>--%>
+<%--                <div class="form-link">--%>
+<%--                    <span>Bạn đã có tài khoản rồi? <a href="#" class="link login-link">Đăng nhập</a></span>--%>
+<%--                </div>--%>
+<%--            </div>--%>
 
-                    <div class="field input-field">
-                        <input type="password" class="password" placeholder="nhập lại mật khẩu">
-                        <i class="bx bx-hide eye-icon"></i>
-                    </div>
-
-                    <div class="field button-field">
-                        <button>Đăng ký</button>
-                    </div>
-                </form>
-                <div class="form-link">
-                    <span>Bạn đã có tài khoản rồi? <a href="#" class="link login-link">Đăng nhập</a></span>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="media-options">
-                <a href="#" class="field facebook">
-                    <i class="bx bxl-facebook facebook-icon"></i>
-                    <span>Đăng ký với Facebook</span>
-                </a>
-            </div>
-
-            <div class="media-options">
-                <a href="#" class="field google">
-                    <img src="assets/img/google.png" alt="" class="google-img">
-                    <span>Đăng ký với Google</span>
-                </a>
-            </div>
-        </div>
+<%--        </div>--%>
         <!-- forgot password -->
         <div class="form forgot-password">
             <div class="form-content">
                 <a href="index.jsp" class="logo">
-                    <img src="assets/img/logo.png" alt="">
+                    <img src="./assets/img/logo.png" alt="">
                 </a>
                 <header>Quên mật khẩu</header>
                 <form action="#">
@@ -128,6 +118,6 @@
         
     </section>
 
-    <script src="assets/js/login.js"></script>
+    <script src="./assets/js/login.js"></script>
 </body>
 </html>

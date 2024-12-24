@@ -63,20 +63,6 @@
     background: #fff;
 }
 
-.form.signup {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.forms.show-signup .form.signup {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.forms.show-signup .form.login {
-    opacity: 0;
-    pointer-events: none;
-}
 
 header {
     font-size: 28px;
@@ -173,17 +159,6 @@ form {
     background-color: #d4d4d4;
 }
 
-.line::before {
-    content: 'Hoặc';
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translateY(-50%, -50%);
-    background-color: #fff;
-    color: #8b8b8b;
-    padding: 0 15px;
-}
-
 .media-options a {
     display: flex;
     align-items: center;
@@ -243,11 +218,30 @@ a.google span {
 }
 
 .forms.show-forgot-password .form.login,
-.forms.show-forgot-password .form.signup {
+.forms.show-forgot-password {
     opacity: 0;
     pointer-events: none;
 }
+.text-center {
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: center !important;
+}
 
+.text-success {
+    color: #28a745 !important; /* Màu xanh lá cây */
+}
+
+.text-danger {
+    color: #dc3545 !important; /* Màu đỏ */
+}
+
+
+/* CSS cho form signup trên register.jsp */
+.form.signup {
+    opacity: 1; /* Đảm bảo form sign-up luôn hiển thị */
+    pointer-events: auto; /* Cho phép tương tác với form */
+}
 
 
 @media screen and (max-width: 400px) {

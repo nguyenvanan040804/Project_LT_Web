@@ -1,3 +1,5 @@
+<%@ page import="java.sql.Connection" %>
+<%@ page import="vn.edu.hcmuaf.fit.demo.db.DBConnect" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="vi">
@@ -10,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <div id="page" class="site page-home">
@@ -40,8 +42,8 @@
                         </div>
                         <div class="right">
                             <ul class="flexitem main-links">
-                                <li><a href="../../../login.html">Đăng Nhập</a></li>
-                                <li><a href="../../../page-user.html">Tài Khoản</a></li>
+                                <li><a href="./login.jsp">Đăng Nhập</a></li>
+                                <li><a href="../../../page-user.jsp">Tài Khoản</a></li>
                                 <li><a href="cart.jsp">Theo Dõi Đơn</a></li>
                                 <li><a href="#">Tiền Tệ <span class="icon-small"> <i class="ri-arrow-down-s-line"></i></span></a>
                                     <ul>
@@ -67,7 +69,7 @@
                     <div class="wrapper flexitem">
                         <a href="#" class="trigger desktop-hide"><span class="i ri-menu-2-line"></span></a>
                         <div class="left flexitem">
-                            <div class="logo"><a href="index.html"><span class="circle"></span>.BikeStore</a></div>
+                            <div class="logo"><a href="index.jsp"><span class="circle"></span>.BikeStore</a></div>
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
                                     <li><a href="#">Trang Chủ</a></li>
@@ -133,7 +135,7 @@
                                                             <div class="media">
                                                                 <div class="thumbnail object-cover">
                                                                     <a href="#">
-                                                                        <img src="assets/img/Xe-dap-tre-em.jpg"
+                                                                        <img src="./assets/img/Xe-dap-tre-em.jpg"
                                                                             alt="">
                                                                     </a>
                                                                 </div>
@@ -144,7 +146,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li><a href="../../../page-service.html">Dịch Vụ</a></li>
+                                    <li><a href="../../../page-service.jsp">Dịch Vụ</a></li>
                                     <li>
                                         <a href="#">Thể Thao
                                             <div class="fly-item"><span>Mới</span></div>
@@ -173,7 +175,7 @@
                                     <div class="empty-cart">
                                         <div class="content">
                                             <div class="empty-body">
-                                                <img src="assets/img/no-cart.png" alt="">
+                                                <img src="./assets/img/no-cart.png" alt="">
                                                 <span>Không có sản phẩm</span>
                                             </div>
                                         </div>
@@ -243,7 +245,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="../../../page-promotion.html">
+                                            <a href="../../../page-promotion.jsp">
                                                 <div class="icon-large"><i class="ri-heart-pulse-line"></i></div>
                                                 Giảm Giá Ưu Đãi
                                                 <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
@@ -257,7 +259,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="../../../page-accessory.html">
+                                            <a href="../../../page-accessory.jsp">
                                                 <div class="icon-large"><i class="ri-android-line"></i></div>
                                                 Phụ Kiện Xe Đạp
                                                 <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
@@ -308,7 +310,7 @@
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <div class="image object-cover">
-                                            <img src="/assets/slider/slider1.png" alt="">
+                                            <img src="./assets/slider/slider1.png" alt="">
                                         </div>
                                         <div class="text-content flexcol">
                                             <a href="#" data-id="sporty" class="primary-button">Đặt Hàng</a>
@@ -318,7 +320,7 @@
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <div class="image object-cover">
-                                            <img src="/assets/slider/slider2.jpg" alt="">
+                                            <img src="./assets/slider/slider2.jpg" alt="">
                                         </div>
                                         <div class="text-content flexcol">
                                             <a href="#" data-id="school" class="primary-button">Đặt Hàng</a>
@@ -328,7 +330,7 @@
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <div class="image object-cover">
-                                            <img src="/assets/slider/slider3.png" alt="">
+                                            <img src="./assets/slider/slider3.png" alt="">
                                         </div>
                                         <div class="text-content flexcol">
                                             <a href="#" data-id="tour" class="primary-button">Đặt Hàng</a>
@@ -338,10 +340,10 @@
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <div class="image object-cover">
-                                            <img src="/assets/slider/slider4.jpg" alt="">
+                                            <img src="./assets/slider/slider4.jpg" alt="">
                                         </div>
                                         <div class="text-content flexcol">
-                                            <a href="../../../page-accessory.html" class="primary-button">Đặt Hàng</a>
+                                            <a href="../../../page-accessory.jsp" class="primary-button">Đặt Hàng</a>
                                         </div>
                                     </div>
                                 </div>
@@ -358,32 +360,32 @@
                     <div class="wrapper flexitem">
                         <div class="item">
                             <a href="#">
-                                <img src="assets/brands/giant.png" alt="">
+                                <img src="./assets/brands/giant.png" alt="">
                             </a>
                         </div>
                         <div class="item">
                             <a href="#">
-                                <img src="assets/brands/momentim.png" alt="">
+                                <img src="./assets/brands/momentim.png" alt="">
                             </a>
                         </div>
                         <div class="item">
                             <a href="#">
-                                <img src="assets/brands/royalbaby.png" alt="">
+                                <img src="./assets/brands/royalbaby.png" alt="">
                             </a>
                         </div>
                         <div class="item">
                             <a href="#">
-                                <img src="assets/brands/Jeep_T7.png" alt="">
+                                <img src="./assets/brands/Jeep_T7.png" alt="">
                             </a>
                         </div>
                         <div class="item">
                             <a href="#">
-                                <img src="assets/brands/liv.png" alt="">
+                                <img src="./assets/brands/liv.png" alt="">
                             </a>
                         </div>
                         <div class="item">
                             <a href="#">
-                                <img src="assets/brands/maxbike.png" alt="">
+                                <img src="./assets/brands/maxbike.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -412,7 +414,7 @@
                                         </div>
                                         <div class="media">
                                             <div class="image">
-                                                <a href="../../../page-offer.html">
+                                                <a href="../../../page-offer.jsp">
                                                     <img src="assets/img/Xe-Dap-Dua-Sava-Ex7.jpg" alt="">
                                                 </a>
                                             </div>
@@ -430,7 +432,7 @@
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(2,548)</span>
                                             </div>
-                                            <h3 class="main-links"><a href="../../../page-offer.html">Xe Đạp Đua Sava Ex7</a></h3>
+                                            <h3 class="main-links"><a href="../../../page-offer.jsp">Xe Đạp Đua Sava Ex7</a></h3>
                                             <div class="price">
                                                 <span class="current">19.490.000đ</span>
                                                 <span class="normal mini-text">20.000.000đ</span>
@@ -453,7 +455,7 @@
                                         <div class="media">
                                             <div class="thumbnail object-cover">
                                                 <a href="#">
-                                                    <img src="assets/img/Xe-Dap-Touring-Life.jpg" alt="">
+                                                    <img src="./assets/img/Xe-Dap-Touring-Life.jpg" alt="">
                                                 </a>
                                             </div>
                                             <div class="hoverable">
@@ -485,7 +487,7 @@
                                         <div class="media">
                                             <div class="thumbnail object-cover">
                                                 <a href="#">
-                                                    <img src="assets/img/Xe-Dap-Dua-Fascino-Triton.jpg" alt="">
+                                                    <img src="./assets/img/Xe-Dap-Dua-Fascino-Triton.jpg" alt="">
                                                 </a>
                                             </div>
                                             <div class="hoverable">
@@ -2847,7 +2849,7 @@
                             </div>
                             <form action="" class="search">
                                 <span class="icon-large"><i class="ri-mail-line"></i></span>
-                                <input type="mail" name="" placeholder="Email của bạn" required>
+                                <input type="email" name="" placeholder="Email của bạn" required>
                                 <button type="submit">Đăng ký</button>
                             </form>
                         </div>

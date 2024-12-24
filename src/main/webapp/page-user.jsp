@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -21,7 +22,7 @@
                         <a class="list-group-item list-group-item-action active" data-toggle="list"
                             href="#account-general">Tài khoản</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-change-password">Đổi mật khẩu</a>
+                            href="#account-change-passWord">Đổi mật khẩu</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
                             href="#account-info">Thông tin</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
@@ -77,19 +78,19 @@
                                 </div>                                
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="account-change-password">
+                        <div class="tab-pane fade" id="account-change-passWord">
                             <div class="card-body pb-2">
                                 <div class="form-group">
                                     <label class="form-label">Mật khẩu hiện tại</label>
-                                    <input type="password" class="form-control">
+                                    <input type="passWord" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Mật khẩu mới</label>
-                                    <input type="password" class="form-control">
+                                    <input type="passWord" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Nhập lại mật khẩu mới</label>
-                                    <input type="password" class="form-control">
+                                    <input type="passWord" class="form-control">
                                 </div>
                             </div>
                         </div>
