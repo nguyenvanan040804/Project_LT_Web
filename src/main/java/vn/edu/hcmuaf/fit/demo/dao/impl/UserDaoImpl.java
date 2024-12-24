@@ -16,33 +16,32 @@ public class UserDaoImpl implements IUserDao {
 
     @Override
     public boolean userRegister(User user) {
-        boolean regis = false;
         try {
-            String sql = "insert into users(username, fullname, email, pass_word, phone, address)" +
+            String sql = "insert into users(userName, fullName, email, passWord, phone, address)" +
                     "values (?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, user.getUsername());
+            ps.setString(1, user.getUserName());
             ps.setString(2, user.getFullName());
             ps.setString(3, user.getEmail());
-            ps.setString(4, user.getPassword());
+            ps.setString(4, user.getPassWord());
             ps.setString(5, user.getPhone());
             ps.setString(6, user.getAddress());
 
-            int i = ps.executeUpdate();
-            if(i == 1) {
-                regis = true;
+            int rowsAffected = ps.executeUpdate();
+            if(rowsAffected > 0) {
+                return true;
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return regis;
+        return false;
     }
 
     @Override
     public User login(String username, String password) {
         User user = null;
         try {
-            String sql = "select * from users where username = ? and pass_word = ?";
+            String sql = "select * from users where userName = ? and passWord = ?";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, username);
             ps.setString(2, password);
@@ -51,11 +50,11 @@ public class UserDaoImpl implements IUserDao {
             if(rs.next()) {
                 user = new User();
                 user.setId(rs.getInt("id"));
-                user.setRole_num(rs.getInt("role_num"));
-                user.setUsername(rs.getString("username"));
-                user.setFullName(rs.getString("fullname"));
+                user.setRoleId(rs.getInt("roleNum"));
+                user.setUserName(rs.getString("userName"));
+                user.setFullName(rs.getString("fullName"));
                 user.setEmail(rs.getString("email"));
-                user.setPassword(rs.getString("pass_word"));
+                user.setPassWord(rs.getString("passWord"));
                 user.setPhone(rs.getString("phone"));
                 user.setAddress(rs.getString("address"));
 

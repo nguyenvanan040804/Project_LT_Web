@@ -7,7 +7,6 @@ import vn.edu.hcmuaf.fit.demo.dao.IUserDao;
 import vn.edu.hcmuaf.fit.demo.dao.impl.UserDaoImpl;
 import vn.edu.hcmuaf.fit.demo.db.DBConnect;
 import vn.edu.hcmuaf.fit.demo.entity.User;
-
 import java.io.IOException;
 
 @WebServlet(value = "/login")

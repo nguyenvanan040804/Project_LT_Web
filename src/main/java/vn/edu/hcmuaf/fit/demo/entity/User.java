@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 
 public class User {
     private int id;
-    private int role_num;
-    private String username;
+    private int roleId;
+    private String userName;
     private String fullName;
     private String email;
-    private String password;
+    private String passWord;
     private String phone;
     private String address;
     private LocalDateTime createdAt;
@@ -17,14 +17,14 @@ public class User {
     public User() {
     }
 
-    public User(int id, int role_num, String username,String fullName, String email, String password, String phone, String address,
-                 LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public User(int id, int roleId, String userName, String fullName, String email, String passWord, String phone, String address,
+                LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
-        this.username = username;
-        this.role_num = role_num;
+        this.userName = userName;
+        this.roleId = roleId;
         this.fullName = fullName;
         this.email = email;
-        this.password = password;
+        this.passWord = passWord;
         this.phone = phone;
         this.address = address;
         this.createdAt = createdAt;
@@ -39,20 +39,20 @@ public class User {
         this.id = id;
     }
 
-    public int getRole_num() {
-        return role_num;
+    public int getRoleId() {
+        return roleId;
     }
 
-    public void setRole_num(int role_num) {
-        this.role_num = role_num;
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getFullName() {
@@ -71,12 +71,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPassWord() {
+        return passWord;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public String getPhone() {
@@ -117,7 +117,7 @@ public class User {
                 "id=" + id +
                 ", fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
+                ", passWord='" + passWord + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
                 ", createdAt=" + createdAt +

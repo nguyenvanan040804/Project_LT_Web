@@ -28,7 +28,7 @@
                     <input type="text" class="input" placeholder="Tên đăng nhập" name="username" required>
                 </div>
                 <div class="field input-field">
-                    <input type="password" class="password" placeholder="Mật khẩu" name="password" required>
+                    <input type="password" class="passWord" placeholder="Mật khẩu" name="password" required>
                     <i class="bx bx-hide eye-icon"></i>
                 </div>
                 <div class="field input-field">

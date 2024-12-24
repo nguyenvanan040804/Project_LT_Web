@@ -8,7 +8,6 @@ import vn.edu.hcmuaf.fit.demo.dao.impl.UserDaoImpl;
 import vn.edu.hcmuaf.fit.demo.db.DBConnect;
 import vn.edu.hcmuaf.fit.demo.entity.User;
 
-import java.io.DataOutput;
 import java.io.IOException;
 
 @WebServlet(value = "/register")
@@ -31,9 +30,9 @@ public class RegisterController extends HttpServlet {
             String check = request.getParameter("check");
 
             User user = new User();
-            user.setUsername(username);
+            user.setUserName(username);
             user.setFullName(fullname);
-            user.setPassword(password);
+            user.setPassWord(password);
             user.setEmail(email);
             user.setPhone(phone);
             user.setAddress(address);
