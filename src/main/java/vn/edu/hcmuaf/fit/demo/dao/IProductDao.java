@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface IProductDao {
     public boolean addProduct(Product product);
-
+    public List<Product> getAllProduct();
 }
