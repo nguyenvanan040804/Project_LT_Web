@@ -27,7 +27,7 @@ public class LoginController extends HttpServlet {
             if("admin".equals(username) && "admin".equals(password)) {
                 User userAd = new User();
                 session.setAttribute("userobj", userAd);
-                response.sendRedirect("./admin.jsp");
+                response.sendRedirect("./admin/home.jsp");
             }else {
                 User user = userDao.login(username, password);
                 if(user != null) {

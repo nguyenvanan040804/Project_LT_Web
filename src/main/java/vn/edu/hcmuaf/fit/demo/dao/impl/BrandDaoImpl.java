@@ -94,20 +94,20 @@ public class BrandDaoImpl implements IBrandDao {
 
     public static void main(String[] args) {
         BrandDaoImpl brandDao = new BrandDaoImpl();
-        Brand brand = new Brand(2, "Giant");
-        Brand brand1 = new Brand(3, "Vinbike");
-        Brand brand2 = new Brand(4, "Momemtun");
-        Brand brand3 = new Brand(5, "Max");
-        Brand brand4 = new Brand(6, "TrinX");
-        Brand brand5 = new Brand(7, "Liv");
-        Brand brand6 = new Brand(8, "Miamor");
-        brandDao.addBrand(brand);
-        brandDao.addBrand(brand1);
-        brandDao.addBrand(brand2);
-        brandDao.addBrand(brand3);
-        brandDao.addBrand(brand4);
-        brandDao.addBrand(brand5);
-        brandDao.addBrand(brand6);
+//        Brand brand = new Brand(2, "Giant");
+//        Brand brand1 = new Brand(3, "Vinbike");
+//        Brand brand2 = new Brand(4, "Momemtun");
+//        Brand brand3 = new Brand(5, "Max");
+//        Brand brand4 = new Brand(6, "TrinX");
+//        Brand brand5 = new Brand(7, "Liv");
+//        Brand brand6 = new Brand(8, "Miamor");
+//        brandDao.addBrand(brand);
+//        brandDao.addBrand(brand1);
+//        brandDao.addBrand(brand2);
+//        brandDao.addBrand(brand3);
+//        brandDao.addBrand(brand4);
+//        brandDao.addBrand(brand5);
+//        brandDao.addBrand(brand6);
     }
 }
 
