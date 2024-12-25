@@ -7,6 +7,7 @@ import vn.edu.hcmuaf.fit.demo.entity.Product;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,6 +67,70 @@ public class ProductDaoImpl implements IProductDao {
         }
         return list;
     }
+
+    @Override
+    public Product getProductById(int id) {
+        Product product = null;
+        String sql = "select * from products where id = ?";
+        try {
+            conn = DBConnect.getConnect();
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            rs = ps.executeQuery();
+            if(rs.next()) {
+                product = new Product(rs.getInt("id"),
+                        rs.getInt("cateId"),
+                        rs.getInt("brandId"),
+                        rs.getString("productName"),
+                        rs.getString("productDes"),
+                        rs.getInt("quantity"),
+                        rs.getDouble("price"),
+                        rs.getDouble("salePrice"));
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return product;
+    }
+
+    @Override
+    public boolean deleteProductById(int id) {
+        String sql = "delete from products where id = ?";
+        try{
+            conn = DBConnect.getConnect();
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            return ps.executeUpdate() > 0;
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean updateProduct(Product product) {
+        String sql = "update products set "
+                + "cateId = ?, brandId = ?, productName = ?, productDes = ?, "
+                + "quantity = ?, price = ? , salePrice = ? "
+                + "WHERE id = ?";
+        try {
+            conn = DBConnect.getConnect();
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, product.getCateId());
+            ps.setInt(2, product.getBrandId());
+            ps.setString(3, product.getProductName());
+            ps.setString(4, product.getProductDes());
+            ps.setInt(5, product.getQuantity());
+            ps.setDouble(6, product.getPrice());
+            ps.setDouble(7, product.getSalePrice());
+            ps.setInt(8, product.getId());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) {
         ProductDaoImpl productDao = new ProductDaoImpl();

@@ -5,6 +5,13 @@ import vn.edu.hcmuaf.fit.demo.entity.Product;
 import java.util.List;
 
 public interface IProductDao {
-    public boolean addProduct(Product product);
-    public List<Product> getAllProduct();
+    boolean addProduct(Product product);
+
+    List<Product> getAllProduct();
+
+    Product getProductById(int id);
+
+    boolean deleteProductById(int id);
+
+    boolean updateProduct(Product product);
 }
