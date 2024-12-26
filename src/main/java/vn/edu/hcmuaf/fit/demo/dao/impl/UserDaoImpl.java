@@ -1,7 +1,7 @@
 package vn.edu.hcmuaf.fit.demo.dao.impl;
 
 import vn.edu.hcmuaf.fit.demo.dao.IUserDao;
-import vn.edu.hcmuaf.fit.demo.entity.User;
+import vn.edu.hcmuaf.fit.demo.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

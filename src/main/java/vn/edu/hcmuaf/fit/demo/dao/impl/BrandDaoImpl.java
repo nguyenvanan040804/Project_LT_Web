@@ -1,8 +1,8 @@
 package vn.edu.hcmuaf.fit.demo.dao.impl;
 
-import vn.edu.hcmuaf.fit.demo.dao.IBrandDao;
+import vn.edu.hcmuaf.fit.demo.dao.IObjectDao;
 import vn.edu.hcmuaf.fit.demo.db.DBConnect;
-import vn.edu.hcmuaf.fit.demo.entity.Brand;
+import vn.edu.hcmuaf.fit.demo.model.Brand;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrandDaoImpl implements IBrandDao {
+public class BrandDaoImpl implements IObjectDao<Brand> {
     private Connection conn;
     private PreparedStatement ps;
     private ResultSet rs;
@@ -21,7 +21,7 @@ public class BrandDaoImpl implements IBrandDao {
     }
 
     @Override
-    public boolean addBrand(Brand brand) {
+    public boolean add(Brand brand) {
         String sql = "insert into brands (brandName) values (?)";
         try {
             ps = conn.prepareStatement(sql);
@@ -34,7 +34,7 @@ public class BrandDaoImpl implements IBrandDao {
     }
 
     @Override
-    public List<Brand> getAllBrand() {
+    public List<Brand> getAll() {
         List<Brand> brands = new ArrayList<>();
         String sql = "select * from brands";
         try {
@@ -50,7 +50,7 @@ public class BrandDaoImpl implements IBrandDao {
     }
 
     @Override
-    public Brand getBrandById(int id) {
+    public Brand getById(int id) {
         String sql = "select * from brands where id = ?";
         try {
             ps = conn.prepareStatement(sql);
@@ -66,7 +66,7 @@ public class BrandDaoImpl implements IBrandDao {
     }
 
     @Override
-    public boolean deleteBrandById(int id) {
+    public boolean deleteById(int id) {
         String sql = "delete from brands where id = ?";
         try {
             ps = conn.prepareStatement(sql);
@@ -79,7 +79,7 @@ public class BrandDaoImpl implements IBrandDao {
     }
 
     @Override
-    public boolean updateBrand(Brand brand) {
+    public boolean update(Brand brand) {
         String sql = "update brands set brandName = ? where id = ?";
         try {
             ps = conn.prepareStatement(sql);
@@ -101,13 +101,13 @@ public class BrandDaoImpl implements IBrandDao {
 //        Brand brand4 = new Brand(6, "TrinX");
 //        Brand brand5 = new Brand(7, "Liv");
 //        Brand brand6 = new Brand(8, "Miamor");
-//        brandDao.addBrand(brand);
-//        brandDao.addBrand(brand1);
-//        brandDao.addBrand(brand2);
-//        brandDao.addBrand(brand3);
-//        brandDao.addBrand(brand4);
-//        brandDao.addBrand(brand5);
-//        brandDao.addBrand(brand6);
+//        brandDao.add(brand);
+//        brandDao.add(brand1);
+//        brandDao.add(brand2);
+//        brandDao.add(brand3);
+//        brandDao.add(brand4);
+//        brandDao.add(brand5);
+//        brandDao.add(brand6);
     }
 }
 

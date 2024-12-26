@@ -1,8 +1,8 @@
 package vn.edu.hcmuaf.fit.demo.dao.impl;
 
-import vn.edu.hcmuaf.fit.demo.dao.ICategoryDao;
+import vn.edu.hcmuaf.fit.demo.dao.IObjectDao;
 import vn.edu.hcmuaf.fit.demo.db.DBConnect;
-import vn.edu.hcmuaf.fit.demo.entity.Category;
+import vn.edu.hcmuaf.fit.demo.model.Category;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryDaoImpl implements ICategoryDao {
+public class CategoryDaoImpl implements IObjectDao<Category> {
     private Connection conn;
 
     public CategoryDaoImpl(Connection conn) {
@@ -19,7 +19,7 @@ public class CategoryDaoImpl implements ICategoryDao {
     }
 
     @Override
-    public boolean addCategory(Category cate) {
+    public boolean add(Category cate) {
         String sql = "insert into categories (cateName) values (?)";
         try (PreparedStatement ps = conn.prepareStatement(sql)){
             ps.setString(1, cate.getCateName());
@@ -31,7 +31,7 @@ public class CategoryDaoImpl implements ICategoryDao {
     }
 
     @Override
-    public List<Category> getAllCategory() {
+    public List<Category> getAll() {
         List<Category> categories = new ArrayList<>();
         String sql = "select * from categories";
         try {
@@ -48,7 +48,7 @@ public class CategoryDaoImpl implements ICategoryDao {
     }
 
     @Override
-    public Category getCateById(int id) {
+    public Category getById(int id) {
         String sql = "select * from categories where id = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -64,7 +64,7 @@ public class CategoryDaoImpl implements ICategoryDao {
     }
 
     @Override
-    public boolean deleteCateById(int id) {
+    public boolean deleteById(int id) {
         String sql = "delete from categories where id = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -77,7 +77,7 @@ public class CategoryDaoImpl implements ICategoryDao {
     }
 
     @Override
-    public boolean updateCate(Category cate) {
+    public boolean update(Category cate) {
         String sql = "update categories set cateName = ? where id = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -102,15 +102,15 @@ public class CategoryDaoImpl implements ICategoryDao {
 //        Category cate7 = new Category(9, "Phụ Kiện Xe Đạp");
 //        Category cate8 = new Category(10, "Thương Hiệu Xe Đạp");
 //        Category cate9 = new Category(11, "Bán Chạy Nhất");
-//        categoryDao.addCategory(cate);
-//        categoryDao.addCategory(cate1);
-//        categoryDao.addCategory(cate2);
-//        categoryDao.addCategory(cate3);
-//        categoryDao.addCategory(cate4);
-//        categoryDao.addCategory(cate5);
-//        categoryDao.addCategory(cate6);
-//        categoryDao.addCategory(cate7);
-//        categoryDao.addCategory(cate8);
-//        categoryDao.addCategory(cate9);
+//        categoryDao.add(cate);
+//        categoryDao.add(cate1);
+//        categoryDao.add(cate2);
+//        categoryDao.add(cate3);
+//        categoryDao.add(cate4);
+//        categoryDao.add(cate5);
+//        categoryDao.add(cate6);
+//        categoryDao.add(cate7);
+//        categoryDao.add(cate8);
+//        categoryDao.add(cate9);
     }
 }

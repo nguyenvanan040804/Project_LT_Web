@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.demo.entity;
+package vn.edu.hcmuaf.fit.demo.model;
 
 public class Brand {
     private int id;

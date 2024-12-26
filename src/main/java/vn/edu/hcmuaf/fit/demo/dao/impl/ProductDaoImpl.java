@@ -1,8 +1,9 @@
 package vn.edu.hcmuaf.fit.demo.dao.impl;
 
+import vn.edu.hcmuaf.fit.demo.dao.IObjectDao;
 import vn.edu.hcmuaf.fit.demo.dao.IProductDao;
 import vn.edu.hcmuaf.fit.demo.db.DBConnect;
-import vn.edu.hcmuaf.fit.demo.entity.Product;
+import vn.edu.hcmuaf.fit.demo.model.Product;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,13 +12,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDaoImpl implements IProductDao {
+public class ProductDaoImpl implements IObjectDao<Product> {
     Connection conn;
     PreparedStatement ps = null;
     ResultSet rs = null;
 
     @Override
-    public boolean addProduct(Product product) {
+    public boolean add(Product product) {
         String sql = "INSERT INTO products (cateId, brandId, productName, productDes, quantity, price, salePrice) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
         try {
@@ -43,7 +44,7 @@ public class ProductDaoImpl implements IProductDao {
     }
 
     @Override
-    public List<Product> getAllProduct() {
+    public List<Product> getAll() {
         List<Product> list = new ArrayList<>();
         String sql = "select * from products";
         try {
@@ -69,7 +70,7 @@ public class ProductDaoImpl implements IProductDao {
     }
 
     @Override
-    public Product getProductById(int id) {
+    public Product getById(int id) {
         Product product = null;
         String sql = "select * from products where id = ?";
         try {
@@ -94,7 +95,7 @@ public class ProductDaoImpl implements IProductDao {
     }
 
     @Override
-    public boolean deleteProductById(int id) {
+    public boolean deleteById(int id) {
         String sql = "delete from products where id = ?";
         try{
             conn = DBConnect.getConnect();
@@ -108,7 +109,7 @@ public class ProductDaoImpl implements IProductDao {
     }
 
     @Override
-    public boolean updateProduct(Product product) {
+    public boolean update(Product product) {
         String sql = "update products set "
                 + "cateId = ?, brandId = ?, productName = ?, productDes = ?, "
                 + "quantity = ?, price = ? , salePrice = ? "
@@ -137,7 +138,7 @@ public class ProductDaoImpl implements IProductDao {
 //        Product p = new Product(1, 1, 1, "Xe Đạp Đua Sava Ex7",
 //                "Miễn phí vận chuyển", 2548, 4289990, 5998990);
 //        productDao.addProduct(p);
-        List<Product> list = productDao.getAllProduct();
+        List<Product> list = productDao.getAll();
         for(Product p : list) {
             System.out.println(p);
         }
