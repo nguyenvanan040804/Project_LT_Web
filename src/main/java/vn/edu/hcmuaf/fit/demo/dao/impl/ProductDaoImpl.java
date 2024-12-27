@@ -1,7 +1,6 @@
 package vn.edu.hcmuaf.fit.demo.dao.impl;
 
 import vn.edu.hcmuaf.fit.demo.dao.IObjectDao;
-import vn.edu.hcmuaf.fit.demo.dao.IProductDao;
 import vn.edu.hcmuaf.fit.demo.db.DBConnect;
 import vn.edu.hcmuaf.fit.demo.model.Product;
 
