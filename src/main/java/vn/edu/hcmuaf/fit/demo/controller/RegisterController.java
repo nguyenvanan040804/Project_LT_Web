@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.demo.controllers;
+package vn.edu.hcmuaf.fit.demo.controller;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -6,7 +6,7 @@ import jakarta.servlet.annotation.*;
 import vn.edu.hcmuaf.fit.demo.dao.IUserDao;
 import vn.edu.hcmuaf.fit.demo.dao.impl.UserDaoImpl;
 import vn.edu.hcmuaf.fit.demo.db.DBConnect;
-import vn.edu.hcmuaf.fit.demo.entity.User;
+import vn.edu.hcmuaf.fit.demo.model.User;
 
 import java.io.IOException;
 
@@ -44,7 +44,7 @@ public class RegisterController extends HttpServlet {
                 boolean regis = userDao.userRegister(user);
                 if(regis) {
                     session.setAttribute("successMsg", "Đăng ký thành công");
-                    response.sendRedirect("register.jsp");
+                    response.sendRedirect("login.jsp");
                 }else {
                     session.setAttribute("failMsg", "Đăng ký không thành công");
                     response.sendRedirect("register.jsp");

@@ -1,6 +1,4 @@
-package vn.edu.hcmuaf.fit.demo.entity;
-
-import java.time.LocalDateTime;
+package vn.edu.hcmuaf.fit.demo.model;
 
 public class Product {
     private int id;

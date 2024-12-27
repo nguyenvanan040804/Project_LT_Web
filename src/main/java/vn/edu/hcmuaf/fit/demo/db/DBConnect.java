@@ -1,8 +1,6 @@
 package vn.edu.hcmuaf.fit.demo.db;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DBConnect {
     private static Connection conn;
@@ -10,10 +8,29 @@ public class DBConnect {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/webbanxedap", "root", "170804");
+            return conn;
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
-        return conn;
+    }
+    public void executeQuery(String sql) {
+        try {
+            Connection conn = getConnect();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public ResultSet selectDataFromDB(String sql) {
+        try {
+            Connection conn = getConnect();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery(sql);
+            return rs;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void main(String[] args) {

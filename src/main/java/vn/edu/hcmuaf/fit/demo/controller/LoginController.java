@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.demo.controllers;
+package vn.edu.hcmuaf.fit.demo.controller;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -6,7 +6,7 @@ import jakarta.servlet.annotation.*;
 import vn.edu.hcmuaf.fit.demo.dao.IUserDao;
 import vn.edu.hcmuaf.fit.demo.dao.impl.UserDaoImpl;
 import vn.edu.hcmuaf.fit.demo.db.DBConnect;
-import vn.edu.hcmuaf.fit.demo.entity.User;
+import vn.edu.hcmuaf.fit.demo.model.User;
 import java.io.IOException;
 
 @WebServlet(value = "/login")
@@ -27,7 +27,7 @@ public class LoginController extends HttpServlet {
             if("admin".equals(username) && "admin".equals(password)) {
                 User userAd = new User();
                 session.setAttribute("userobj", userAd);
-                response.sendRedirect("./admin.jsp");
+                response.sendRedirect("./admin/home.jsp");
             }else {
                 User user = userDao.login(username, password);
                 if(user != null) {
@@ -37,7 +37,6 @@ public class LoginController extends HttpServlet {
                     session.setAttribute("failedMsg", "username hoặc password không đúng");
                     response.sendRedirect("login.jsp");
                 }
-                response.sendRedirect("index.jsp");
             }
         }catch (Exception e) {
             e.printStackTrace();

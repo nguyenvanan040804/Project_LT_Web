@@ -206,34 +206,18 @@ a.google span {
     color: #232836;
 }
 
-/* forgot password */
-.form.forgot-password {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.forms.show-forgot-password .form.forgot-password {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.forms.show-forgot-password .form.login,
-.forms.show-forgot-password {
-    opacity: 0;
-    pointer-events: none;
-}
-.text-center {
-    margin-top: 10px;
-    font-size: 1em;
-    text-align: center !important;
-}
-
 .text-success {
     color: #28a745 !important; /* Màu xanh lá cây */
 }
 
 .text-danger {
     color: #dc3545 !important; /* Màu đỏ */
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

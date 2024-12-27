@@ -23,6 +23,15 @@
                 <a href="index.jsp" class="logo">
                     <img src="./assets/img/logo.png" alt="">
                 </a>
+
+                <c:if test="${not empty successMsg}">
+                    <p class="text-center text-success">${successMsg}</p>
+                    <c:remove var="successMsg" scope="session" />
+                </c:if>
+                <c:if test="${not empty failMsg}">
+                    <p class="text-center text-danger">${failMsg}</p>
+                    <c:remove var="failMsg" scope="session" />
+                </c:if>
                 <header>Đăng nhập</header>
 
                 <form action="login" method="post">
@@ -40,7 +49,7 @@
                     </c:if>
 
                     <div class="form-link">
-                        <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                        <a href="forgotPass.jsp" class="forgot-pass">Quên mật khẩu?</a>
                     </div>
                     <div class="field input-field">
                         <button>Đăng nhập</button>
@@ -96,25 +105,25 @@
 
 <%--        </div>--%>
         <!-- forgot password -->
-        <div class="form forgot-password">
-            <div class="form-content">
-                <a href="index.jsp" class="logo">
-                    <img src="./assets/img/logo.png" alt="">
-                </a>
-                <header>Quên mật khẩu</header>
-                <form action="#">
-                    <div class="field input-field">
-                        <input type="email" class="input" placeholder="Nhập email của bạn" required>
-                    </div>
-                    <div class="field button-field">
-                        <button>Gửi mật khẩu</button>
-                    </div>
-                </form>
-                <div class="form-link">
-                    <span>Trở lại <a href="#" class="link login-link">Đăng nhập</a></span>
-                </div>
-            </div>
-        </div>
+<%--        <div class="form forgot-password">--%>
+<%--            <div class="form-content">--%>
+<%--                <a href="index.jsp" class="logo">--%>
+<%--                    <img src="./assets/img/logo.png" alt="">--%>
+<%--                </a>--%>
+<%--                <header>Quên mật khẩu</header>--%>
+<%--                <form action="#">--%>
+<%--                    <div class="field input-field">--%>
+<%--                        <input type="email" class="input" placeholder="Nhập email của bạn" required>--%>
+<%--                    </div>--%>
+<%--                    <div class="field button-field">--%>
+<%--                        <button>Gửi mật khẩu</button>--%>
+<%--                    </div>--%>
+<%--                </form>--%>
+<%--                <div class="form-link">--%>
+<%--                    <span>Trở lại <a href="#" class="link login-link">Đăng nhập</a></span>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
         
     </section>
 

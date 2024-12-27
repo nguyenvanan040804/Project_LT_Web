@@ -28,7 +28,7 @@
                     <input type="text" class="input" placeholder="Tên đăng nhập" name="username" required>
                 </div>
                 <div class="field input-field">
-                    <input type="password" class="passWord" placeholder="Mật khẩu" name="password" required>
+                    <input type="password" class="password" placeholder="Mật khẩu" name="password" required>
                     <i class="bx bx-hide eye-icon"></i>
                 </div>
                 <div class="field input-field">
@@ -51,20 +51,12 @@
                     <button>Đăng ký</button>
                 </div>
             </form>
-            <c:if test="${not empty successMsg}">
-                <p class="text-center text-success">${successMsg}</p>
-                <c:remove var="successMsg" scope="session" />
-            </c:if>
-            <c:if test="${not empty failMsg}">
-                <p class="text-center text-danger">${failMsg}</p>
-                <c:remove var="failMsg" scope="session" />
-            </c:if>
             <div class="form-link">
                 <span>Bạn đã có tài khoản? <a href="./login.jsp" class="link login-link">Đăng nhập</a></span>
             </div>
         </div>
     </div>
 </section>
-<script src="./assets/js/login.js"></script>
+<script src="assets/js/login.js"></script>
 </body>
 </html>

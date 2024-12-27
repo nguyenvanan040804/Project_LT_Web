@@ -35,7 +35,7 @@ pwShowHide.forEach(eyeIcon => {
 
 // for gotpassword
 // Chuyển đổi sang form quên mật khẩu
-forgotPassLink.addEventListener("click", e => {
-    e.preventDefault();
-    forms.classList.add("show-forgot-password");
-});
+// forgotPassLink.addEventListener("click", e => {
+//     e.preventDefault();
+//     forms.classList.add("show-forgot-password");
+// });

@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.demo.entity;
+package vn.edu.hcmuaf.fit.demo.model;
 
 import java.time.LocalDateTime;
 
@@ -41,6 +41,14 @@ public class User {
 
     public int getRoleId() {
         return roleId;
+    }
+
+    public String getLastName() {
+        if (fullName != null && !fullName.isEmpty()) {
+            String[] nameParts = fullName.split(" ");
+            return nameParts[nameParts.length - 1];
+        }
+        return "";
     }
 
     public void setRoleId(int roleId) {
