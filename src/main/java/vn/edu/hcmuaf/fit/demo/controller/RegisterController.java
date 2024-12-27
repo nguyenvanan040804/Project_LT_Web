@@ -44,7 +44,7 @@ public class RegisterController extends HttpServlet {
                 boolean regis = userDao.userRegister(user);
                 if(regis) {
                     session.setAttribute("successMsg", "Đăng ký thành công");
-                    response.sendRedirect("register.jsp");
+                    response.sendRedirect("login.jsp");
                 }else {
                     session.setAttribute("failMsg", "Đăng ký không thành công");
                     response.sendRedirect("register.jsp");

@@ -50,18 +50,18 @@ public class UserDaoImpl implements IUserDao {
             if(rs.next()) {
                 user = new User();
                 user.setId(rs.getInt("id"));
-                user.setRoleId(rs.getInt("roleNum"));
+                user.setRoleId(rs.getInt("roleId"));
                 user.setUserName(rs.getString("userName"));
                 user.setFullName(rs.getString("fullName"));
                 user.setEmail(rs.getString("email"));
                 user.setPassWord(rs.getString("passWord"));
                 user.setPhone(rs.getString("phone"));
                 user.setAddress(rs.getString("address"));
-
+                return user;
             }
         }catch (Exception e) {
             e.printStackTrace();
         }
-        return user;
+        return null;
     }
 }

@@ -1,3 +1,4 @@
+<%@ page import="vn.edu.hcmuaf.fit.demo.model.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -39,8 +40,21 @@
                 </div>
                 <div class="right">
                     <ul class="flexitem main-links">
-                        <li><a href="./login.jsp">Đăng Nhập</a></li>
-                        <li><a href="../../../page-user.jsp">Tài Khoản</a></li>
+                        <%
+                            User user = (User) session.getAttribute("userobj");
+                        %>
+                        <li>
+                            <% if (user == null) { %>
+                            <a href="./login.jsp">Đăng nhập</a>
+                            <% } else { %>
+                            <a href="./page-user.jsp">Xin chào, <%= user.getLastName() %></a>
+                            <% } %>
+                        </li>
+
+                        <% if (user != null) { %>
+                        <li><a href="./logout">Đăng xuất</a></li>
+                        <% } %>
+                        <li><a href="./page-user.jsp">Tài Khoản</a></li>
                         <li><a href="cart.jsp">Theo Dõi Đơn</a></li>
                         <li><a href="#">Tiền Tệ <span class="icon-small"> <i
                                 class="ri-arrow-down-s-line"></i></span></a>

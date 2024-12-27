@@ -43,6 +43,14 @@ public class User {
         return roleId;
     }
 
+    public String getLastName() {
+        if (fullName != null && !fullName.isEmpty()) {
+            String[] nameParts = fullName.split(" ");
+            return nameParts[nameParts.length - 1];
+        }
+        return "";
+    }
+
     public void setRoleId(int roleId) {
         this.roleId = roleId;
     }

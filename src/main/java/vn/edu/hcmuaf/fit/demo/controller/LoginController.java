@@ -37,7 +37,6 @@ public class LoginController extends HttpServlet {
                     session.setAttribute("failedMsg", "username hoặc password không đúng");
                     response.sendRedirect("login.jsp");
                 }
-                response.sendRedirect("index.jsp");
             }
         }catch (Exception e) {
             e.printStackTrace();

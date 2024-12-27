@@ -23,6 +23,15 @@
                 <a href="index.jsp" class="logo">
                     <img src="./assets/img/logo.png" alt="">
                 </a>
+
+                <c:if test="${not empty successMsg}">
+                    <p class="text-center text-success">${successMsg}</p>
+                    <c:remove var="successMsg" scope="session" />
+                </c:if>
+                <c:if test="${not empty failMsg}">
+                    <p class="text-center text-danger">${failMsg}</p>
+                    <c:remove var="failMsg" scope="session" />
+                </c:if>
                 <header>Đăng nhập</header>
 
                 <form action="login" method="post">
