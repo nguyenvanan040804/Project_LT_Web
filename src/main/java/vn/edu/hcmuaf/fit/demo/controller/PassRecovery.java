@@ -19,5 +19,20 @@ public class PassRecovery extends HttpServlet {
 
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String email = request.getParameter("email");
+        HttpSession session = request.getSession();
+        UserDaoImpl userDao = new UserDaoImpl(DBConnect.getConnect());
+        boolean isSent = userDao.passwordRecovery(username, email);
 
+        if (isSent) {
+            session.setAttribute("successMsg", "Mật khẩu đã gửi trong email bạn");
+            response.sendRedirect("./forgotPass.jsp");
+        } else {
+            session.setAttribute("failMsg", "Bạn nhập sai thông tin");
+            response.sendRedirect("./forgotPass.jsp");
+        }
+    }
 }
