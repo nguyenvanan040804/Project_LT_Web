@@ -91,5 +91,45 @@ public class UserDaoImpl implements IUserDao {
         return user;
     }
 
+    public static boolean sendMail(String to, String subject, String text) {
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+        props.put("mail.debug", "true");
+        Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication("clanbatluc22@gmail.com", "fdpm awfa djmt tqyb");
+            }
+        });
+        try {
+            Message message = new MimeMessage(session);
+            message.setHeader("Content-Type", "text/plain; charset=UTF-8");
+            message.setFrom(new InternetAddress("clanbatluc22@gmail.com", "BikeStore Cửa Hàng Xe Đạp"));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
+            message.setSubject(subject);
+            message.setText(text);
+            Transport.send(message);
+            return true;
+        } catch (MessagingException e) {
+            e.printStackTrace();
+            return false;
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public boolean passwordRecovery(String username, String email) {
+        User user = findByUserNameAndEmail(username, email);
+        if(user != null) {
+            sendMail(email, "Mật khẩu của bạn", user.getPassWord());
+            return true;
+        }
+        return false;
+    }
 
+    public static void main(String[] args) {
+//        System.out.println(new UserDaoImpl(DBConnect.getConnect()).passwordRecovery("anhtuan", "t75339223@gmail.com"));
+    }
 }
