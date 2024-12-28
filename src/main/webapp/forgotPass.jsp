@@ -24,14 +24,25 @@
                 <img src="./assets/img/logo.png" alt="">
             </a>
             <header>Quên mật khẩu</header>
-            <form action="#">
+            <form action="PasswordRecovery" method="post">
                 <div class="field input-field">
-                    <input type="email" class="input" placeholder="Nhập email của bạn" required>
+                    <input type="text" class="input" name="username" placeholder="Nhập username của bạn" required>
+                </div>
+                <div class="field input-field">
+                    <input type="email" class="input" name="email" placeholder="Nhập email của bạn" required>
                 </div>
                 <div class="field button-field">
                     <button>Gửi mật khẩu</button>
                 </div>
             </form>
+            <c:if test="${not empty successMsg}">
+                <p class="text-center text-success">${successMsg}</p>
+                <c:remove var="successMsg" scope="session" />
+            </c:if>
+            <c:if test="${not empty failMsg}">
+                <p class="text-center text-danger">${failMsg}</p>
+                <c:remove var="failMsg" scope="session" />
+            </c:if>
             <div class="form-link">
                 <span>Trở lại <a href="login.jsp" class="link login-link">Đăng nhập</a></span>
             </div>

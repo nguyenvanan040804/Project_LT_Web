@@ -1,11 +1,18 @@
 package vn.edu.hcmuaf.fit.demo.dao.impl;
 
 import vn.edu.hcmuaf.fit.demo.dao.IUserDao;
+import vn.edu.hcmuaf.fit.demo.db.DBConnect;
 import vn.edu.hcmuaf.fit.demo.model.User;
 
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Properties;
 
 public class UserDaoImpl implements IUserDao {
     private Connection conn;
@@ -28,7 +35,7 @@ public class UserDaoImpl implements IUserDao {
             ps.setString(6, user.getAddress());
 
             int rowsAffected = ps.executeUpdate();
-            if(rowsAffected > 0) {
+            if (rowsAffected > 0) {
                 return true;
             }
         } catch (Exception e) {
@@ -47,7 +54,7 @@ public class UserDaoImpl implements IUserDao {
             ps.setString(2, password);
 
             ResultSet rs = ps.executeQuery();
-            if(rs.next()) {
+            if (rs.next()) {
                 user = new User();
                 user.setId(rs.getInt("id"));
                 user.setRoleId(rs.getInt("roleId"));
@@ -59,9 +66,30 @@ public class UserDaoImpl implements IUserDao {
                 user.setAddress(rs.getString("address"));
                 return user;
             }
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
+    public User findByUserNameAndEmail(String username, String email) {
+        User user = null;
+        String sql = "select * from users where username = ? and email = ?";
+        try {
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, username);
+            ps.setString(2, email);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()) {
+                user = new User();
+                user.setUserName(rs.getString("username"));
+                user.setEmail(rs.getString("email"));
+                user.setPassWord(rs.getString("password"));
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
+
 }
