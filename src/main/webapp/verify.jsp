@@ -15,34 +15,33 @@
 <section class="container forms">
     <div class="go-back">
         <i class="bx bx-left-arrow-alt"></i>
-        <a href="index.jsp">Trở lại</a>
+        <a href="register.jsp">Trở lại</a>
     </div>
-    <!-- forgot password -->
+    <!-- verify -->
     <div class="form forgot-password" style="opacity: 1; pointer-events: auto">
         <div class="form-content">
             <a href="index.jsp" class="logo">
                 <img src="./assets/img/logo.png" alt="">
             </a>
-            <header>Quên mật khẩu</header>
-            <c:if test="${not empty message}">
-                <div class="text-center text-success">${message}</div>
-            </c:if>
-            <c:if test="${not empty error}">
-                <div class="text-center text-danger">${error}</div>
-            </c:if>
-            <form action="PasswordRecovery" method="post">
+            <header style="margin-top: 1em;">Xác thực tài khoản </header>
+            <form action="verifyCode" method="post">
                 <div class="field input-field">
-                    <input type="text" class="input" name="username" placeholder="Nhập username của bạn" required>
-                </div>
-                <div class="field input-field">
-                    <input type="email" class="input" name="email" placeholder="Nhập email của bạn" required>
+                    <input type="text" class="input" name="authcode" placeholder="Nhập mã xác thực" required>
                 </div>
                 <div class="field button-field">
-                    <button>Gửi mật khẩu</button>
+                    <button>Xác thực</button>
                 </div>
             </form>
+            <c:if test="${not empty successMsg}">
+                <p class="text-center text-success">${successMsg}</p>
+                <c:remove var="successMsg" scope="session" />
+            </c:if>
+            <c:if test="${not empty failMsg}">
+                <p class="text-center text-danger">${failMsg}</p>
+                <c:remove var="failMsg" scope="session" />
+            </c:if>
             <div class="form-link">
-                <span>Trở lại <a href="login.jsp" class="link login-link">Đăng nhập</a></span>
+                <span>Trở lại <a href="register.jsp" class="link login-link">Đăng ký</a></span>
             </div>
         </div>
     </div>
