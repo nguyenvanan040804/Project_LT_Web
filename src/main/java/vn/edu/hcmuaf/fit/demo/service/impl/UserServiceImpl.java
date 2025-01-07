@@ -22,8 +22,45 @@ public class UserServiceImpl implements IUserService {
         return true;
     }
 
+
+
     @Override
-    public void updateStatus(User user) {
-        userDao.updateStatus(user);
+    public User login(String username, String password) {
+        User user = this.findOne(username);
+        if(user != null && password.equals(user.getPassWord())) {
+            return user;
+        }
+        return null;
     }
 
+    @Override
+    public List<User> findAll() {
+        return userDao.findAll();
+    }
+
+
+
+    @Override
+    public void insert(User user) {
+        userDao.insert(user);
+    }
+
+    @Override
+    public void update(User user) {
+        User oldUser = userDao.findOne(user.getId());
+        oldUser.setEmail(user.getEmail());
+        oldUser.setUserName(user.getUserName());
+        oldUser.setPassWord(user.getPassWord());
+        oldUser.setFullName(user.getFullName());
+        oldUser.setPhone(user.getPhone());
+        oldUser.setAddress(user.getAddress());
+        oldUser.setCode(user.getCode());
+        oldUser.setStatus(user.getStatus());
+        userDao.update(user);
+    }
+
+    @Override
+    public void delete(int id) {
+        userDao.delete(id);
+    }
+}
