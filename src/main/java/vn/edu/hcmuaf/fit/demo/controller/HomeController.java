@@ -125,7 +125,43 @@ public class HomeController extends HttpServlet {
         request.getRequestDispatcher("./login.jsp").forward(request, response);
     }
     // login với method Post
+    public void postLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        boolean isRememberMe = false;
+        String remember = request.getParameter("remember");
 
+        if("on".equals(remember)) {
+            isRememberMe = true;
+        }
+        String alertMsg = "";
+        if(username.isEmpty() || password.isEmpty()) {
+            alertMsg = "Tài khoản hoặc mật khẩu không đúng";
+            request.setAttribute("message", alertMsg);
+            request.getRequestDispatcher("./login.jsp").forward(request, response);
+            return;
+        }
+        User user = userService.login(username, password);
+        if(user != null) {
+            if(user.getStatus() == 1) {
+                // tạo session
+                HttpSession session = request.getSession();
+                session.setAttribute("account", user);
+                if(isRememberMe) {
+                    saveRememberMe(response, username);
+                }
+                response.sendRedirect(request.getContextPath() + "/waiting");
+            }else {
+                alertMsg = "tài khoản đã bị khóa";
+                request.setAttribute("error", alertMsg);
+                request.getRequestDispatcher("./login.jsp").forward(request, response);
+            }
+        }else {
+            alertMsg = "tài khoản hoặc mật khẩu không đúng";
+            request.setAttribute("error", alertMsg);
+            request.getRequestDispatcher("./login.jsp").forward(request, response);
+        }
+    }
 
     private void saveRememberMe(HttpServletResponse response, String username) {
         Cookie cookie = new Cookie(Constant.COOKIE_REMEMBER, username);
@@ -146,5 +182,63 @@ public class HomeController extends HttpServlet {
             }
         }
     }
+    // forgot password với method post
+    public void postForgotPass(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String email = request.getParameter("email");
+        User user = userService.findOne(username);
 
+        if(user.getEmail().equals(email) && user.getUserName().equals(username)) {
+            Email sm = new Email();
+            boolean test = sm.emailSend(user);
+            if(test) {
+                request.setAttribute("message", "Vui lòng kiểm tra email để nhận mật khẩu");
+            }else {
+                request.setAttribute("error", "Lỗi không gửi được email");
+            }
+        }else {
+            request.setAttribute("error", "username hoặc email không tồn tại");
+            request.getRequestDispatcher("./forgotPass.jsp").forward(request, response);
+            return;
+        }
+        request.getRequestDispatcher("./forgotPass.jsp").forward(request, response);
+    }
+
+
+    public void postVerifyCode(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()){
+            // truy cập session
+            HttpSession session = request.getSession();
+            User user = (User) session.getAttribute("account");
+
+            String code = request.getParameter("authcode");
+
+            if(code.equals(user.getCode())) {
+                user.setEmail(user.getEmail());
+                user.setStatus(1);
+
+                userService.updateStatus(user);
+
+                out.println("Kích hoạt tài khoản thành công!");
+            }else {
+                out.println("Sai mã kích hoạt, vui lòng kiểm tra lại");
+            }
+        }
+    }
+    public void getLogout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        session.removeAttribute("account"); // remove session
+        Cookie[] cookies = request.getCookies();
+        if(cookies != null) {
+            for(Cookie cookie : cookies) {
+                if(Constant.COOKIE_REMEMBER.equals(cookie.getName())) {
+                    cookie.setMaxAge(0);    // remove cookie
+                    response.addCookie(cookie);     // add lại
+                    break;
+                }
+            }
+        }
+        response.sendRedirect("./login.jsp");
+    }
 }
