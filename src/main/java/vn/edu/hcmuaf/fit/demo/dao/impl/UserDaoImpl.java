@@ -12,6 +12,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class UserDaoImpl implements IUserDao {
@@ -22,114 +24,79 @@ public class UserDaoImpl implements IUserDao {
     }
 
     @Override
-    public boolean userRegister(User user) {
+    public void insertRegister(User user) {
+        String sql = "insert into users (roleId, userName, fullName, passWord, email, phone, address, status, code) values (?, ?, " +
+                "?, ?, ?, ?, ?, ?, ?)";
         try {
-            String sql = "insert into users(userName, fullName, email, passWord, phone, address)" +
-                    "values (?, ?, ?, ?, ?, ?)";
+            conn = DBConnect.getConnect();
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, user.getUserName());
-            ps.setString(2, user.getFullName());
-            ps.setString(3, user.getEmail());
+            ps.setInt(1, user.getRoleId());
+            ps.setString(2, user.getUserName());
+            ps.setString(3, user.getFullName());
             ps.setString(4, user.getPassWord());
-            ps.setString(5, user.getPhone());
-            ps.setString(6, user.getAddress());
-
-            int rowsAffected = ps.executeUpdate();
-            if (rowsAffected > 0) {
-                return true;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-
-    @Override
-    public User login(String username, String password) {
-        User user = null;
-        try {
-            String sql = "select * from users where userName = ? and passWord = ?";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, username);
-            ps.setString(2, password);
-
-            ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                user = new User();
-                user.setId(rs.getInt("id"));
-                user.setRoleId(rs.getInt("roleId"));
-                user.setUserName(rs.getString("userName"));
-                user.setFullName(rs.getString("fullName"));
-                user.setEmail(rs.getString("email"));
-                user.setPassWord(rs.getString("passWord"));
-                user.setPhone(rs.getString("phone"));
-                user.setAddress(rs.getString("address"));
-                return user;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-    public User findByUserNameAndEmail(String username, String email) {
-        User user = null;
-        String sql = "select * from users where username = ? and email = ?";
-        try {
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, username);
-            ps.setString(2, email);
-            ResultSet rs = ps.executeQuery();
-            if(rs.next()) {
-                user = new User();
-                user.setUserName(rs.getString("username"));
-                user.setEmail(rs.getString("email"));
-                user.setPassWord(rs.getString("password"));
-            }
-        }catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return user;
-    }
-
-    public static boolean sendMail(String to, String subject, String text) {
-        Properties props = new Properties();
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "587");
-        props.put("mail.debug", "true");
-        Session session = Session.getInstance(props, new javax.mail.Authenticator() {
-            @Override
-            protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("clanbatluc22@gmail.com", "fdpm awfa djmt tqyb");
-            }
-        });
-        try {
-            Message message = new MimeMessage(session);
-            message.setHeader("Content-Type", "text/plain; charset=UTF-8");
-            message.setFrom(new InternetAddress("clanbatluc22@gmail.com", "BikeStore Cửa Hàng Xe Đạp"));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
-            message.setSubject(subject);
-            message.setText(text);
-            Transport.send(message);
-            return true;
-        } catch (MessagingException e) {
-            e.printStackTrace();
-            return false;
-        } catch (UnsupportedEncodingException e) {
+            ps.setString(5, user.getEmail());
+            ps.setString(6, user.getPhone());
+            ps.setString(7, user.getAddress());
+            ps.setInt(8, user.getStatus());
+            ps.setString(9, user.getCode());
+            ps.executeUpdate();
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
-    public boolean passwordRecovery(String username, String email) {
-        User user = findByUserNameAndEmail(username, email);
-        if(user != null) {
-            sendMail(email, "Mật khẩu của bạn", user.getPassWord());
-            return true;
+
+    @Override
+    public void updateStatus(User user) {
+        String sql = "update users set status = ?, code = ? where email  = ?";
+        try {
+            conn = DBConnect.getConnect();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, user.getStatus());
+            ps.setString(2, user.getCode());
+            ps.setString(3, user.getEmail());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-        return false;
     }
 
-    public static void main(String[] args) {
-//        System.out.println(new UserDaoImpl(DBConnect.getConnect()).passwordRecovery("anhtuan", "t75339223@gmail.com"));
+    @Override
+    public boolean checkExistEmail(String email) {
+        boolean duplicate = false;
+        String sql = "select * from users where email = ?";
+        try {
+            conn = DBConnect.getConnect();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()) {
+                duplicate = true;
+            }
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return duplicate;
     }
-}
+
+    @Override
+    public boolean checkExistUsername(String username) {
+        boolean duplicate = false;
+        String sql = "select * from users where userName = ?";
+        try {
+            conn = DBConnect.getConnect();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()) {
+                duplicate = true;
+            }
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return duplicate;
+    }
+

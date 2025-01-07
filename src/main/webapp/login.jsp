@@ -24,30 +24,25 @@
                     <img src="./assets/img/logo.png" alt="">
                 </a>
 
-                <c:if test="${not empty successMsg}">
-                    <p class="text-center text-success">${successMsg}</p>
-                    <c:remove var="successMsg" scope="session" />
-                </c:if>
-                <c:if test="${not empty failMsg}">
-                    <p class="text-center text-danger">${failMsg}</p>
-                    <c:remove var="failMsg" scope="session" />
-                </c:if>
                 <header>Đăng nhập</header>
-
+                <c:if test="${not empty message}">
+                    <div class="text-center text-success">${message}</div>
+                </c:if>
+                <c:if test="${not empty error}">
+                    <div class="text-center text-danger">${error}</div>
+                </c:if>
                 <form action="login" method="post">
                     <div class="field input-field">
-                        <input type="text" class="input" placeholder="username" name="username">
+                        <input type="text" class="input" placeholder="tên đăng nhập" name="username">
                     </div>
                     <div class="field input-field">
                         <input type="password" class="password" placeholder="mật khẩu" name="password">
                         <i class="bx bx-hide eye-icon"></i>
                     </div>
-
-                    <c:if test="${not empty failedMsg}">
-                        <h5 class="text-center text-danger">${failedMsg}</h5>
-                        <c:remove var="failedMsg" scope="session" />
-                    </c:if>
-
+                    <div class="check-form" style="font-size: 0.8em; display: flex; margin: 10px; gap: 10px">
+                        <input type="checkbox" class="input" name="remember">
+                        Ghi nhớ tên đăng nhập
+                    </div>
                     <div class="form-link">
                         <a href="forgotPass.jsp" class="forgot-pass">Quên mật khẩu?</a>
                     </div>

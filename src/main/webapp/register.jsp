@@ -23,6 +23,12 @@
                 <img src="./assets/img/logo.png" alt="">
             </a>
             <header>Đăng ký</header>
+            <c:if test="${not empty message}">
+                <div class="text-center text-success">${message}</div>
+            </c:if>
+            <c:if test="${not empty error}">
+                <div class="text-center text-danger">${error}</div>
+            </c:if>
             <form action="register" method="post">
                 <div class="field input-field">
                     <input type="text" class="input" placeholder="Tên đăng nhập" name="username" required>

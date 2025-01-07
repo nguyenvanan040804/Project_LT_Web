@@ -1,8 +1,9 @@
 package vn.edu.hcmuaf.fit.demo.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class User {
+public class User implements Serializable {
     private int id;
     private int roleId;
     private String userName;
@@ -11,24 +12,47 @@ public class User {
     private String passWord;
     private String phone;
     private String address;
+    private int status;
+    private String code;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
     public User() {
     }
 
-    public User(int id, int roleId, String userName, String fullName, String email, String passWord, String phone, String address,
-                LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public User(int id, int roleId, String userName, String fullName, String email, String passWord, String phone, String address, int status, String code) {
         this.id = id;
-        this.userName = userName;
         this.roleId = roleId;
+        this.userName = userName;
         this.fullName = fullName;
         this.email = email;
         this.passWord = passWord;
         this.phone = phone;
         this.address = address;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
+        this.status = status;
+        this.code = code;
+    }
+
+    public User(int roleId, String userName, String fullName, String email, String passWord, String phone, String address, int status, String code) {
+        this.userName = userName;
+        this.email = email;
+        this.fullName = fullName;
+        this.passWord = passWord;
+        this.status = status;
+        this.roleId = roleId;
+        this.code = code;
+        this.phone = phone;
+        this.address = address;
+    }
+
+    public User(String userName, String fullName, String email, String passWord, String phone, String address, String code) {
+        this.userName = userName;
+        this.fullName = fullName;
+        this.email = email;
+        this.passWord = passWord;
+        this.phone = phone;
+        this.address = address;
+        this.code = code;
     }
 
     public int getId() {
@@ -49,6 +73,22 @@ public class User {
             return nameParts[nameParts.length - 1];
         }
         return "";
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public void setRoleId(int roleId) {
