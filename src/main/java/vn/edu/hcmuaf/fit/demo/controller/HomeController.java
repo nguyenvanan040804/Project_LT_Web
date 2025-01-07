@@ -125,43 +125,26 @@ public class HomeController extends HttpServlet {
         request.getRequestDispatcher("./login.jsp").forward(request, response);
     }
     // login với method Post
-    public void postLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        boolean isRememberMe = false;
-        String remember = request.getParameter("remember");
 
-        if("on".equals(remember)) {
-            isRememberMe = true;
-        }
-        String alertMsg = "";
-        if(username.isEmpty() || password.isEmpty()) {
-            alertMsg = "Tài khoản hoặc mật khẩu không đúng";
-            request.setAttribute("message", alertMsg);
-            request.getRequestDispatcher("./login.jsp").forward(request, response);
-            return;
-        }
-        User user = userService.login(username, password);
-        if(user != null) {
-            if(user.getStatus() == 1) {
-                // tạo session
-                HttpSession session = request.getSession();
-                session.setAttribute("account", user);
-                if(isRememberMe) {
-                    saveRememberMe(response, username);
-                }
-                response.sendRedirect(request.getContextPath() + "/waiting");
-            }else {
-                alertMsg = "tài khoản đã bị khóa";
-                request.setAttribute("error", alertMsg);
-                request.getRequestDispatcher("./login.jsp").forward(request, response);
-            }
-        }else {
-            alertMsg = "tài khoản hoặc mật khẩu không đúng";
-            request.setAttribute("error", alertMsg);
-            request.getRequestDispatcher("./login.jsp").forward(request, response);
-        }
+
+    private void saveRememberMe(HttpServletResponse response, String username) {
+        Cookie cookie = new Cookie(Constant.COOKIE_REMEMBER, username);
+        cookie.setMaxAge(30 * 60);
+        response.addCookie(cookie);
     }
 
+    public void getWaiting(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // kiểm tra session
+        HttpSession session = request.getSession();
+        if(session != null && session.getAttribute("account") != null) {
+            User u = (User) session.getAttribute("account");
+            request.setAttribute("username", u.getUserName());
+            if(u.getRoleId() == 1) {
+                response.sendRedirect(request.getContextPath() + "/admin/home.jsp");
+            }else {
+                response.sendRedirect(request.getContextPath() + "/index.jsp");
+            }
+        }
+    }
 
 }
