@@ -26,6 +26,106 @@ public class UserDaoImpl implements IUserDao {
 
 
     @Override
+    public List<User> findAll() {
+        List<User> users = new ArrayList<>();
+        String sql = "select * from users";
+        try {
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                User user = new User(
+                        rs.getInt("id"),
+                        rs.getInt("roleId"),
+                        rs.getString("userName"),
+                        rs.getString("fullName"),
+                        rs.getString("email"),
+                        rs.getString("passWord"),
+                        rs.getString("phone"),
+                        rs.getString("address"),
+                        rs.getInt("status"),
+                        rs.getString("code"));
+                        users.add(user);
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return users;
+    }
+
+    @Override
+    public User findOne(int id) {
+        String sql = "select * from users where id = ?";
+        try {
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return new User(
+                        rs.getInt("id"),
+                        rs.getInt("roleId"),
+                        rs.getString("userName"),
+                        rs.getString("fullName"),
+                        rs.getString("email"),
+                        rs.getString("passWord"),
+                        rs.getString("phone"),
+                        rs.getString("address"),
+                        rs.getInt("status"),
+                        rs.getString("code"));
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public User findOne(String username) {
+        String sql = "select * from users where userName = ?";
+        try {
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return new User(
+                        rs.getInt("id"),
+                        rs.getInt("roleId"),
+                        rs.getString("userName"),
+                        rs.getString("fullName"),
+                        rs.getString("email"),
+                        rs.getString("passWord"),
+                        rs.getString("phone"),
+                        rs.getString("address"),
+                        rs.getInt("status"),
+                        rs.getString("code"));
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public void insert(User user) {
+        String sql = "insert into users(roleId, userName, fullName, email, passWord, phone, address, status, code) " +
+                "values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        try {
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, user.getRoleId());
+            ps.setString(2, user.getUserName());
+            ps.setString(3, user.getFullName());
+            ps.setString(4, user.getEmail());
+            ps.setString(5, user.getPassWord());
+            ps.setString(6, user.getPhone());
+            ps.setString(7, user.getAddress());
+            ps.setInt(8, user.getStatus());
+            ps.setString(9, user.getCode());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     public void update(User user) {
         String sql = "update users set roleId = ?, userName = ?, fullName = ?, email = ?," +
                 " passWord = ?, phone = ?, address = ?, status = ?, code = ? where id = ?";
