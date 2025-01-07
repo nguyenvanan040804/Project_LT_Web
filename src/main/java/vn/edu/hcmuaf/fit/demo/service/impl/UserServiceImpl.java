@@ -22,7 +22,20 @@ public class UserServiceImpl implements IUserService {
         return true;
     }
 
+    @Override
+    public void updateStatus(User user) {
+        userDao.updateStatus(user);
+    }
 
+    @Override
+    public boolean checkExistEmail(String email) {
+        return userDao.checkExistEmail(email);
+    }
+
+    @Override
+    public boolean checkExistUsername(String userName) {
+        return userDao.checkExistUsername(userName);
+    }
 
     @Override
     public User login(String username, String password) {
@@ -38,7 +51,15 @@ public class UserServiceImpl implements IUserService {
         return userDao.findAll();
     }
 
+    @Override
+    public User findOne(int id) {
+        return userDao.findOne(id);
+    }
 
+    @Override
+    public User findOne(String username) {
+        return userDao.findOne(username);
+    }
 
     @Override
     public void insert(User user) {
