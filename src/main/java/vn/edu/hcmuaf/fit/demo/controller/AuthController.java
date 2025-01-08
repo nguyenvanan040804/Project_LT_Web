@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.*;
 import vn.edu.hcmuaf.fit.demo.model.User;
 import vn.edu.hcmuaf.fit.demo.service.IUserService;
 import vn.edu.hcmuaf.fit.demo.service.impl.UserServiceImpl;
+import vn.edu.hcmuaf.fit.demo.utils.BCrypt;
 import vn.edu.hcmuaf.fit.demo.utils.Constant;
 import vn.edu.hcmuaf.fit.demo.utils.Email;
 
@@ -55,7 +56,7 @@ public class AuthController extends HttpServlet {
     // register với method post
     public void postRegister(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        String rawPassword = request.getParameter("password");
         String fullname = request.getParameter("fullname");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
@@ -83,15 +84,18 @@ public class AuthController extends HttpServlet {
             // lấy số 6 chữ số
             String code = sm.getRandom();
 
+            // Mã hóa mật khẩu
+            String hashedPassword = BCrypt.hashPassword(rawPassword);
+
             // tạo user mới chứa tất cả thông tin
-            User user = new User(username, fullname, email, password, phone, address, code);
+            User user = new User(username, fullname, email, hashedPassword, phone, address, code);
 
             boolean test = sm.sendEmail(user);
             if(test) {
                 HttpSession session = request.getSession();
                 session.setAttribute("account", user);
 
-                boolean isSuccess = userService.register(username, fullname, email, password, phone, address, code);
+                boolean isSuccess = userService.register(username, fullname, email, hashedPassword, phone, address, code);
                 if(isSuccess) {
                     response.sendRedirect(request.getContextPath() + "/verifyCode");
                 }else {
