@@ -4,17 +4,12 @@ import vn.edu.hcmuaf.fit.demo.dao.IUserDao;
 import vn.edu.hcmuaf.fit.demo.db.DBConnect;
 import vn.edu.hcmuaf.fit.demo.model.User;
 
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 public class UserDaoImpl implements IUserDao {
     private Connection conn;
@@ -156,12 +151,16 @@ public class UserDaoImpl implements IUserDao {
     @Override
     public User findOne(String username) {
         String sql = "select * from users where userName = ?";
+        System.out.println("username: " + username);
+        User user = null;
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, username);
+            System.out.println("ps: " + ps);
             ResultSet rs = ps.executeQuery();
+            System.out.println("rs: " + rs);
             if (rs.next()) {
-                return new User(
+                user = new User(
                         rs.getInt("id"),
                         rs.getInt("roleId"),
                         rs.getString("userName"),
@@ -172,11 +171,17 @@ public class UserDaoImpl implements IUserDao {
                         rs.getString("address"),
                         rs.getInt("status"),
                         rs.getString("code"));
+
             }
         } catch(SQLException e){
             e.printStackTrace();
         }
-        return null;
+        return user;
+    }
+
+    public static void main(String[] args) {
+        UserDaoImpl userDao = new UserDaoImpl(DBConnect.getConnect());
+        System.out.println(userDao.findOne("batuan"));
     }
 
     @Override

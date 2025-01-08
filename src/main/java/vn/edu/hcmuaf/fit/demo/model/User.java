@@ -14,8 +14,6 @@ public class User implements Serializable {
     private String address;
     private int status;
     private String code;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
 
     public User() {
     }
@@ -143,22 +141,6 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -168,8 +150,6 @@ public class User implements Serializable {
                 ", passWord='" + passWord + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
                 '}';
     }
 }

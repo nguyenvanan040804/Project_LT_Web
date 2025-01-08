@@ -41,20 +41,23 @@
                 <div class="right">
                     <ul class="flexitem main-links">
                         <%
-                            User user = (User) session.getAttribute("userobj");
+                            User account = (session != null) ? (User) session.getAttribute("account") : null;
                         %>
                         <li>
-                            <% if (user == null) { %>
+                            <% if (account == null) { %>
                             <a href="./login.jsp">Đăng nhập</a>
                             <% } else { %>
-                            <a href="./page-user.jsp">Xin chào, <%= user.getLastName() %></a>
+                            <a href="#">Xin chào, <%= account.getLastName() %></a>
                             <% } %>
                         </li>
 
-                        <% if (user != null) { %>
+                        <% if (account != null) { %>
                         <li><a href="./logout">Đăng xuất</a></li>
-                        <% } %>
                         <li><a href="./page-user.jsp">Tài Khoản</a></li>
+                        <% } else { %>
+                        <li><a href="./login.jsp">Tài Khoản</a></li>
+                        <% } %>
+<%--                        <li><a href="./login.jsp">Tài Khoản</a></li>--%>
                         <li><a href="cart.jsp">Theo Dõi Đơn</a></li>
                         <li><a href="#">Tiền Tệ <span class="icon-small"> <i
                                 class="ri-arrow-down-s-line"></i></span></a>

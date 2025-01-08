@@ -12,8 +12,8 @@ import vn.edu.hcmuaf.fit.demo.utils.Email;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(urlPatterns = {"/home", "/login", "/register", "/PasswordRecovery", "/waiting", "/verifyCode", "/logout"})
-public class HomeController extends HttpServlet {
+@WebServlet(urlPatterns = {"/home", "/login", "/register", "/waiting", "/verifyCode", "/logout"})
+public class AuthController extends HttpServlet {
     IUserService userService = new UserServiceImpl();
 
     @Override
@@ -23,8 +23,6 @@ public class HomeController extends HttpServlet {
             getRegister(request, response);
         }else if(url.contains("login")) {
             getLogin(request, response);
-        }else if(url.contains("PasswordRecovery")) {
-            request.getRequestDispatcher("./forgotPass.jsp").forward(request, response);
         }else if(url.contains("waiting")) {
             getWaiting(request, response);
         }else if(url.contains("verifyCode")) {
@@ -43,8 +41,6 @@ public class HomeController extends HttpServlet {
             postRegister(request, response);
         }else if(url.contains("login")) {
             postLogin(request, response);
-        }else if(url.contains("PasswordRecovery")) {
-            postForgotPass(request, response);
         }else if(url.contains("verifyCode")) {
             postVerifyCode(request, response);
         }
@@ -68,10 +64,18 @@ public class HomeController extends HttpServlet {
         String alertMsg = "";
         if(userService.checkExistEmail(email)) {
             alertMsg = "Email đã tồn tại";
+            request.setAttribute("username", username);
+            request.setAttribute("fullname", fullname);
+            request.setAttribute("phone", phone);
+            request.setAttribute("address", address);
             request.setAttribute("error", alertMsg);
             request.getRequestDispatcher("./register.jsp").forward(request, response);
         }else if(userService.checkExistUsername(username)) {
             alertMsg = "tài khoản đã tồn tại";
+            request.setAttribute("email", email);
+            request.setAttribute("fullname", fullname);
+            request.setAttribute("phone", phone);
+            request.setAttribute("address", address);
             request.setAttribute("error", alertMsg);
             request.getRequestDispatcher("./register.jsp").forward(request, response);
         }else {
@@ -92,6 +96,11 @@ public class HomeController extends HttpServlet {
                     response.sendRedirect(request.getContextPath() + "/verifyCode");
                 }else {
                     alertMsg = "Lỗi hệ thống !";
+                    request.setAttribute("username", username);
+                    request.setAttribute("email", email);
+                    request.setAttribute("fullname", fullname);
+                    request.setAttribute("phone", phone);
+                    request.setAttribute("address", address);
                     request.setAttribute("error", alertMsg);
                     request.getRequestDispatcher("./register.jsp").forward(request, response);
                 }
@@ -115,7 +124,9 @@ public class HomeController extends HttpServlet {
         if(cookies != null) {
             for (Cookie cookie : cookies) {
                 if(cookie.getName().equals("username")) {
-                    session = request.getSession(true);
+                    if (session == null) {
+                        session = request.getSession(true);
+                    }
                     session.setAttribute("username", cookie.getValue());
                     response.sendRedirect(request.getContextPath() + "./waiting");
                     return;
@@ -128,16 +139,14 @@ public class HomeController extends HttpServlet {
     public void postLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        boolean isRememberMe = false;
         String remember = request.getParameter("remember");
 
-        if("on".equals(remember)) {
-            isRememberMe = true;
-        }
+        boolean isRememberMe = "on".equals(remember);
         String alertMsg = "";
         if(username.isEmpty() || password.isEmpty()) {
             alertMsg = "Tài khoản hoặc mật khẩu không đúng";
             request.setAttribute("message", alertMsg);
+            request.setAttribute("username", username);
             request.getRequestDispatcher("./login.jsp").forward(request, response);
             return;
         }
@@ -154,11 +163,13 @@ public class HomeController extends HttpServlet {
             }else {
                 alertMsg = "tài khoản đã bị khóa";
                 request.setAttribute("error", alertMsg);
+                request.setAttribute("username", username);
                 request.getRequestDispatcher("./login.jsp").forward(request, response);
             }
         }else {
             alertMsg = "tài khoản hoặc mật khẩu không đúng";
             request.setAttribute("error", alertMsg);
+            request.setAttribute("username", username);
             request.getRequestDispatcher("./login.jsp").forward(request, response);
         }
     }
@@ -182,28 +193,6 @@ public class HomeController extends HttpServlet {
             }
         }
     }
-    // forgot password với method post
-    public void postForgotPass(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String email = request.getParameter("email");
-        User user = userService.findOne(username);
-
-        if(user.getEmail().equals(email) && user.getUserName().equals(username)) {
-            Email sm = new Email();
-            boolean test = sm.emailSend(user);
-            if(test) {
-                request.setAttribute("message", "Vui lòng kiểm tra email để nhận mật khẩu");
-            }else {
-                request.setAttribute("error", "Lỗi không gửi được email");
-            }
-        }else {
-            request.setAttribute("error", "username hoặc email không tồn tại");
-            request.getRequestDispatcher("./forgotPass.jsp").forward(request, response);
-            return;
-        }
-        request.getRequestDispatcher("./forgotPass.jsp").forward(request, response);
-    }
-
 
     public void postVerifyCode(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -227,18 +216,20 @@ public class HomeController extends HttpServlet {
         }
     }
     public void getLogout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        session.removeAttribute("account"); // remove session
+        HttpSession session = request.getSession(false);    // tránh tạo session mới nếu không tồn tại
+        if (session != null) {
+            session.removeAttribute("account");  // remove session attribute
+        }
         Cookie[] cookies = request.getCookies();
         if(cookies != null) {
             for(Cookie cookie : cookies) {
                 if(Constant.COOKIE_REMEMBER.equals(cookie.getName())) {
                     cookie.setMaxAge(0);    // remove cookie
-                    response.addCookie(cookie);     // add lại
+                    response.addCookie(cookie);     // update cookie
                     break;
                 }
             }
         }
-        response.sendRedirect("./login.jsp");
+        response.sendRedirect("./index.jsp");
     }
 }
