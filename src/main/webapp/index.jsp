@@ -482,757 +482,757 @@
             <div class="features">
                 <div class="container">
                     <div class="wrapper">
-                        <div class="column">
-                            <div class="sectop flexitem">
-                                <h2><span class="circle"></span><span>Danh mục</span></h2>
-                                <div class="second-links">
-                                    <a href="#" class="view-all">Xem tất cả
-                                        <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="products sub flexwrap">
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#" data-id="children">
-                                                <img src="assets/img/category-treem.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="sub-links"><a href="#" data-id="children">Xe Đạp Trẻ Em</a></h3>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#" data-id="sporty">
-                                                <img src="assets/img/category-thethao.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="sub-links"><a href="#" data-id="sporty">Xe Đạp Thể Thao</a></h3>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#" data-id="terrain">
-                                                <img src="assets/img/category-diahinh.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="sub-links"><a href="#" data-id="terrain">Xe Đạp Địa Hình</a></h3>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#" data-id="racing">
-                                                <img src="assets/img/category-dua.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="sub-links"><a href="#" data-id="racing">Xe Đạp Đua</a></h3>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#" data-id="tour">
-                                                <img src="assets/img/category-touring.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="sub-links"><a href="#" data-id="tour">Xe Đạp Touring</a></h3>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#" data-id="elec">
-                                                <img src="assets/img/category-xedien.png" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="sub-links"><a href="#" data-id="elec">Xe Đạp Điện</a></h3>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#" data-id="school">
-                                                <img src="assets/img/category-phothong.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="sub-links"><a href="#" data-id="school">Xe Đạp Đi Học</a></h3>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="../../../page-accessory.html">
-                                                <img src="assets/img/category-phukien-1.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="sub-links"><a href="../../../page-accessory.html">Phụ Kiện Xe Đạp</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<%--                        <div class="column">--%>
+<%--                            <div class="sectop flexitem">--%>
+<%--                                <h2><span class="circle"></span><span>Danh mục</span></h2>--%>
+<%--                                <div class="second-links">--%>
+<%--                                    <a href="#" class="view-all">Xem tất cả--%>
+<%--                                        <i class="ri-arrow-right-line"></i>--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <div class="products sub flexwrap">--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#" data-id="children">--%>
+<%--                                                <img src="assets/img/category-treem.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <h3 class="sub-links"><a href="#" data-id="children">Xe Đạp Trẻ Em</a></h3>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#" data-id="sporty">--%>
+<%--                                                <img src="assets/img/category-thethao.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <h3 class="sub-links"><a href="#" data-id="sporty">Xe Đạp Thể Thao</a></h3>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#" data-id="terrain">--%>
+<%--                                                <img src="assets/img/category-diahinh.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <h3 class="sub-links"><a href="#" data-id="terrain">Xe Đạp Địa Hình</a></h3>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#" data-id="racing">--%>
+<%--                                                <img src="assets/img/category-dua.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <h3 class="sub-links"><a href="#" data-id="racing">Xe Đạp Đua</a></h3>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#" data-id="tour">--%>
+<%--                                                <img src="assets/img/category-touring.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <h3 class="sub-links"><a href="#" data-id="tour">Xe Đạp Touring</a></h3>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#" data-id="elec">--%>
+<%--                                                <img src="assets/img/category-xedien.png" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <h3 class="sub-links"><a href="#" data-id="elec">Xe Đạp Điện</a></h3>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#" data-id="school">--%>
+<%--                                                <img src="assets/img/category-phothong.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <h3 class="sub-links"><a href="#" data-id="school">Xe Đạp Đi Học</a></h3>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="../../../page-accessory.html">--%>
+<%--                                                <img src="assets/img/category-phukien-1.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <h3 class="sub-links"><a href="../../../page-accessory.html">Phụ Kiện Xe Đạp</a></h3>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
                     </div>
                 </div>
             </div>
             <!--danh mục sản phẩm-->
         
-            <div class="features">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="column">
-                            <div class="sectop flexitem">
-                                <h2><span class="circle"></span><span>Nổi bật</span></h2>
-                                <div class="second-links">
-                                    <a href="#" class="view-all">Xem tất cả
-                                        <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="products main flexwrap">
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="../../../page-single.html">
-                                                <img src="assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>16%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,955)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Life Horse Fx2 – Khung Nhôm | Phanh Vành</a></h3>
-                                        <div class="price">
-                                            <span class="current">5.500.000đ</span>
-                                            <span class="normal mini-text">6.555.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
-                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/Xe-Dap-Fixed-Gear-Life-Fix735-700C.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>7%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(655)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Life Fix735 700C Giá Rẻ | Khuyến mãi Hot</a></h3>
-                                        <div class="price">
-                                            <span class="current">3.740.000đ</span>
-                                            <span class="normal mini-text">4.000.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
-                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/Xe-Dap-Fixed-Gear-Funky-Locking-Nhat-Ban.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>5%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(835)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Funky Locking Nhật Bản</a></h3>
-                                        <div class="price">
-                                            <span class="current">7.590.000đ</span>
-                                            <span class="normal mini-text">7.990.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Sản xuất tại Đài Loan</li>
-                                                <li>Bảo hành 12 tháng</li>
-                                                <li>Có nhiều màu sắc khác nhau</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/xe-dap-fix-gear-khong-thang-brave-will.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>2%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,955)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Không Thắng Brave Will</a></h3>
-                                        <div class="price">
-                                            <span class="current">4.590.000đ</span>
-                                            <span class="normal mini-text">4.690.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Sản xuất tại Đài Loan</li>
-                                                <li>Bảo hành 12 tháng</li>
-                                                <li>Phù hợp cho người thích cảm giác mạnh</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/feature-product-5.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>10%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(733)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Địa Hình MTB Kurashi Kon 26 Inch</a></h3>
-                                        <div class="price">
-                                            <span class="current">3.790.000đ</span>
-                                            <span class="normal mini-text">4.190.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Thiết kế đơn giản, trọng lượng nhẹ và có thể đi lùi</li>
-                                                <li>Ghi đông Xe Đạp Fixed Funky Popping thiết kế kiểu dáng cong</li>
-                                                <li>Bộ truyền động Xe Đạp Fixed Gear Funky Popping được cấu tạo đơn giản</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/feature-products-7.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>22%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(723)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Touring Life Fly – Khung Nhôm | Phanh Đĩa | Ltwoo R7</a></h3>
-                                        <div class="price">
-                                            <span class="current">8.090.000đ</span>
-                                            <span class="normal mini-text">10.350.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>
-                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/xe-dap-dia-hinh-giant-atx-720-2021.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>2%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(841)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Địa Hình Giant ATX 720-2021 Giá Rẻ</a></h3>
-                                        <div class="price">
-                                            <span class="current">10.750.0000đ</span>
-                                            <span class="normal mini-text">10.990.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Xe chính hãng, nhập khẩu Đài Loan</li>
-                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/Xe-Dap-Touring-Twitter-R12-Tay-Ngang.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>13%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(935)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Touring Twtter R12 Tay Ngang Giá Rẻ Khuyến Mãi Hot</a></h3>
-                                        <div class="price">
-                                            <span class="current">15.900.000đ</span>
-                                            <span class="normal mini-text">18.290.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Thiết kế thời thượng và công nghệ tiên tiến</li>
-                                                <li>Phù hợp với người cao từ 1m65 trở lên</li>
-                                                <li>Chịu tải trọng lên đến 90kg</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<%--            <div class="features">--%>
+<%--                <div class="container">--%>
+<%--                    <div class="wrapper">--%>
+<%--                        <div class="column">--%>
+<%--                            <div class="sectop flexitem">--%>
+<%--                                <h2><span class="circle"></span><span>Nổi bật</span></h2>--%>
+<%--                                <div class="second-links">--%>
+<%--                                    <a href="#" class="view-all">Xem tất cả--%>
+<%--                                        <i class="ri-arrow-right-line"></i>--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <div class="products main flexwrap">--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="../../../page-single.html">--%>
+<%--                                                <img src="assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>16%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,955)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Life Horse Fx2 – Khung Nhôm | Phanh Vành</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">5.500.000đ</span>--%>
+<%--                                            <span class="normal mini-text">6.555.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>--%>
+<%--                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>--%>
+<%--                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/Xe-Dap-Fixed-Gear-Life-Fix735-700C.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>7%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(655)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Life Fix735 700C Giá Rẻ | Khuyến mãi Hot</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">3.740.000đ</span>--%>
+<%--                                            <span class="normal mini-text">4.000.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>--%>
+<%--                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>--%>
+<%--                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/Xe-Dap-Fixed-Gear-Funky-Locking-Nhat-Ban.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>5%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(835)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Funky Locking Nhật Bản</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">7.590.000đ</span>--%>
+<%--                                            <span class="normal mini-text">7.990.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Sản xuất tại Đài Loan</li>--%>
+<%--                                                <li>Bảo hành 12 tháng</li>--%>
+<%--                                                <li>Có nhiều màu sắc khác nhau</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/xe-dap-fix-gear-khong-thang-brave-will.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>2%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,955)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Fixed Gear Không Thắng Brave Will</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">4.590.000đ</span>--%>
+<%--                                            <span class="normal mini-text">4.690.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Sản xuất tại Đài Loan</li>--%>
+<%--                                                <li>Bảo hành 12 tháng</li>--%>
+<%--                                                <li>Phù hợp cho người thích cảm giác mạnh</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/feature-product-5.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>10%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(733)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Địa Hình MTB Kurashi Kon 26 Inch</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">3.790.000đ</span>--%>
+<%--                                            <span class="normal mini-text">4.190.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Thiết kế đơn giản, trọng lượng nhẹ và có thể đi lùi</li>--%>
+<%--                                                <li>Ghi đông Xe Đạp Fixed Funky Popping thiết kế kiểu dáng cong</li>--%>
+<%--                                                <li>Bộ truyền động Xe Đạp Fixed Gear Funky Popping được cấu tạo đơn giản</li>--%>
+<%--                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/feature-products-7.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>22%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(723)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Touring Life Fly – Khung Nhôm | Phanh Đĩa | Ltwoo R7</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">8.090.000đ</span>--%>
+<%--                                            <span class="normal mini-text">10.350.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Là lựa chọn cho những ai đam mê và muốn thử sức với dòng xe đạp fixed gear</li>--%>
+<%--                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>--%>
+<%--                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/xe-dap-dia-hinh-giant-atx-720-2021.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>2%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(841)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Địa Hình Giant ATX 720-2021 Giá Rẻ</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">10.750.0000đ</span>--%>
+<%--                                            <span class="normal mini-text">10.990.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Xe chính hãng, nhập khẩu Đài Loan</li>--%>
+<%--                                                <li>Phù hợp với người cao từ 1m60 trở lên</li>--%>
+<%--                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/Xe-Dap-Touring-Twitter-R12-Tay-Ngang.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>13%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(935)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Touring Twtter R12 Tay Ngang Giá Rẻ Khuyến Mãi Hot</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">15.900.000đ</span>--%>
+<%--                                            <span class="normal mini-text">18.290.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Thiết kế thời thượng và công nghệ tiên tiến</li>--%>
+<%--                                                <li>Phù hợp với người cao từ 1m65 trở lên</li>--%>
+<%--                                                <li>Chịu tải trọng lên đến 90kg</li>--%>
+<%--                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
             <!-- nổi bật product-->
 
-            <div class="features">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="column">
-                            <div class="sectop flexitem">
-                                <h2><span class="circle"></span><span>Bộ sưu tập ra mắt 2025</span></h2>
-                                <div class="second-links">
-                                    <a href="#" class="view-all">Xem tất cả
-                                        <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="products main flexwrap">
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/bst2024.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>26%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,255)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Trẻ Em Youth Max Bike Bella 5</a></h3>
-                                        <div class="price">
-                                            <span class="current">1.999.000đ</span>
-                                            <span class="normal mini-text">2.199.990đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Miễn phí ship giao hàng khi mua xe đạp, không áp dụng với các sản phẩm đang có khuyến mãi từ 50%</li>
-                                                <li>Giảm 10% đối với đơn hàng phụ kiện từ 3 món</li>
-                                                <li>Giảm 15% đối với đơn hàng phụ kiện từ 5 món</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/bst2024_2.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>35%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,955)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Đường Phố Touring JEEP Freedom LX-66 Disc, Phanh Đĩa – Bánh 700C</a></h3>
-                                        <div class="price">
-                                            <span class="current">5.600.000đ</span>
-                                            <span class="normal mini-text">6.600.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Miễn phí ship giao hàng khi mua xe đạp, không áp dụng với các sản phẩm đang có khuyến mãi từ 50%</li>
-                                                <li>Giảm 10% đối với đơn hàng phụ kiện từ 3 món</li>
-                                                <li>Giảm 15% đối với đơn hàng phụ kiện từ 5 món</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/bst2024-3.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>15%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,072)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Trẻ Em Youth MISAKI Berry 2 – Bánh 14 Inches</a></h3>
-                                        <div class="price">
-                                            <span class="current">2.490.000đ</span>
-                                            <span class="normal mini-text">2.799.990đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Sản xuất tại Trung Quốc</li>
-                                                <li>Bảo hành 12 tháng</li>
-                                                <li>Giảm 10% đối với đơn hàng phụ kiện từ 3 món</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/bts2024-4.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>30%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,217)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Đường Phố Fixed Gear VINBIKE Megatron – Bánh 700C</a></h3>
-                                        <div class="price">
-                                            <span class="current">6.290.000đ</span>
-                                            <span class="normal mini-text">6.990.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Bánh xe 700C cùng với hệ thống fixed gear tạo ra trải nghiệm đạp xe mạnh mẽ và thú vị</li>
-                                                <li>Bảo hành 12 tháng</li>
-                                                <li>Người bạn đồng hành tin cậy trên mọi cuộc hành trình</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/bst2024-5.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>25%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,015)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Trẻ Em Youth TRINX Princess – Bánh 18 Inches</a></h3>
-                                        <div class="price">
-                                            <span class="current">1.590.000đ</span>
-                                            <span class="normal mini-text">1.990.000</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Thiết kế đơn giản, trọng lượng nhẹ và có thể đi lùi</li>
-                                                <li>Thiết kế và sản xuất tại Việt Nam</li>
-                                                <li>Giảm 10% đối với đơn hàng phụ kiện từ 3 món</li>
-                                                <li>Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/bst2024-6.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>15%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,955)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Địa Hình MTB Giant Roam 4 Disc 2024</a></h3>
-                                        <div class="price">
-                                            <span class="current">11.290.000đ</span>
-                                            <span class="normal mini-text">13.590.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Xe đạp MTB Giant Roam 4 Disc 2024 có kiểu dáng khỏe khoắn, phối màu tươi trẻ, thu hút mọi ánh nhìn</li>
-                                                <li>Trang bị lốp Giant CrossCut 700x42c chống đâm thủng, vành xe nhôm đôi và căm thép không gỉ</li>
-                                                <li>Hệ thống Shimano 2×7 với chuyển đĩa và chuyển líp Tourney, giúp xe di chuyển mượt mà trên nhiều địa hình</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/bst2024-7.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>25%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,225)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Đua Giant Propel ADV Pro 0 2024</a></h3>
-                                        <div class="price">
-                                            <span class="current">121.990.000đ</span>
-                                            <span class="normal mini-text">169.990.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Hàng cao cấp</li>
-                                                <li>Giảm giá lên đến 20%</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#">
-                                                <img src="assets/img/bst2024-8.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="discount circle flexcenter"><span>25%</span></div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(1,955)</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Touring Twtter R12 Tay Ngang</a></h3>
-                                        <div class="price">
-                                            <span class="current">1.599.000đ</span>
-                                            <span class="normal mini-text">1.799.990đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Thiết kế thời thượng và công nghệ tiên tiến</li>
-                                                <li>Phù hợp với người cao từ 1m65 trở lên</li>
-                                                <li>Chịu tải trọng lên đến 90kg</li>
-                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<%--            <div class="features">--%>
+<%--                <div class="container">--%>
+<%--                    <div class="wrapper">--%>
+<%--                        <div class="column">--%>
+<%--                            <div class="sectop flexitem">--%>
+<%--                                <h2><span class="circle"></span><span>Bộ sưu tập ra mắt 2025</span></h2>--%>
+<%--                                <div class="second-links">--%>
+<%--                                    <a href="#" class="view-all">Xem tất cả--%>
+<%--                                        <i class="ri-arrow-right-line"></i>--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <div class="products main flexwrap">--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/bst2024.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>26%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,255)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Trẻ Em Youth Max Bike Bella 5</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">1.999.000đ</span>--%>
+<%--                                            <span class="normal mini-text">2.199.990đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Miễn phí ship giao hàng khi mua xe đạp, không áp dụng với các sản phẩm đang có khuyến mãi từ 50%</li>--%>
+<%--                                                <li>Giảm 10% đối với đơn hàng phụ kiện từ 3 món</li>--%>
+<%--                                                <li>Giảm 15% đối với đơn hàng phụ kiện từ 5 món</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/bst2024_2.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>35%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,955)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Đường Phố Touring JEEP Freedom LX-66 Disc, Phanh Đĩa – Bánh 700C</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">5.600.000đ</span>--%>
+<%--                                            <span class="normal mini-text">6.600.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Miễn phí ship giao hàng khi mua xe đạp, không áp dụng với các sản phẩm đang có khuyến mãi từ 50%</li>--%>
+<%--                                                <li>Giảm 10% đối với đơn hàng phụ kiện từ 3 món</li>--%>
+<%--                                                <li>Giảm 15% đối với đơn hàng phụ kiện từ 5 món</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/bst2024-3.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>15%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,072)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Trẻ Em Youth MISAKI Berry 2 – Bánh 14 Inches</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">2.490.000đ</span>--%>
+<%--                                            <span class="normal mini-text">2.799.990đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Sản xuất tại Trung Quốc</li>--%>
+<%--                                                <li>Bảo hành 12 tháng</li>--%>
+<%--                                                <li>Giảm 10% đối với đơn hàng phụ kiện từ 3 món</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/bts2024-4.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>30%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,217)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Đường Phố Fixed Gear VINBIKE Megatron – Bánh 700C</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">6.290.000đ</span>--%>
+<%--                                            <span class="normal mini-text">6.990.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Bánh xe 700C cùng với hệ thống fixed gear tạo ra trải nghiệm đạp xe mạnh mẽ và thú vị</li>--%>
+<%--                                                <li>Bảo hành 12 tháng</li>--%>
+<%--                                                <li>Người bạn đồng hành tin cậy trên mọi cuộc hành trình</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/bst2024-5.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>25%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,015)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Trẻ Em Youth TRINX Princess – Bánh 18 Inches</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">1.590.000đ</span>--%>
+<%--                                            <span class="normal mini-text">1.990.000</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Thiết kế đơn giản, trọng lượng nhẹ và có thể đi lùi</li>--%>
+<%--                                                <li>Thiết kế và sản xuất tại Việt Nam</li>--%>
+<%--                                                <li>Giảm 10% đối với đơn hàng phụ kiện từ 3 món</li>--%>
+<%--                                                <li>Chính Hãng Bảo Hành 12 Tháng</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/bst2024-6.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>15%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,955)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Địa Hình MTB Giant Roam 4 Disc 2024</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">11.290.000đ</span>--%>
+<%--                                            <span class="normal mini-text">13.590.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Xe đạp MTB Giant Roam 4 Disc 2024 có kiểu dáng khỏe khoắn, phối màu tươi trẻ, thu hút mọi ánh nhìn</li>--%>
+<%--                                                <li>Trang bị lốp Giant CrossCut 700x42c chống đâm thủng, vành xe nhôm đôi và căm thép không gỉ</li>--%>
+<%--                                                <li>Hệ thống Shimano 2×7 với chuyển đĩa và chuyển líp Tourney, giúp xe di chuyển mượt mà trên nhiều địa hình</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/bst2024-7.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>25%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,225)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Đua Giant Propel ADV Pro 0 2024</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">121.990.000đ</span>--%>
+<%--                                            <span class="normal mini-text">169.990.000đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Hàng cao cấp</li>--%>
+<%--                                                <li>Giảm giá lên đến 20%</li>--%>
+<%--                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="item">--%>
+<%--                                    <div class="media">--%>
+<%--                                        <div class="thumbnail object-cover">--%>
+<%--                                            <a href="#">--%>
+<%--                                                <img src="assets/img/bst2024-8.jpg" alt="">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="hoverable">--%>
+<%--                                            <ul>--%>
+<%--                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-eye-line"></i></a></li>--%>
+<%--                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="discount circle flexcenter"><span>25%</span></div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="content">--%>
+<%--                                        <div class="rating">--%>
+<%--                                            <div class="stars"></div>--%>
+<%--                                            <span class="mini-text">(1,955)</span>--%>
+<%--                                        </div>--%>
+<%--                                        <h3 class="main-links"><a href="#">Xe Đạp Touring Twtter R12 Tay Ngang</a></h3>--%>
+<%--                                        <div class="price">--%>
+<%--                                            <span class="current">1.599.000đ</span>--%>
+<%--                                            <span class="normal mini-text">1.799.990đ</span>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="footer">--%>
+<%--                                            <ul class="mini-text">--%>
+<%--                                                <li>Thiết kế thời thượng và công nghệ tiên tiến</li>--%>
+<%--                                                <li>Phù hợp với người cao từ 1m65 trở lên</li>--%>
+<%--                                                <li>Chịu tải trọng lên đến 90kg</li>--%>
+<%--                                                <li>Xe Nhập Khẩu Chính Hãng Bảo Hành 12 Tháng</li>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
             <!-- 2025 product-->
 
-            <div class="banners">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="column">
-                            <div class="sectop flexitem">
-                                <h2><span class="circle"></span><span>ưu đãi mới</span></h2>
-                                <div class="second-links">
-                                    <a href="#" class="view-all">Xem tất cả
-                                        <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="top-dis-categories flexwrap">
-                                <div class="row">
-                                    <div class="item">
-                                        <a href="#"><img src="assets/img/uu-dai-duoi-2-trieu-gia-re.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="item">
-                                        <a href="#"><img src="assets/img/uu-dai-duoi-5-trieu.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="item">
-                                        <a href="#"><img src="assets/img/uu-dai-khuyen-mai.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- shop address -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+<%--            <div class="banners">--%>
+<%--                <div class="container">--%>
+<%--                    <div class="wrapper">--%>
+<%--                        <div class="column">--%>
+<%--                            <div class="sectop flexitem">--%>
+<%--                                <h2><span class="circle"></span><span>ưu đãi mới</span></h2>--%>
+<%--                                <div class="second-links">--%>
+<%--                                    <a href="#" class="view-all">Xem tất cả--%>
+<%--                                        <i class="ri-arrow-right-line"></i>--%>
+<%--                                    </a>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <div class="top-dis-categories flexwrap">--%>
+<%--                                <div class="row">--%>
+<%--                                    <div class="item">--%>
+<%--                                        <a href="#"><img src="assets/img/uu-dai-duoi-2-trieu-gia-re.jpg" alt=""></a>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="row">--%>
+<%--                                    <div class="item">--%>
+<%--                                        <a href="#"><img src="assets/img/uu-dai-duoi-5-trieu.jpg" alt=""></a>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="row">--%>
+<%--                                    <div class="item">--%>
+<%--                                        <a href="#"><img src="assets/img/uu-dai-khuyen-mai.jpg" alt=""></a>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <!-- shop address -->--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
             <!-- banner ưu đãi -->
 
             <div class="features">
@@ -1262,17 +1262,16 @@
                                                 <li><a href=""><i class="ri-shuffle-line"></i></a></li>
                                             </ul>
                                         </div>
-                                        <div class="discount circle flexcenter"><span>6%</span></div>
                                     </div>
                                     <div class="content">
                                         <div class="rating">
-                                            <div class="stars"></div>
-                                            <span class="mini-text">(799)</span>
+                                            <div class="mini-text">(4.5)</div>
+                                            <div class="stars" style="width: 17px;"></div>
+                                            <span class="mini-text" style="margin-left: auto;">Số lượng: 799</span>
                                         </div>
                                         <h3 class="main-links"><a href="#">Xe Đạp Trẻ Em JsXiong 2301 Hiphop 12 Inch</a></h3>
                                         <div class="price">
                                             <span class="current">1.450.000đ</span>
-                                            <span class="normal mini-text">1.550.000đ</span>
                                         </div>
                                         <div class="footer">
                                             <ul class="mini-text">

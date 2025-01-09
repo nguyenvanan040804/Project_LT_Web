@@ -32,10 +32,10 @@
             </c:if>
             <form action="PasswordRecovery" method="post">
                 <div class="field input-field">
-                    <input type="text" class="input" name="username" placeholder="Nhập username của bạn" required>
+                    <input type="text" class="input" name="username" placeholder="Nhập username của bạn" required value="${username != null ? username : ''}">
                 </div>
                 <div class="field input-field">
-                    <input type="email" class="input" name="email" placeholder="Nhập email của bạn" required>
+                    <input type="email" class="input" name="email" placeholder="Nhập email của bạn" required value="${email != null ? email : ''}">
                 </div>
                 <div class="field button-field">
                     <button>Gửi mật khẩu</button>

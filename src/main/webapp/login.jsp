@@ -33,7 +33,7 @@
                 </c:if>
                 <form action="login" method="post">
                     <div class="field input-field">
-                        <input type="text" class="input" placeholder="tên đăng nhập" name="username">
+                        <input type="text" class="input" placeholder="tên đăng nhập" name="username" value="${username != null ? username : ''}">
                     </div>
                     <div class="field input-field">
                         <input type="password" class="password" placeholder="mật khẩu" name="password">

@@ -31,23 +31,23 @@
             </c:if>
             <form action="register" method="post">
                 <div class="field input-field">
-                    <input type="text" class="input" placeholder="Tên đăng nhập" name="username" required>
+                    <input type="text" class="input" placeholder="Tên đăng nhập" name="username" required value="${username != null ? username : ''}">
                 </div>
                 <div class="field input-field">
                     <input type="password" class="password" placeholder="Mật khẩu" name="password" required>
                     <i class="bx bx-hide eye-icon"></i>
                 </div>
                 <div class="field input-field">
-                    <input type="text" class="input" placeholder="Tên đầy đủ" name="fullname">
+                    <input type="text" class="input" placeholder="Tên đầy đủ" name="fullname" value="${fullname != null ? fullname : ''}">
                 </div>
                 <div class="field input-field">
-                    <input type="email" class="input" placeholder="Email" name="email" required>
+                    <input type="email" class="input" placeholder="Email" name="email" required value="${email != null ? email : ''}">
                 </div>
                 <div class="field input-field">
-                    <input type="text" class="input" placeholder="Số điện thoại" name="phone">
+                    <input type="text" class="input" placeholder="Số điện thoại" name="phone" value="${phone != null ? phone : ''}">
                 </div>
                 <div class="field input-field">
-                    <input type="text" class="input" placeholder="Địa chỉ" name="address">
+                    <input type="text" class="input" placeholder="Địa chỉ" name="address" value="${address != null ? address : ''}">
                 </div>
                 <div class="check-form" style="font-size: 0.8em; display: flex; margin: 10px; gap: 10px">
                     <input type="checkbox" class="input" name="check">
