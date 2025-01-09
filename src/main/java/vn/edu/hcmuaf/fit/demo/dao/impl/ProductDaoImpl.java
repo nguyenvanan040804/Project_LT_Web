@@ -13,27 +13,26 @@ import java.util.List;
 
 public class ProductDaoImpl implements IObjectDao<Product> {
     Connection conn;
-    PreparedStatement ps = null;
-    ResultSet rs = null;
+
+    public ProductDaoImpl(Connection conn) {
+        this.conn = conn;
+    }
 
     @Override
     public boolean add(Product product) {
-        String sql = "INSERT INTO products (proName, price, description, thumb, cateId) " +
-                "VALUES (?, ?, ?, ?, ?)";
+        String sql = "insert into products (proName, price, description, thumb, quantity, cateId) " +
+                "values (?, ?, ?, ?, ?, ?)";
         try {
-            conn = DBConnect.getConnect();
-            ps = conn.prepareStatement(sql);
+            PreparedStatement ps = conn.prepareStatement(sql);
 
             ps.setString(1, product.getProName());
             ps.setInt(2, product.getPrice());
             ps.setString(3, product.getDescription());
             ps.setString(4, product.getThumb());
-            ps.setInt(5, product.getCateId());
+            ps.setInt(5, product.getQuantity());
+            ps.setInt(6, product.getCateId());
 
-            int rowsAffected = ps.executeUpdate();
-            if(rowsAffected > 0) {
-                return true;
-            }
+            return ps.executeUpdate() > 0;
         }catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,9 +44,8 @@ public class ProductDaoImpl implements IObjectDao<Product> {
         List<Product> list = new ArrayList<>();
         String sql = "select * from products";
         try {
-            conn = DBConnect.getConnect();
-            ps = conn.prepareStatement(sql);
-            rs = ps.executeQuery();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
             while(rs.next()) {
                 list.add(new Product(
                         rs.getInt("id"),
@@ -55,6 +53,7 @@ public class ProductDaoImpl implements IObjectDao<Product> {
                         rs.getInt("price"),
                         rs.getString("description"),
                         rs.getString("thumb"),
+                        rs.getInt("quantity"),
                         rs.getInt("cateId")
                 ));
             }
@@ -66,35 +65,33 @@ public class ProductDaoImpl implements IObjectDao<Product> {
 
     @Override
     public Product getById(int id) {
-        Product product = null;
         String sql = "select * from products where id = ?";
         try {
-            conn = DBConnect.getConnect();
-            ps = conn.prepareStatement(sql);
+            PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
-            rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery();
             if(rs.next()) {
-                product = new Product(
+                return new Product(
                         rs.getInt("id"),
                         rs.getString("proName"),
                         rs.getInt("price"),
                         rs.getString("description"),
                         rs.getString("thumb"),
+                        rs.getInt("quantity"),
                         rs.getInt("cateId")
                 );
             }
         }catch (Exception e) {
             e.printStackTrace();
         }
-        return product;
+        return null;
     }
 
     @Override
     public boolean deleteById(int id) {
         String sql = "delete from products where id = ?";
         try{
-            conn = DBConnect.getConnect();
-            ps = conn.prepareStatement(sql);
+            PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
             return ps.executeUpdate() > 0;
         }catch (SQLException e) {
@@ -109,13 +106,13 @@ public class ProductDaoImpl implements IObjectDao<Product> {
                 + "proName = ?, price = ?, description = ?, thumb = ?, "
                 + "cateId = ? WHERE id = ?";
         try {
-            conn = DBConnect.getConnect();
-            ps = conn.prepareStatement(sql);
+            PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, product.getProName());
             ps.setInt(2, product.getPrice());
             ps.setString(3, product.getDescription());
             ps.setString(4, product.getThumb());
-            ps.setInt(5, product.getCateId());
+            ps.setInt(5, product.getQuantity());
+            ps.setInt(6, product.getCateId());
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -125,7 +122,6 @@ public class ProductDaoImpl implements IObjectDao<Product> {
 
 
     public static void main(String[] args) {
-        ProductDaoImpl productDao = new ProductDaoImpl();
-
+        ProductDaoImpl productDao = new ProductDaoImpl(DBConnect.getConnect());
     }
 }
