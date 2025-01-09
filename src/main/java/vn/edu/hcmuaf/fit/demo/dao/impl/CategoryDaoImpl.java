@@ -81,8 +81,8 @@ public class CategoryDaoImpl implements IObjectDao<Category> {
         String sql = "update categories set cateName = ? where id = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setInt(1, cate.getId());
-            ps.setString(2, cate.getCateName());
+            ps.setString(1, cate.getCateName());
+            ps.setInt(2, cate.getId());
             return ps.executeUpdate() > 0;
         }catch (SQLException e) {
             e.printStackTrace();
@@ -92,25 +92,6 @@ public class CategoryDaoImpl implements IObjectDao<Category> {
 
     public static void main(String[] args) {
         CategoryDaoImpl categoryDao = new CategoryDaoImpl(DBConnect.getConnect());
-//        Category cate = new Category(2, "Xe Đạp Thể Thao");
-//        Category cate1 = new Category(3, "Xe Đạp Địa Hình");
-//        Category cate2 = new Category(4, "Xe Đạp Touring");
-//        Category cate3 = new Category(5, "Xe Đạp Đua");
-//        Category cate4 = new Category(6, "Xe Đạp Điện");
-//        Category cate5 = new Category(7, "Giảm Giá Ưu Đãi");
-//        Category cate6 = new Category(8, "Xe Đạp Phổ Thông");
-//        Category cate7 = new Category(9, "Phụ Kiện Xe Đạp");
-//        Category cate8 = new Category(10, "Thương Hiệu Xe Đạp");
-//        Category cate9 = new Category(11, "Bán Chạy Nhất");
-//        categoryDao.add(cate);
-//        categoryDao.add(cate1);
-//        categoryDao.add(cate2);
-//        categoryDao.add(cate3);
-//        categoryDao.add(cate4);
-//        categoryDao.add(cate5);
-//        categoryDao.add(cate6);
-//        categoryDao.add(cate7);
-//        categoryDao.add(cate8);
-//        categoryDao.add(cate9);
+        System.out.println(categoryDao.getAll());
     }
 }

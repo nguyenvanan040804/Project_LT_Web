@@ -1,6 +1,6 @@
 <%@ page import="vn.edu.hcmuaf.fit.demo.model.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page isELIgnored="false" %>
+<%@ page isELIgnored="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -218,83 +218,16 @@
                         </div>
                         <div class="dpt-menu">
                             <ul class="second-links">
-                                <li class="has-child beauty">
-                                    <a href="#" data-id="children">
-                                        <div class="icon-large"><i class="ri-bear-smile-line"></i></div>
-                                        Xe Đạp Trẻ Em
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li class="has-child electric">
-                                    <a href="#" data-id="sporty">
-                                        <div class="icon-large"><i class="ri-bluetooth-connect-line"></i></div>
-                                        Xe Đạp Thể Thao
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li class="has-child fashion">
-                                    <a href="#" data-id="terrain">
-                                        <div class="icon-large"><i class="ri-t-shirt-air-line"></i></div>
-                                        Xe Đạp Địa Hình
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" data-id="tour">
-                                        <div class="icon-large"><i class="ri-shirt-line"></i></div>
-                                        Xe Đạp Touring
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" data-id="racing">
-                                        <div class="icon-large"><i class="ri-user-5-line"></i></div>
-                                        Xe Đạp Đua
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" data-id="racing">
-                                        <div class="icon-large"><i class="ri-user-6-line"></i></div>
-                                        Xe Đạp Điện
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../../../page-promotion.jsp">
-                                        <div class="icon-large"><i class="ri-heart-pulse-line"></i></div>
-                                        Giảm Giá Ưu Đãi
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li class="has-child homekit">
-                                    <a href="#" data-id="school">
-                                        <div class="icon-large"><i class="ri-home-8-line"></i></div>
-                                        Xe Đạp Phổ Thông
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../../../page-accessory.jsp">
-                                        <div class="icon-large"><i class="ri-android-line"></i></div>
-                                        Phụ Kiện Xe Đạp
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="icon-large"><i class="ri-basketball-line"></i></div>
-                                        Thương Hiệu Xe Đạp
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="icon-large"><i class="ri-shield-star-line"></i></div>
-                                        Bán Chạy Nhất
-                                        <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
-                                    </a>
-                                </li>
+<%--                                Load danh mục--%>
+                                <c:forEach var="category" items="${applicationScope.categories}">
+                                    <li class="has-child beauty">
+                                        <a href="#" data-id="children">
+                                            <div class="icon-large" style="font-size: 0.3em; margin-right: 3em;"><i class="ri-circle-fill"></i></div>
+                                            ${category.cateName}
+                                            <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
+                                        </a>
+                                    </li>
+                                </c:forEach>
                             </ul>
                         </div>
                     </div>

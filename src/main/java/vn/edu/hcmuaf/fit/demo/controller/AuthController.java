@@ -191,7 +191,7 @@ public class AuthController extends HttpServlet {
             User u = (User) session.getAttribute("account");
             request.setAttribute("username", u.getUserName());
             if(u.getRoleId() == 1) {
-                response.sendRedirect(request.getContextPath() + "/admin/home.jsp");
+                response.sendRedirect(request.getContextPath() + "/admin/admin.jsp");
             }else {
                 response.sendRedirect(request.getContextPath() + "/index.jsp");
             }

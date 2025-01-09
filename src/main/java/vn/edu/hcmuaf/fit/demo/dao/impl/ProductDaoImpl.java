@@ -18,19 +18,17 @@ public class ProductDaoImpl implements IObjectDao<Product> {
 
     @Override
     public boolean add(Product product) {
-        String sql = "INSERT INTO products (cateId, brandId, productName, productDes, quantity, price, salePrice) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO products (proName, price, description, thumb, cateId) " +
+                "VALUES (?, ?, ?, ?, ?)";
         try {
             conn = DBConnect.getConnect();
             ps = conn.prepareStatement(sql);
 
-            ps.setInt(1, product.getCateId());
-            ps.setInt(2, product.getBrandId());
-            ps.setString(3, product.getProductName());
-            ps.setString(4, product.getProductDes());
-            ps.setInt(5, product.getQuantity());
-            ps.setDouble(6, product.getPrice());
-            ps.setDouble(7, product.getSalePrice());
+            ps.setString(1, product.getProName());
+            ps.setInt(2, product.getPrice());
+            ps.setString(3, product.getDescription());
+            ps.setString(4, product.getThumb());
+            ps.setInt(5, product.getCateId());
 
             int rowsAffected = ps.executeUpdate();
             if(rowsAffected > 0) {
@@ -53,13 +51,11 @@ public class ProductDaoImpl implements IObjectDao<Product> {
             while(rs.next()) {
                 list.add(new Product(
                         rs.getInt("id"),
-                        rs.getInt("cateId"),
-                        rs.getInt("brandId"),
-                        rs.getString("productName"),
-                        rs.getString("productDes"),
-                        rs.getInt("quantity"),
-                        rs.getDouble("price"),
-                        rs.getDouble("salePrice")
+                        rs.getString("proName"),
+                        rs.getInt("price"),
+                        rs.getString("description"),
+                        rs.getString("thumb"),
+                        rs.getInt("cateId")
                 ));
             }
         }catch (Exception e) {
@@ -78,14 +74,14 @@ public class ProductDaoImpl implements IObjectDao<Product> {
             ps.setInt(1, id);
             rs = ps.executeQuery();
             if(rs.next()) {
-                product = new Product(rs.getInt("id"),
-                        rs.getInt("cateId"),
-                        rs.getInt("brandId"),
-                        rs.getString("productName"),
-                        rs.getString("productDes"),
-                        rs.getInt("quantity"),
-                        rs.getDouble("price"),
-                        rs.getDouble("salePrice"));
+                product = new Product(
+                        rs.getInt("id"),
+                        rs.getString("proName"),
+                        rs.getInt("price"),
+                        rs.getString("description"),
+                        rs.getString("thumb"),
+                        rs.getInt("cateId")
+                );
             }
         }catch (Exception e) {
             e.printStackTrace();
@@ -110,20 +106,16 @@ public class ProductDaoImpl implements IObjectDao<Product> {
     @Override
     public boolean update(Product product) {
         String sql = "update products set "
-                + "cateId = ?, brandId = ?, productName = ?, productDes = ?, "
-                + "quantity = ?, price = ? , salePrice = ? "
-                + "WHERE id = ?";
+                + "proName = ?, price = ?, description = ?, thumb = ?, "
+                + "cateId = ? WHERE id = ?";
         try {
             conn = DBConnect.getConnect();
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, product.getCateId());
-            ps.setInt(2, product.getBrandId());
-            ps.setString(3, product.getProductName());
-            ps.setString(4, product.getProductDes());
-            ps.setInt(5, product.getQuantity());
-            ps.setDouble(6, product.getPrice());
-            ps.setDouble(7, product.getSalePrice());
-            ps.setInt(8, product.getId());
+            ps.setString(1, product.getProName());
+            ps.setInt(2, product.getPrice());
+            ps.setString(3, product.getDescription());
+            ps.setString(4, product.getThumb());
+            ps.setInt(5, product.getCateId());
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -134,12 +126,6 @@ public class ProductDaoImpl implements IObjectDao<Product> {
 
     public static void main(String[] args) {
         ProductDaoImpl productDao = new ProductDaoImpl();
-//        Product p = new Product(1, 1, 1, "Xe Đạp Đua Sava Ex7",
-//                "Miễn phí vận chuyển", 2548, 4289990, 5998990);
-//        productDao.addProduct(p);
-        List<Product> list = productDao.getAll();
-        for(Product p : list) {
-            System.out.println(p);
-        }
+
     }
 }

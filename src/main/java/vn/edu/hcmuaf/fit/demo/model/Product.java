@@ -1,29 +1,27 @@
 package vn.edu.hcmuaf.fit.demo.model;
 
+import java.time.LocalDateTime;
+
 public class Product {
     private int id;
+    private String proName;
+    private int price;
+    private String description;
+    private String thumb;
+    private LocalDateTime createAt;
     private int cateId;
-    private int brandId;
-    private String productName;
-    private String productDes;
-    private int quantity;
-    private double price;
-    private double salePrice;
 
     public Product() {
 
     }
 
-    public Product(int id, int cateId, int brandId, String productName, String productDes,
-                   int quantity, double price, double salePrice) {
+    public Product(int id, String proName, int price, String description, String thumb, int cateId) {
         this.id = id;
-        this.cateId = cateId;
-        this.brandId = brandId;
-        this.productName = productName;
-        this.productDes = productDes;
-        this.quantity = quantity;
+        this.proName = proName;
         this.price = price;
-        this.salePrice = salePrice;
+        this.description = description;
+        this.thumb = thumb;
+        this.cateId = cateId;
     }
 
     public int getId() {
@@ -34,6 +32,38 @@ public class Product {
         this.id = id;
     }
 
+    public String getProName() {
+        return proName;
+    }
+
+    public void setProName(String proName) {
+        this.proName = proName;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getThumb() {
+        return thumb;
+    }
+
+    public void setThumb(String thumb) {
+        this.thumb = thumb;
+    }
+
     public int getCateId() {
         return cateId;
     }
@@ -42,66 +72,15 @@ public class Product {
         this.cateId = cateId;
     }
 
-    public int getBrandId() {
-        return brandId;
-    }
-
-    public void setBrandId(int brandId) {
-        this.brandId = brandId;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public String getProductDes() {
-        return productDes;
-    }
-
-    public void setProductDes(String productDes) {
-        this.productDes = productDes;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getSalePrice() {
-        return salePrice;
-    }
-
-    public void setSalePrice(double salePrice) {
-        this.salePrice = salePrice;
-    }
-
-
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
-                ", cateId=" + cateId +
-                ", brandId=" + brandId +
-                ", productName='" + productName + '\'' +
-                ", productDes='" + productDes + '\'' +
-                ", quantity=" + quantity +
+                ", proName='" + proName + '\'' +
                 ", price=" + price +
-                ", salePrice=" + salePrice +
+                ", description='" + description + '\'' +
+                ", thumb='" + thumb + '\'' +
+                ", cateId=" + cateId +
                 '}';
     }
 }
