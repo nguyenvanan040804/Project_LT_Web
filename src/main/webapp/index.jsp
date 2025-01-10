@@ -1249,7 +1249,40 @@
                                 </div>
                             </div>
                             <div class="products main flexwrap">
-
+                                <c:forEach var="product" items="${products}">
+                                    <div class="item">
+                                        <div class="media">
+                                            <div class="thumbnail object-cover">
+                                                <a href="#" data-id="${product.id}">
+                                                    <img src="${product.thumb}" alt="${product.proName}">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href=""><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="rating">
+                                                <div class="mini-text">(4.5)</div>
+                                                <div class="stars" style="width: 17px;"></div>
+                                                <span class="mini-text" style="margin-left: auto;">Số lượng: ${product.quantity}</span>
+                                            </div>
+                                            <h3 class="main-links"><a href="#">${product.proName}</a></h3>
+                                            <div class="price">
+                                                <span class="current">${product.price}</span>
+                                            </div>
+                                            <div class="footer">
+                                                <ul class="mini-text">
+                                                    <li>${product.description}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </c:forEach>
                                 <div class="item">
                                     <div class="media">
                                         <div class="thumbnail object-cover">
