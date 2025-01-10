@@ -34,4 +34,9 @@ public class ProductServiceImpl implements IObjectService<Product> {
     public boolean update(Product pro) {
         return productDao.update(pro);
     }
+
+    public static void main(String[] args) {
+        ProductServiceImpl productService = new ProductServiceImpl();
+        System.out.println(productService.getAll());
+    }
 }

@@ -13,7 +13,7 @@ import vn.edu.hcmuaf.fit.demo.utils.Email;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(urlPatterns = {"/home", "/login", "/register", "/waiting", "/verifyCode", "/logout"})
+@WebServlet(urlPatterns = {"/login", "/register", "/waiting", "/verifyCode", "/logout"})
 public class AuthController extends HttpServlet {
     IUserService userService = new UserServiceImpl();
 

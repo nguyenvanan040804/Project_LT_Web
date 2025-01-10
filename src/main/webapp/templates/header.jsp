@@ -219,7 +219,7 @@
                         <div class="dpt-menu">
                             <ul class="second-links">
 <%--                                Load danh mục--%>
-                                <c:forEach var="category" items="${applicationScope.categories}">
+                                <c:forEach var="category" items="${categories}">
                                     <li class="has-child beauty">
                                         <a href="#" data-id="children">
                                             <div class="icon-large" style="font-size: 0.3em; margin-right: 3em;"><i class="ri-circle-fill"></i></div>
