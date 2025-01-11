@@ -121,7 +121,24 @@ public class ProductDaoImpl implements IObjectDao<Product> {
     }
 
 
+    public List<String> getProductImages(int productId) {
+        List<String> images = new ArrayList<>();
+        String sql = "select path from product_img where productId = ?";
+        try {
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, productId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                images.add(rs.getString("path"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return images;
+    }
+
     public static void main(String[] args) {
         ProductDaoImpl productDao = new ProductDaoImpl(DBConnect.getConnect());
+        System.out.println(productDao.getProductImages(1));
     }
 }

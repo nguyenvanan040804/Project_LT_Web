@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="vi">
@@ -1271,8 +1272,8 @@
                                             </div>
                                             <h3 class="main-links"><a href="#">${product.proName}</a></h3>
                                             <div class="price pro-price">
-                                                <span class="current">${product.price}</span>
-                                                <a href="detail?id=${product.id}" class="btn btn-detail">Xem chi tiết</a>
+                                                <span class="current"><f:formatNumber value="${product.price}"/>đ</span>
+                                                <a href="detail?pid=${product.id}" class="btn btn-detail">Xem chi tiết</a>
                                             </div>
                                             <div class="footer">
                                                 <ul class="mini-text">
@@ -1601,8 +1602,8 @@
                                                 </div>
                                                 <h3 class="main-links"><a href="#">${product.proName}</a></h3>
                                                 <div class="price pro-price">
-                                                    <span class="current">${product.price}</span>
-                                                    <a href="detail?id=${product.id}" class="btn btn-detail">Xem chi tiết</a>
+                                                    <span class="current"><f:formatNumber value="${product.price}"/>đ</span>
+                                                    <a href="detail?pid=${product.id}" class="btn btn-detail">Xem chi tiết</a>
                                                 </div>
                                                 <div class="footer">
                                                     <ul class="mini-text">
@@ -1938,8 +1939,8 @@
                                                 </div>
                                                 <h3 class="main-links"><a href="#">${product.proName}</a></h3>
                                                 <div class="price pro-price">
-                                                    <span class="current">${product.price}</span>
-                                                    <a href="detail?id=${product.id}" class="btn btn-detail">Xem chi tiết</a>
+                                                    <span class="current"><f:formatNumber value="${product.price}"/>đ</span>
+                                                    <a href="detail?pid=${product.id}" class="btn btn-detail">Xem chi tiết</a>
                                                 </div>
                                                 <div class="footer">
                                                     <ul class="mini-text">

@@ -9,7 +9,7 @@ import vn.edu.hcmuaf.fit.demo.service.IObjectService;
 import java.util.List;
 
 public class ProductServiceImpl implements IObjectService<Product> {
-    private IObjectDao<Product> productDao = new ProductDaoImpl(DBConnect.getConnect());
+    private ProductDaoImpl productDao = new ProductDaoImpl(DBConnect.getConnect());
     @Override
     public boolean add(Product pro) {
         return productDao.add(pro);
@@ -33,6 +33,9 @@ public class ProductServiceImpl implements IObjectService<Product> {
     @Override
     public boolean update(Product pro) {
         return productDao.update(pro);
+    }
+    public List<String> getProductImages(int productId) {
+        return productDao.getProductImages(productId);
     }
 
     public static void main(String[] args) {

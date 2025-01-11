@@ -14,4 +14,5 @@ public interface IObjectDao<T> {
     boolean deleteById(int id);
 
     boolean update(T obj);
+
 }
