@@ -8,6 +8,7 @@ public class Product {
     private int price;
     private String description;
     private String thumb;
+    private int quantity;
     private LocalDateTime createAt;
     private int cateId;
 
@@ -15,12 +16,22 @@ public class Product {
 
     }
 
-    public Product(int id, String proName, int price, String description, String thumb, int cateId) {
+    public Product(int id, String proName, int price, String description, String thumb, int quantity, int cateId) {
         this.id = id;
         this.proName = proName;
         this.price = price;
         this.description = description;
         this.thumb = thumb;
+        this.quantity = quantity;
+        this.cateId = cateId;
+    }
+
+    public Product(String proName, int price, String description, String thumb, int quantity, int cateId) {
+        this.proName = proName;
+        this.price = price;
+        this.description = description;
+        this.thumb = thumb;
+        this.quantity = quantity;
         this.cateId = cateId;
     }
 
@@ -60,6 +71,14 @@ public class Product {
         return thumb;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public void setThumb(String thumb) {
         this.thumb = thumb;
     }
@@ -80,6 +99,7 @@ public class Product {
                 ", price=" + price +
                 ", description='" + description + '\'' +
                 ", thumb='" + thumb + '\'' +
+                ", quantity'" + quantity + '\'' +
                 ", cateId=" + cateId +
                 '}';
     }

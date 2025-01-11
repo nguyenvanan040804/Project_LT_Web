@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="vn.edu.hcmuaf.fit.demo.db.DBConnect" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -18,7 +19,7 @@
 <body>
     <div id="page" class="site page-home">
 
-        <jsp:include page="templates/header.jsp" />
+        <jsp:include page="templates/header.jsp" flush="true" />
 
         <main>
             <div class="slider">
@@ -1248,42 +1249,40 @@
                                 </div>
                             </div>
                             <div class="products main flexwrap">
-                                <div class="item">
-                                    <div class="media">
-                                        <div class="thumbnail object-cover">
-                                            <a href="#" data-id="children">
-                                                <img src="assets/img/kid-1.jpg" alt="">
-                                            </a>
+                                <c:forEach var="product" items="${products}">
+                                    <div class="item">
+                                        <div class="media">
+                                            <div class="thumbnail object-cover">
+                                                <a href="#" data-id="${product.id}">
+                                                    <img src="${product.thumb}" alt="${product.proName}">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href=""><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="hoverable">
-                                            <ul>
-                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
-                                                <li><a href=""><i class="ri-eye-line"></i></a></li>
-                                                <li><a href=""><i class="ri-shuffle-line"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="rating">
-                                            <div class="mini-text">(4.5)</div>
-                                            <div class="stars" style="width: 17px;"></div>
-                                            <span class="mini-text" style="margin-left: auto;">Số lượng: 799</span>
-                                        </div>
-                                        <h3 class="main-links"><a href="#">Xe Đạp Trẻ Em JsXiong 2301 Hiphop 12 Inch</a></h3>
-                                        <div class="price">
-                                            <span class="current">1.450.000đ</span>
-                                        </div>
-                                        <div class="footer">
-                                            <ul class="mini-text">
-                                                <li>Thiết kế hiphop năng động và mạnh mẽ phù hợp với các bé trai</li>
-                                                <li>Khung sườn thiết kế chắc chắn, thẩm mỹ, an toàn tuyệt đối</li>
-                                                <li>Phù hợp với các bé từ 90cm</li>
-                                                <li>Xe nhập khẩu chính hãng</li>
-                                                <li>Bảo hành 12 tháng</li>
-                                            </ul>
+                                        <div class="content">
+                                            <div class="rating">
+                                                <div class="mini-text">(4.5)</div>
+                                                <div class="stars" style="width: 17px;"></div>
+                                                <span class="mini-text" style="margin-left: auto;">Số lượng: ${product.quantity}</span>
+                                            </div>
+                                            <h3 class="main-links"><a href="#">${product.proName}</a></h3>
+                                            <div class="price">
+                                                <span class="current">${product.price}</span>
+                                            </div>
+                                            <div class="footer">
+                                                <ul class="mini-text">
+                                                    <li>${product.description}</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </c:forEach>
                                 <div class="item">
                                     <div class="media">
                                         <div class="thumbnail object-cover">
