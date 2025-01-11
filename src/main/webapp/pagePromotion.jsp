@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="src/main/webapp/assets/css/acc-manager.css">
+    <link rel="stylesheet" href="./assets/css/page-admin.css">
     <link rel="stylesheet" href="assets/css/promotion.css">
 </head>
 
@@ -1244,7 +1244,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
-    <script src="src/main/webapp/assets/js/scripts.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script src="assets/js/promotion.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/category.js"></script>

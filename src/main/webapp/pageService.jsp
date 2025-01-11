@@ -64,7 +64,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/category.js"></script>
-    <script src="src/main/webapp/assets/js/scripts.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script>
         const FtoShow = '.filter';
         const Fpopup = document.querySelector(FtoShow);

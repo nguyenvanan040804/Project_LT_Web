@@ -12,7 +12,7 @@
 <body>
     <div class="go-back">
         <i class="bx bx-left-arrow-alt"></i>
-        <a href="index.jsp">Trở lại</a>
+        <a href="home.jsp">Trở lại</a>
     </div>
     <div class="container light-style flex-grow-1 container-p-y">
         <div class="card overflow-hidden">
@@ -36,7 +36,7 @@
                 <div class="col-md-9">
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="account-general">
-                            <a href="index.jsp" class="logo">
+                            <a href="home.jsp" class="logo">
                                 <img src="assets/img/logo.png" alt="">
                             </a>
                             <div class="card-body media align-items-center">

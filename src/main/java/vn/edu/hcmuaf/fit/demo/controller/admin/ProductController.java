@@ -55,7 +55,7 @@ public class ProductController extends HttpServlet {
     private void listProducts(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Product> products = productService.getAll();
         request.setAttribute("products", products);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/home.jsp").forward(request, response);
     }
 
     @Override

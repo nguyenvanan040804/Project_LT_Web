@@ -25,7 +25,7 @@
                     <div class="wrapper">
                         <div class="breadcrumb">
                             <ul class="flexitem">
-                                <li><a href="index.jsp">Trang chủ</a></li>
+                                <li><a href="home.jsp">Trang chủ</a></li>
                                 <li><a href="#">Thương hiệu xe đạp</a></li>
                                 <li><a href="#">Xe đạp</a></li>
                             </ul>

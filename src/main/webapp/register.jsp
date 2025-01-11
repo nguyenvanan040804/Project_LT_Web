@@ -19,7 +19,7 @@
     </div>
     <div class="form signup" style="opacity: 1; pointer-events: auto">
         <div class="form-content">
-            <a href="index.jsp" class="logo">
+            <a href="home.jsp" class="logo">
                 <img src="./assets/img/logo.png" alt="">
             </a>
             <header>Đăng ký</header>

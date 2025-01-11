@@ -15,12 +15,12 @@
 <section class="container forms">
     <div class="go-back">
         <i class="bx bx-left-arrow-alt"></i>
-        <a href="index.jsp">Trở lại</a>
+        <a href="home.jsp">Trở lại</a>
     </div>
     <!-- forgot password -->
     <div class="form forgot-password" style="opacity: 1; pointer-events: auto">
         <div class="form-content">
-            <a href="index.jsp" class="logo">
+            <a href="home.jsp" class="logo">
                 <img src="./assets/img/logo.png" alt="">
             </a>
             <header>Quên mật khẩu</header>

@@ -48,7 +48,7 @@ public class AuthController extends HttpServlet {
     }
     // home với method get
     public void homePage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("./index.jsp").forward(request, response);
+        request.getRequestDispatcher("./home").forward(request, response);
     }
     public void getRegister(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         request.getRequestDispatcher("./register.jsp").forward(request, response);
@@ -193,7 +193,7 @@ public class AuthController extends HttpServlet {
             if(u.getRoleId() == 1) {
                 response.sendRedirect(request.getContextPath() + "/admin/admin.jsp");
             }else {
-                response.sendRedirect(request.getContextPath() + "/index.jsp");
+                response.sendRedirect(request.getContextPath() + "/home");
             }
         }
     }
@@ -234,6 +234,6 @@ public class AuthController extends HttpServlet {
                 }
             }
         }
-        response.sendRedirect("./index.jsp");
+        response.sendRedirect("./home");
     }
 }
