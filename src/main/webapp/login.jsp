@@ -16,11 +16,11 @@
     <section class="container forms">
         <div class="go-back">
             <i class="bx bx-left-arrow-alt"></i>
-            <a href="index.jsp">Trở lại</a>
+            <a href="./home">Trở lại</a>
         </div>
         <div class="form login">
             <div class="form-content">
-                <a href="index.jsp" class="logo">
+                <a href="./home" class="logo">
                     <img src="./assets/img/logo.png" alt="">
                 </a>
 
@@ -61,7 +61,7 @@
 
 <%--        <div class="form signup">--%>
 <%--            <div class="form-content">--%>
-<%--                <a href="index.jsp" class="logo">--%>
+<%--                <a href="home.jsp" class="logo">--%>
 <%--                    <img src="./assets/img/logo.png" alt="">--%>
 <%--                </a>--%>
 <%--                <header>Đăng ký</header>--%>
@@ -102,7 +102,7 @@
         <!-- forgot password -->
 <%--        <div class="form forgot-password">--%>
 <%--            <div class="form-content">--%>
-<%--                <a href="index.jsp" class="logo">--%>
+<%--                <a href="home.jsp" class="logo">--%>
 <%--                    <img src="./assets/img/logo.png" alt="">--%>
 <%--                </a>--%>
 <%--                <header>Quên mật khẩu</header>--%>

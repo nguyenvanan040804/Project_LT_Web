@@ -52,7 +52,7 @@ public class PassController extends HttpServlet {
 }
 
     public void homePage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("./index.jsp").forward(request, response);
+        request.getRequestDispatcher("./home.jsp").forward(request, response);
     }
 
 }

@@ -259,7 +259,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.jsp">Trang chủ</a></li>
+                                                    <li><a href="home.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp trẻ em</li>
                                                 </ul>
                                             </div>
@@ -595,7 +595,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.jsp">Trang chủ</a></li>
+                                                    <li><a href="home.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp thể thao</li>
                                                 </ul>
                                             </div>
@@ -921,7 +921,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.jsp">Trang chủ</a></li>
+                                                    <li><a href="home.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp đua</li>
                                                 </ul>
                                             </div>
@@ -1250,7 +1250,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.jsp">Trang chủ</a></li>
+                                                    <li><a href="home.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp địa hình</li>
                                                 </ul>
                                             </div>
@@ -1584,7 +1584,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.jsp">Trang chủ</a></li>
+                                                    <li><a href="home.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp touring</li>
                                                 </ul>
                                             </div>
@@ -1908,7 +1908,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.jsp">Trang chủ</a></li>
+                                                    <li><a href="home.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp phổ thông</li>
                                                 </ul>
                                             </div>
@@ -2235,7 +2235,7 @@
                                         <div class="cat-head">
                                             <div class="breadcrumb">
                                                 <ul class="flexitem">
-                                                    <li><a href="index.jsp">Trang chủ</a></li>
+                                                    <li><a href="home.jsp">Trang chủ</a></li>
                                                     <li>Xe đạp điện</li>
                                                 </ul>
                                             </div>
