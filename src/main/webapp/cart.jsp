@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="vi">
@@ -28,19 +30,19 @@
                                 <li>Giỏ Hàng</li>
                             </ul>
                         </div>
-                            <div class="page-title">
+                            <div class="page-title" style="display: flex; align-items: center; justify-content: space-between;">
                                 <h1>Giỏ Hàng</h1>
+                                <a href="home">Tiếp tục mua hàng <i class="ri-arrow-right-line"></i> </a>
                             </div>
                             <div class="products one cart">
                                 <div class="flexwrap">
-                                    <form action="" class="form-cart">
+                                    <form action="cart" method="post" class="form-cart">
                                         <div class="item">
                                             <table id="cart-table">
                                                 <thead>
                                                     <tr>
                                                         <th>Ảnh</th>
                                                         <th>Tên</th>
-                                                        <th>Màu</th>
                                                         <th>Giá</th>
                                                         <th>Số lượng</th>
                                                         <th>Tổng</th>
@@ -48,187 +50,40 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                <c:forEach var="entry" items="${sessionScope.cart.items}">
                                                     <tr>
                                                         <td>
                                                             <div class="thumbnail object-cover">
-                                                                <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Life-Horse-Fx2.jpg" alt=""></a>
+                                                                <a href="#"><img src="${entry.value.img}" alt="${entry.value.proName}"></a>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div style="text-align: left;">
-                                                                <strong><a href="#">Xe Đạp Fixed Gear Life Horse Fx2</a></strong>
+                                                                <strong><a href="#">${entry.value.proName}</a></strong>
                                                             </div>
                                                         </td>
+                                                        <td><f:formatNumber value="${entry.value.price}"/>đ</td>
                                                         <td>
-                                                            <p>Trắng</p>
+                                                            <form action="cart" method="post" class="update-cart-form">
+                                                                <input type="hidden" name="action" value="update">
+                                                                <input type="hidden" name="productId" value="${entry.key}">
+                                                                <input type="number" name="quantity" value="${entry.value.quantity}" min="0" class="quantity-input">
+                                                            </form>
                                                         </td>
-                                                        <td>5.500.000đ</td>
+                                                        <td><f:formatNumber value="${entry.value.price * entry.value.quantity}"/>đ</td>
                                                         <td>
-                                                            <div class="qty-control flexitem">
-                                                                <input type="number" value="2" min="1">
-                                                            </div>
+                                                            <form action="cart" method="post" class="remove-form">
+                                                                <input type="hidden" name="action" value="remove">
+                                                                <input type="hidden" name="productId" value="${entry.key}">
+                                                                <button type="submit" class="item-remove"><i class="ri-close-line"></i></button>
+                                                            </form>
                                                         </td>
-                                                        <td>11.000.000đ</td>
-                                                        <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="thumbnail object-cover">
-                                                                <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Life-Fix735-700C.jpg" alt=""></a>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div style="text-align: left;">
-                                                                <strong><a href="#">Xe Đạp Fixed Gear Life Fix735 700C</a></strong>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <p>Xám</p>
-                                                        </td>
-                                                        <td>3.740.000đ</td>
-                                                        <td>
-                                                            <div class="qty-control flexitem">
-                                                                <input type="number" value="1" min="1">
-                                                            </div>
-                                                        </td>
-                                                        <td>3.740.000đ</td>
-                                                        <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="thumbnail object-cover">
-                                                                <a href="#"><img src="assets/img/Xe-Dap-Fixed-Gear-Funky-Locking-Nhat-Ban.jpg" alt=""></a>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div style="text-align: left;">
-                                                                <strong><a href="#">Xe Đạp Fixed Gear Funky Locking Nhật Bản</a></strong>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <p>Xám</p>
-                                                        </td>
-                                                        <td>7.590.000đ</td>
-                                                        <td>
-                                                            <div class="qty-control flexitem">
-                                                                <input type="number" value="1" min="1">
-                                                            </div>
-                                                        </td>
-                                                        <td>7.590.000đ</td>
-                                                        <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="thumbnail object-cover">
-                                                                <a href="#"><img src="assets/img/xe-dap-fix-gear-khong-thang-brave-will.jpg" alt=""></a>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div style="text-align: left;">
-                                                                <strong><a href="#">Xe Đạp Fixed Gear Không Thắng Brave Will</a></strong>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <p>Đỏ-Trắng</p>
-                                                        </td>
-                                                        <td>4.590.000đ</td>
-                                                        <td>
-                                                            <div class="qty-control flexitem">
-                                                                <input type="number" value="1" min="1">
-                                                            </div>
-                                                        </td>
-                                                        <td>4.590.000đ</td>
-                                                        <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
-                                                    </tr>
+                                                </c:forEach>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </form>
-                                    <!-- <div class="cart-summary styled">
-                                        <div class="item">
-                                            <div class="coupon">
-                                                <input type="text" placeholder="Mã giảm giá">
-                                                <button>Áp dụng</button>
-                                            </div>
-                                            <div class="shipping-rate collapse">
-                                                <div class="has-child expand">
-                                                    <a href="#" class="icon-small">Phí vận chuyển và thuế</a>
-                                                    <div class="content">
-                                                        <div class="countries">
-                                                            <form action="">
-                                                                <label for="country">Quốc gia</label>
-                                                                <select name="country" id="country">
-                                                                    <option value=""></option>
-                                                                    <option value="1">Lào</option>
-                                                                    <option value="2">Campuchia</option>
-                                                                    <option value="3">Thái Lan</option>
-                                                                    <option value="4" selected="selected">Việt Nam</option>
-                                                                    <option value="5">Khác</option>
-                                                                </select>
-                                                            </form>
-                                                        </div>
-                                                        <div class="states">
-                                                            <form action="">
-                                                                <label for="state">Tỉnh/Thành Phố</label>
-                                                                <select name="state" id="state">
-                                                                    <option value="">Chọn tỉnh hoặc thành phố</option>
-                                                                    <option value="1">TP. Hồ Chí Minh</option>
-                                                                    <option value="2">Cần Thơ</option>
-                                                                    <option value="3">Đà Nẵng</option>
-                                                                    <option value="4">Hà Nội</option>
-                                                                    <option value="5">Hải Phòng</option>
-                                                                    <option value="6">Khác</option>
-                                                                </select>
-                                                            </form>
-                                                        </div>
-                                                        <div class="postal-code">
-                                                            <form action="">
-                                                                <label for="postal">Mã Zip/Bưu chính</label>
-                                                                <input type="number" name="postal" id="postal">
-                                                            </form>
-                                                        </div>
-                                                        <div class="rate-options variant">
-                                                            <form action="">
-                                                                <p>
-                                                                    <span>Mặc định: 100.000đ</span>
-                                                                    <input type="radio" name="rate-option" id="flat" checked>
-                                                                    <label for="flat" class="circle"></label>
-                                                                </p>
-                                                                <p>
-                                                                    <span>Tốt nhất: 300.000đ</span>
-                                                                    <input type="radio" name="rate-option" id="best">
-                                                                    <label for="best" class="circle"></label>
-                                                                </p>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="cart-total">
-                                                <table>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Tổng</th>
-                                                            <td>26.920.000đ</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Giảm giá</th>
-                                                            <td>-500.000đ</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Phí giao hàng <span class="mini-text">(Mặc định)</span></th>
-                                                            <td>100.000đ</td>
-                                                        </tr>
-                                                        <tr class="grand-total">
-                                                            <th>Tổng cộng</th>
-                                                            <td><strong>26.520.000đ</strong></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <a href="checkout.jsp" class="secondary-button">Thanh toán</a>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
                             <div class="cart-add">
@@ -247,18 +102,18 @@
                                         <table>
                                             <tr>
                                                 <td>Tổng đơn hàng</td>
-                                                <td>26.920.000đ</td>
+                                                <td><f:formatNumber value="${sessionScope.cartTotalPrice}" />đ</td>
                                             </tr>
                                             <tr>
-                                                <td>Phí vận chuyển</td>
-                                                <td>100.000đ</td>
+                                                <td>Phí vận chuyển (10%)</td>
+                                                <td><f:formatNumber value="${sessionScope.cartTotalPrice * 0.1}" />đ</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Tổng</strong></td>
-                                                <td>27.020.000đ</td>
+                                                <td><f:formatNumber value="${sessionScope.cartTotalPrice + sessionScope.cartTotalPrice * 0.1}" />đ</td>
                                             </tr>
                                         </table>
-                                        <button class="normal"><a href="../../../checkout.html">Thanh toán</a></button>
+                                        <button class="normal"><a href="checkout.jsp">Thanh toán</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -270,13 +125,40 @@
         <!-- main -->
 
         <jsp:include page="templates/footer.jsp" />
-
+        <style>
+            .page-title a {
+                font-size: 12px;
+                background-color: #2e77ba;
+                padding: 9px;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+            }
+            .page-title button:hover {
+                background-color: #000;
+            }
+        </style>
     </div>
+<%--    xử lý giỏ hàng--%>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/category.js"></script>
     <script src="assets/js/store.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+
+            quantityInputs.forEach(input => {
+                input.addEventListener('change', function () {
+                    this.closest('form').submit();
+                });
+            });
+        });
+    </script>
+    <!-- jquery load trang -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         const FtoShow = '.filter';
         const Fpopup = document.querySelector(FtoShow);
