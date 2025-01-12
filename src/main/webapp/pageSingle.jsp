@@ -76,14 +76,11 @@
                                                     <span class="current"><f:formatNumber value="${proDetail.price}"/>đ</span>
                                                 </div>
                                                 <div class="actions">
-                                                    <div class="qty-control flexitem">
-                                                        <button class="minus circle">-</button>
-                                                        <input type="text" value="1">
-                                                        <button class="plus circle">+</button>
-                                                    </div>
-                                                    <div class="button-cart">
-                                                        <button class="primary-button"><i class="ri-shopping-cart-line"></i><span>Thêm vào giỏ hàng</span></button>
-                                                    </div>
+                                                    <form action="cart" method="post">
+                                                        <input type="hidden" name="action" value="add">
+                                                        <input type="hidden" name="productId" value="${proDetail.id}">
+                                                        <button class="add-to-cart">Thêm giỏ hàng</button>
+                                                    </form>
                                                     <div class="wish-share">
                                                         <ul class="flexitem second-links">
                                                             <li><a href="#">
@@ -473,9 +470,36 @@
 
         </main>
         <!-- main -->
-
         <jsp:include page="templates/footer.jsp" />
+    <style>
 
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+
+        .add-to-cart {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #2e77ba;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+        .flexitem .second-links {
+            font-size: 0.8em;
+        }
+
+    </style>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>

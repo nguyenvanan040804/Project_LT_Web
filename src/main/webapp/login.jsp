@@ -9,7 +9,7 @@
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- <link rel="stylesheet" href="assets/css/base.css"> -->
+    <link rel="stylesheet" href="./assets/css/base.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
