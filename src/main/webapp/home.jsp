@@ -501,7 +501,7 @@
 <%--                                        </div>--%>
 <%--                                    </div>--%>
 <%--                                    <div class="content">--%>
-<%--                                        <h3 class="sub-links"><a href="#" data-id="children">Xe Đạp Trẻ Em</a></h3>--%>
+<%--                                        <h3 class="sub-links"><a href="./pageCategory.jsp" data-id="children">Xe Đạp Trẻ Em</a></h3>--%>
 <%--                                    </div>--%>
 <%--                                </div>--%>
 <%--                                <div class="item">--%>

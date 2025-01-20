@@ -88,7 +88,7 @@
                     <div class="logo"><a href="index.jsp"><span class="circle"></span>.BikeStore</a></div>
                     <nav class="mobile-hide">
                         <ul class="flexitem second-links">
-                            <li><a href="#">Trang Chủ</a></li>
+                            <li><a href="./home.jsp">Trang Chủ</a></li>
                             <li><a href="#">Cửa Hàng</a></li>
                             <li class="has-child">
                                 <a href="#">Sản Phẩm
@@ -101,8 +101,8 @@
                                                 <div class="row">
                                                     <h4>Xe Đạp</h4>
                                                     <ul>
-                                                        <li><a href="#" data-id="children">Xe đạp trẻ em</a></li>
-                                                        <li><a href="#" data-id="racing">Xe đạp đua</a></li>
+                                                        <li><a href="./pageCategory.jsp" data-id="children">Xe đạp trẻ em</a></li>
+                                                        <li><a href="./pageCategory.jsp" data-id="racing">Xe đạp đua</a></li>
                                                         <li><a href="#" data-id="sporty">Xe đạp thể thao</a></li>
                                                         <li><a href="#" data-id="terrain">Xe đạp địa hình</a></li>
                                                         <li><a href="#" data-id="school">Xe đạp học sinh</a></li>
