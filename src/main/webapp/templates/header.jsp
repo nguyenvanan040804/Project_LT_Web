@@ -221,7 +221,8 @@
 <%--                                Load danh mục--%>
                                 <c:forEach var="category" items="${categories}">
                                     <li class="has-child beauty">
-                                        <a href="#" data-id="children">
+<%--                                        <a href="#" data-id="children">--%>
+                                            <a href="./pageCategory.jsp?id=${category.id}">
                                             <div class="icon-large" style="font-size: 0.3em; margin-right: 3em;"><i class="ri-circle-fill"></i></div>
                                             ${category.cateName}
                                             <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
